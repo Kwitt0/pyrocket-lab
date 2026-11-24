@@ -53,4 +53,4 @@ All devices were tested over the same home Wi-Fi network. The `url` field in eac
 
 ## Licenses
 
-Pyodide is distributed under the Mozilla Public License 2.0 (see `vendor/pyodide/LICENSE`). Skulpt is distributed under the MIT License (https://github.com/skulpt/skulpt).
+Pyodide is distributed under the Mozilla Public License 2.0 (see `vendor/pyodide/LICENSE`). Skulpt is distributed under the MIT License (see `vendor/skulpt/LICENSE`).
