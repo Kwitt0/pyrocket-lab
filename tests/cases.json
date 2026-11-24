@@ -1,0 +1,2854 @@
+[
+ {
+  "id": "L01",
+  "suite": "language",
+  "group": "ก. ข้อมูลพื้นฐาน",
+  "name": "หารปัดเศษ เศษเหลือ ยกกำลัง",
+  "code": "print(7 // 2, 7 % 2, -7 // 2, -7 % 2, 2 ** 10, 7 / 2)",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L02",
+  "suite": "language",
+  "group": "ก. ข้อมูลพื้นฐาน",
+  "name": "การแสดงผลทศนิยม",
+  "code": "print(0.1 + 0.2, 1 / 3, 1e16, 2.5e-5, 10 / 2)",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L03",
+  "suite": "language",
+  "group": "ก. ข้อมูลพื้นฐาน",
+  "name": "จำนวนเต็มขนาดใหญ่",
+  "code": "print(2 ** 100)\nprint(12345678901234567890 * 98765432109876543210)",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L04",
+  "suite": "language",
+  "group": "ก. ข้อมูลพื้นฐาน",
+  "name": "การปัดเศษด้วย round",
+  "code": "print(round(2.5), round(3.5), round(2.675, 2), round(-0.5), round(7))",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L05",
+  "suite": "language",
+  "group": "ก. ข้อมูลพื้นฐาน",
+  "name": "คำสั่งของข้อความ",
+  "code": "s = \"PyRocket Lab\"\nprint(s.upper(), s.lower(), len(s), s[0], s[-1], s[2:8], s[::-1])\nprint(s.replace(\"Lab\", \"Robot\"), s.split(), \"-\".join([\"a\", \"b\", \"c\"]))\nprint(s.find(\"R\"), s.count(\"o\"), s.startswith(\"Py\"), \"   x  \".strip())",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L06",
+  "suite": "language",
+  "group": "ก. ข้อมูลพื้นฐาน",
+  "name": "การจัดรูปแบบข้อความ",
+  "code": "print(\"%d-%s-%.2f\" % (3, \"x\", 3.14159))\nprint(\"{:>6}|{:<6}|{:^6}\".format(\"a\", \"b\", \"c\"))\nprint(f\"{3.14159:.2f} {42:05d} {255:x} {1234567:,}\")",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L07",
+  "suite": "language",
+  "group": "ก. ข้อมูลพื้นฐาน",
+  "name": "การแปลงชนิดข้อมูล",
+  "code": "print(int(\"42\") + 1, float(\"3.5\") * 2, str(10) + \"0\", int(3.99), bool(\"\"), bool(\"0\"))\nprint(type(1).__name__, type(1.0).__name__, type(\"a\").__name__, type([]).__name__)",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L08",
+  "suite": "language",
+  "group": "ก. ข้อมูลพื้นฐาน",
+  "name": "ข้อความภาษาไทย",
+  "code": "s = \"สวัสดี\"\nprint(len(s), s[0:3], s * 2)",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L09",
+  "suite": "language",
+  "group": "ข. โครงสร้างควบคุม",
+  "name": "if / elif / else ในลูป",
+  "code": "for score in [45, 60, 79, 80, 100]:\n    if score >= 80:\n        grade = \"A\"\n    elif score >= 60:\n        grade = \"B\"\n    else:\n        grade = \"F\"\n    print(score, grade)",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L10",
+  "suite": "language",
+  "group": "ข. โครงสร้างควบคุม",
+  "name": "range แบบมีระยะก้าว",
+  "code": "print(list(range(5)), list(range(2, 8)), list(range(10, 0, -3)))\ntotal = 0\nfor i in range(1, 11):\n    total += i\nprint(total)",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L11",
+  "suite": "language",
+  "group": "ข. โครงสร้างควบคุม",
+  "name": "while กับ break และ continue",
+  "code": "n = 0\nwhile True:\n    n += 1\n    if n % 2 == 0:\n        continue\n    if n > 9:\n        break\n    print(n)",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L12",
+  "suite": "language",
+  "group": "ข. โครงสร้างควบคุม",
+  "name": "ลูปซ้อนลูป",
+  "code": "for i in range(1, 4):\n    row = \"\"\n    for j in range(1, 4):\n        row += str(i * j) + \" \"\n    print(row)",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L13",
+  "suite": "language",
+  "group": "ข. โครงสร้างควบคุม",
+  "name": "เงื่อนไขต่อเนื่องและ and / or",
+  "code": "x = 5\nprint(1 < x < 10, 1 < x > 10, x == 5 and x != 4, x < 0 or \"fallback\")\nprint(\"คู่\" if x % 2 == 0 else \"คี่\", not x, 3 in [1, 2, 3])",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L14",
+  "suite": "language",
+  "group": "ข. โครงสร้างควบคุม",
+  "name": "for-else และ while-else",
+  "code": "for n in [1, 3, 5]:\n    if n % 2 == 0:\n        break\nelse:\n    print(\"ไม่มีเลขคู่\")\nk = 3\nwhile k > 0:\n    k -= 1\nelse:\n    print(\"จบ\", k)",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L15",
+  "suite": "language",
+  "group": "ค. โครงสร้างข้อมูล",
+  "name": "คำสั่งของ list",
+  "code": "a = [3, 1, 2]\na.append(5)\na.insert(0, 9)\na.remove(1)\nprint(a, len(a), sum(a), max(a), min(a))\na.sort()\nprint(a, a.pop(), a.index(3), a[::-1])",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L16",
+  "suite": "language",
+  "group": "ค. โครงสร้างข้อมูล",
+  "name": "การตัด list และ list comprehension",
+  "code": "nums = list(range(10))\nprint(nums[2:5], nums[:3], nums[-3:], nums[::2])\nprint([n * n for n in nums if n % 2 == 0])\nprint([[r * c for c in range(3)] for r in range(2)])",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L17",
+  "suite": "language",
+  "group": "ค. โครงสร้างข้อมูล",
+  "name": "tuple และการแตกค่า",
+  "code": "a, b = 1, 2\na, b = b, a\nfirst, *rest = [10, 20, 30]\nprint(a, b, first, rest, (1, 2) + (3,), len((1, 2, 3)))",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L18",
+  "suite": "language",
+  "group": "ค. โครงสร้างข้อมูล",
+  "name": "dict",
+  "code": "d = {\"b\": 2, \"a\": 1}\nd[\"c\"] = 3\nprint(d, d.get(\"x\", 0), list(d.keys()), list(d.items()))\nprint({k: v * 2 for k, v in d.items()}, \"a\" in d, len(d))",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L19",
+  "suite": "language",
+  "group": "ค. โครงสร้างข้อมูล",
+  "name": "set",
+  "code": "a = {1, 2, 3, 3}\nb = {3, 4}\nprint(sorted(a | b), sorted(a & b), sorted(a - b), len(a), 2 in a)",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L20",
+  "suite": "language",
+  "group": "ค. โครงสร้างข้อมูล",
+  "name": "enumerate / zip / sorted",
+  "code": "names = [\"cat\", \"ant\", \"bee\"]\nfor i, n in enumerate(names, 1):\n    print(i, n)\nprint(list(zip(names, [3, 1, 2])), sorted(names), sorted(names, key=len, reverse=True))\nprint(list(reversed(names)), any(n == \"bee\" for n in names), all(len(n) == 3 for n in names))",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L21",
+  "suite": "language",
+  "group": "ค. โครงสร้างข้อมูล",
+  "name": "ตาราง 2 มิติ",
+  "code": "grid = [[0] * 3 for _ in range(3)]\ngrid[1][2] = 7\nfor row in grid:\n    print(row)\nprint(sum(sum(r) for r in grid))",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L22",
+  "suite": "language",
+  "group": "ง. ฟังก์ชันและคลาส",
+  "name": "ค่าเริ่มต้นและการส่งค่าแบบระบุชื่อ",
+  "code": "def area(w, h=2, *, unit=\"cm\"):\n    return f\"{w * h} {unit}\"\nprint(area(3), area(3, 4), area(h=5, w=2), area(1, unit=\"m\"))",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L23",
+  "suite": "language",
+  "group": "ง. ฟังก์ชันและคลาส",
+  "name": "ฟังก์ชันเรียกตัวเอง",
+  "code": "def fact(n):\n    return 1 if n <= 1 else n * fact(n - 1)\ndef fib(n):\n    return n if n < 2 else fib(n - 1) + fib(n - 2)\nprint(fact(10), [fib(i) for i in range(10)])",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L24",
+  "suite": "language",
+  "group": "ง. ฟังก์ชันและคลาส",
+  "name": "*args และ **kwargs",
+  "code": "def show(*args, **kwargs):\n    return len(args), sorted(kwargs.items())\nprint(show(1, 2, 3, b=2, a=1))\nprint(show(*[1, 2], **{\"z\": 0}))",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L25",
+  "suite": "language",
+  "group": "ง. ฟังก์ชันและคลาส",
+  "name": "lambda / map / filter",
+  "code": "sq = lambda x: x * x\nprint(list(map(sq, [1, 2, 3])), list(filter(lambda x: x > 1, [1, 2, 3])))",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L26",
+  "suite": "language",
+  "group": "ง. ฟังก์ชันและคลาส",
+  "name": "คลาสและเมท็อด",
+  "code": "class Robot:\n    count = 0\n    def __init__(self, name):\n        self.name = name\n        self.steps = 0\n        Robot.count += 1\n    def walk(self, n):\n        self.steps += n\n        return self\n    def __str__(self):\n        return f\"{self.name} เดิน {self.steps} ก้าว\"\nr = Robot(\"Rocket\").walk(2).walk(3)\nprint(r, Robot.count, isinstance(r, Robot))",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L27",
+  "suite": "language",
+  "group": "ง. ฟังก์ชันและคลาส",
+  "name": "การสืบทอดคลาส",
+  "code": "class Animal:\n    def __init__(self, name):\n        self.name = name\n    def speak(self):\n        return \"...\"\nclass Dog(Animal):\n    def speak(self):\n        return super().speak() + \" โฮ่ง\"\nd = Dog(\"บ๊อบ\")\nprint(d.name, d.speak(), isinstance(d, Animal))",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L28",
+  "suite": "language",
+  "group": "ง. ฟังก์ชันและคลาส",
+  "name": "try / except / finally",
+  "code": "class TooFar(Exception):\n    pass\ndef move(n):\n    if n > 5:\n        raise TooFar(f\"ไกลเกินไป: {n}\")\n    return n\nfor n in [3, 9]:\n    try:\n        print(move(n))\n    except TooFar as e:\n        print(\"ผิดพลาด:\", e)\n    finally:\n        print(\"จบรอบ\")\ntry:\n    int(\"x\")\nexcept (ValueError, TypeError) as e:\n    print(type(e).__name__)",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L29",
+  "suite": "language",
+  "group": "ง. ฟังก์ชันและคลาส",
+  "name": "generator",
+  "code": "def countdown(n):\n    while n > 0:\n        yield n\n        n -= 1\nprint(list(countdown(4)), sum(x for x in countdown(4)))",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L30",
+  "suite": "language",
+  "group": "จ. ไลบรารีมาตรฐาน",
+  "name": "math",
+  "code": "import math\nprint(math.sqrt(16), math.floor(2.7), math.ceil(2.1), math.gcd(12, 18), round(math.pi, 5))\nprint(math.sin(0), math.pow(2, 3), math.fabs(-3))",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L31",
+  "suite": "language",
+  "group": "จ. ไลบรารีมาตรฐาน",
+  "name": "random แบบกำหนด seed",
+  "code": "import random\nrandom.seed(7)\nprint(random.randint(1, 6), random.choice([\"ซ้าย\", \"ขวา\"]), round(random.random(), 6))",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L32",
+  "suite": "language",
+  "group": "จ. ไลบรารีมาตรฐาน",
+  "name": "string",
+  "code": "import string\nprint(string.ascii_lowercase[:5], string.digits)",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L33",
+  "suite": "language",
+  "group": "จ. ไลบรารีมาตรฐาน",
+  "name": "collections",
+  "code": "from collections import Counter, defaultdict\nprint(Counter(\"banana\").most_common(2))\nd = defaultdict(list)\nd[\"a\"].append(1)\nprint(dict(d))",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L34",
+  "suite": "language",
+  "group": "จ. ไลบรารีมาตรฐาน",
+  "name": "itertools",
+  "code": "import itertools\nprint(list(itertools.permutations(\"abc\", 2))[:3], list(itertools.accumulate([1, 2, 3])))",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L35",
+  "suite": "language",
+  "group": "จ. ไลบรารีมาตรฐาน",
+  "name": "json",
+  "code": "import json\ntext = json.dumps({\"b\": [1, 2], \"a\": None}, sort_keys=True)\nprint(text, json.loads(text)[\"b\"][1])",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L36",
+  "suite": "language",
+  "group": "ฉ. ไวยากรณ์รุ่นใหม่",
+  "name": "f-string แบบ = (3.8)",
+  "code": "steps = 3\nprint(f\"{steps=} {steps * 2=}\")",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L37",
+  "suite": "language",
+  "group": "ฉ. ไวยากรณ์รุ่นใหม่",
+  "name": "ตัวดำเนินการ := (3.8)",
+  "code": "data = [1, 5, 8]\nif (n := len(data)) > 2:\n    print(\"ยาว\", n)",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L38",
+  "suite": "language",
+  "group": "ฉ. ไวยากรณ์รุ่นใหม่",
+  "name": "พารามิเตอร์แบบตำแหน่งเท่านั้น (3.8)",
+  "code": "def move(dist, /, unit=\"ช่อง\"):\n    return f\"{dist} {unit}\"\nprint(move(2), move(3, unit=\"ก้าว\"))",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L39",
+  "suite": "language",
+  "group": "ฉ. ไวยากรณ์รุ่นใหม่",
+  "name": "รวม dict ด้วย | (3.9)",
+  "code": "print({\"a\": 1} | {\"b\": 2}, {\"a\": 1} | {\"a\": 9})",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L40",
+  "suite": "language",
+  "group": "ฉ. ไวยากรณ์รุ่นใหม่",
+  "name": "removeprefix / removesuffix (3.9)",
+  "code": "print(\"robot.straight\".removeprefix(\"robot.\"), \"level1.py\".removesuffix(\".py\"))",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L41",
+  "suite": "language",
+  "group": "ฉ. ไวยากรณ์รุ่นใหม่",
+  "name": "match-case (3.10)",
+  "code": "def act(cmd):\n    match cmd:\n        case \"left\":\n            return \"เลี้ยวซ้าย\"\n        case (\"go\", n):\n            return f\"เดิน {n}\"\n        case _:\n            return \"ไม่รู้จัก\"\nprint(act(\"left\"), act((\"go\", 2)), act(0))",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L42",
+  "suite": "language",
+  "group": "ฉ. ไวยากรณ์รุ่นใหม่",
+  "name": "int.bit_count และ zip(strict) (3.10)",
+  "code": "print((5).bit_count(), list(zip([1, 2], \"ab\", strict=True)))",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L43",
+  "suite": "language",
+  "group": "ฉ. ไวยากรณ์รุ่นใหม่",
+  "name": "add_note ของ exception (3.11)",
+  "code": "try:\n    raise ValueError(\"ค่าผิด\")\nexcept ValueError as e:\n    e.add_note(\"ตรวจบรรทัดก่อนหน้า\")\n    print(e, e.__notes__)",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L44",
+  "suite": "language",
+  "group": "ฉ. ไวยากรณ์รุ่นใหม่",
+  "name": "คำสั่ง type และ f-string ซ้อนเครื่องหมายคำพูด (3.12)",
+  "code": "type Point = tuple[int, int]\nprint(Point.__name__, f\"{\"a\" + \"b\"}\")",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "L45",
+  "suite": "language",
+  "group": "ฉ. ไวยากรณ์รุ่นใหม่",
+  "name": "copy.replace (3.13)",
+  "code": "import copy\nfrom dataclasses import dataclass\n@dataclass\nclass P:\n    x: int\n    y: int\nprint(copy.replace(P(1, 2), x=5))",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "E01",
+  "suite": "error",
+  "group": "ก. ไวยากรณ์",
+  "name": "ลืมเครื่องหมาย : หลัง for",
+  "code": "for i in range(3)\n    print(i)",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "E02",
+  "suite": "error",
+  "group": "ก. ไวยากรณ์",
+  "name": "ลืมปิดวงเล็บ",
+  "code": "print(\"สวัสดี\"\nprint(\"PyRocket\")",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "E03",
+  "suite": "error",
+  "group": "ก. ไวยากรณ์",
+  "name": "ลืมปิดเครื่องหมายคำพูด",
+  "code": "print(\"สวัสดี)",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "E04",
+  "suite": "error",
+  "group": "ก. ไวยากรณ์",
+  "name": "ใช้ = แทน == ในเงื่อนไข",
+  "code": "x = 5\nif x = 5:\n    print(\"ห้า\")",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "E05",
+  "suite": "error",
+  "group": "ก. ไวยากรณ์",
+  "name": "ลืมเครื่องหมายจุลภาคใน list",
+  "code": "nums = [1 2 3]\nprint(nums)",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "E06",
+  "suite": "error",
+  "group": "ก. ไวยากรณ์",
+  "name": "พิมพ์คำสั่งด้วยตัวพิมพ์ใหญ่",
+  "code": "For i in range(3):\n    print(i)",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "E07",
+  "suite": "error",
+  "group": "ก. ไวยากรณ์",
+  "name": "return นอกฟังก์ชัน",
+  "code": "x = 1\nreturn x",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "E08",
+  "suite": "error",
+  "group": "ข. การเยื้องบรรทัด",
+  "name": "ไม่เยื้องบรรทัดหลัง for",
+  "code": "for i in range(3):\nprint(i)",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "E09",
+  "suite": "error",
+  "group": "ข. การเยื้องบรรทัด",
+  "name": "เยื้องบรรทัดโดยไม่จำเป็น",
+  "code": "x = 1\n    print(x)",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "E10",
+  "suite": "error",
+  "group": "ข. การเยื้องบรรทัด",
+  "name": "เยื้องกลับไม่ตรงระดับเดิม",
+  "code": "for i in range(2):\n    print(i)\n  print(\"จบ\")",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "E11",
+  "suite": "error",
+  "group": "ค. ชื่อผิด",
+  "name": "สะกดชื่อตัวแปรผิด",
+  "code": "total = 10\nprint(totl + 5)",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "E12",
+  "suite": "error",
+  "group": "ค. ชื่อผิด",
+  "name": "สะกดชื่อคำสั่ง print ผิด",
+  "code": "pritn(\"สวัสดี\")",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "E13",
+  "suite": "error",
+  "group": "ค. ชื่อผิด",
+  "name": "สะกดชื่อคำสั่งของหุ่นยนต์ผิด",
+  "code": "robot.straigt(1)",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "E14",
+  "suite": "error",
+  "group": "ค. ชื่อผิด",
+  "name": "สะกดชื่อคำสั่งของโมดูล math ผิด",
+  "code": "import math\nprint(math.sqroot(16))",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "E15",
+  "suite": "error",
+  "group": "ค. ชื่อผิด",
+  "name": "สะกดชื่อคำสั่งของ list ผิด",
+  "code": "items = [1, 2]\nitems.apend(3)",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "E16",
+  "suite": "error",
+  "group": "ค. ชื่อผิด",
+  "name": "ใช้ตัวแปรในฟังก์ชันก่อนกำหนดค่า",
+  "code": "count = 0\ndef add():\n    count += 1\nadd()",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "E17",
+  "suite": "error",
+  "group": "ค. ชื่อผิด",
+  "name": "เรียกโมดูลที่ไม่มี",
+  "code": "import robots",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "E18",
+  "suite": "error",
+  "group": "ง. ชนิดข้อมูลและค่า",
+  "name": "บวกข้อความกับตัวเลข",
+  "code": "score = 8\nprint(\"คะแนน \" + score)",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "E19",
+  "suite": "error",
+  "group": "ง. ชนิดข้อมูลและค่า",
+  "name": "แปลงข้อความที่ไม่ใช่ตัวเลข",
+  "code": "n = int(\"สาม\")",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "E20",
+  "suite": "error",
+  "group": "ง. ชนิดข้อมูลและค่า",
+  "name": "หารด้วยศูนย์",
+  "code": "steps = 0\nprint(10 / steps)",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "E21",
+  "suite": "error",
+  "group": "ง. ชนิดข้อมูลและค่า",
+  "name": "เรียกลำดับเกินขนาดของ list",
+  "code": "path = [1, 2, 3]\nprint(path[3])",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "E22",
+  "suite": "error",
+  "group": "ง. ชนิดข้อมูลและค่า",
+  "name": "เรียก key ที่ไม่มีใน dict",
+  "code": "pos = {\"x\": 1}\nprint(pos[\"y\"])",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "E23",
+  "suite": "error",
+  "group": "ง. ชนิดข้อมูลและค่า",
+  "name": "เรียกตัวแปรเหมือนเป็นฟังก์ชัน",
+  "code": "speed = 5\nspeed()",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "E24",
+  "suite": "error",
+  "group": "ง. ชนิดข้อมูลและค่า",
+  "name": "ส่งค่าให้ฟังก์ชันเกินจำนวน",
+  "code": "def walk(n):\n    return n\nwalk(1, 2)",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "E25",
+  "suite": "error",
+  "group": "ง. ชนิดข้อมูลและค่า",
+  "name": "เรียกคำสั่งจากค่า None",
+  "code": "result = None\nresult.append(1)",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "E26",
+  "suite": "error",
+  "group": "ง. ชนิดข้อมูลและค่า",
+  "name": "ส่งข้อความให้คำสั่งหุ่นยนต์",
+  "code": "robot.straight(\"2\")",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "E27",
+  "suite": "error",
+  "group": "ง. ชนิดข้อมูลและค่า",
+  "name": "ฟังก์ชันเรียกตัวเองไม่สิ้นสุด",
+  "code": "def loop(n):\n    return loop(n + 1)\nloop(0)",
+  "levelKey": null,
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": []
+  }
+ },
+ {
+  "id": "R01",
+  "suite": "robot",
+  "group": "ก. ผ่านด่าน",
+  "name": "เฉลยด่าน 1",
+  "code": "for i in range(3):\n    robot.straight(1)\n    robot.turn(-90)\n    robot.straight(1)\n    robot.turn(90)",
+  "levelKey": "1",
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 3,
+    "y": 2
+   },
+   "obs": [
+    {
+     "x": 3,
+     "y": 0,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 2,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 2,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 3,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 3,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 4,
+     "t": "N2"
+    },
+    {
+     "x": 3,
+     "y": 4,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 5,
+     "t": "N3"
+    }
+   ]
+  }
+ },
+ {
+  "id": "R02",
+  "suite": "robot",
+  "group": "ก. ผ่านด่าน",
+  "name": "เฉลยด่าน 2",
+  "code": "for i in range(2):\n    robot.turn(90)\n    robot.straight(1)\n    robot.turn(-90)\n    robot.straight(1)\nrobot.turn(90)\nrobot.straight(2)",
+  "levelKey": "2",
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 1,
+    "y": 5,
+    "dir": 0
+   },
+   "goal": {
+    "x": 5,
+    "y": 3
+   },
+   "obs": [
+    {
+     "x": 1,
+     "y": 1,
+     "t": "N2"
+    },
+    {
+     "x": 3,
+     "y": 1,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 2,
+     "t": "N2"
+    },
+    {
+     "x": 3,
+     "y": 2,
+     "t": "N3"
+    },
+    {
+     "x": 4,
+     "y": 2,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 3,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 4,
+     "t": "N2"
+    },
+    {
+     "x": 4,
+     "y": 4,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 5,
+     "t": "N3"
+    },
+    {
+     "x": 3,
+     "y": 5,
+     "t": "N2"
+    },
+    {
+     "x": 4,
+     "y": 5,
+     "t": "N3"
+    }
+   ]
+  }
+ },
+ {
+  "id": "R03",
+  "suite": "robot",
+  "group": "ก. ผ่านด่าน",
+  "name": "เฉลยด่าน 3",
+  "code": "robot.straight(1)\nrobot.turn(-90)\nrobot.straight(3)\nrobot.turn(90)\nfor i in range(2):\n    robot.straight(1)\n    robot.turn(-90)\n    robot.straight(1)\n    robot.turn(90)\nrobot.straight(2)",
+  "levelKey": "3",
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": [
+    {
+     "x": 2,
+     "y": 0,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 1,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 1,
+     "t": "N3"
+    },
+    {
+     "x": 4,
+     "y": 1,
+     "t": "N3"
+    },
+    {
+     "x": 3,
+     "y": 2,
+     "t": "N4"
+    },
+    {
+     "x": 0,
+     "y": 3,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 3,
+     "t": "N1"
+    },
+    {
+     "x": 3,
+     "y": 3,
+     "t": "N2"
+    },
+    {
+     "x": 5,
+     "y": 3,
+     "t": "N2"
+    },
+    {
+     "x": 2,
+     "y": 4,
+     "t": "N3"
+    },
+    {
+     "x": 4,
+     "y": 4,
+     "t": "N2"
+    }
+   ]
+  }
+ },
+ {
+  "id": "R04",
+  "suite": "robot",
+  "group": "ก. ผ่านด่าน",
+  "name": "เฉลยด่าน 4",
+  "code": "robot.turn(-90)\nrobot.straight(3)\nrobot.turn(90)\nrobot.straight(3)\nfor i in range(2):\n    robot.turn(-90)\n    robot.straight(1)\n    robot.turn(90)\n    robot.straight(1)",
+  "levelKey": "4",
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 1,
+     "y": 0
+    },
+    {
+     "x": 2,
+     "y": 0
+    },
+    {
+     "x": 3,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 1
+    },
+    {
+     "x": 5,
+     "y": 1
+    },
+    {
+     "x": 4,
+     "y": 2
+    },
+    {
+     "x": 1,
+     "y": 3
+    },
+    {
+     "x": 3,
+     "y": 3
+    },
+    {
+     "x": 1,
+     "y": 4
+    },
+    {
+     "x": 2,
+     "y": 4
+    }
+   ]
+  }
+ },
+ {
+  "id": "R05",
+  "suite": "robot",
+  "group": "ก. ผ่านด่าน",
+  "name": "ด่าน 1 ด้วยฟังก์ชันที่เขียนเอง",
+  "code": "def stair(n):\n    robot.straight(n)\n    robot.turn(-90)\n    robot.straight(n)\n    robot.turn(90)\n\nfor i in range(3):\n    stair(1)\n    print(\"ขั้นที่\", i + 1)",
+  "levelKey": "1",
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 3,
+    "y": 2
+   },
+   "obs": [
+    {
+     "x": 3,
+     "y": 0,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 2,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 2,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 3,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 3,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 4,
+     "t": "N2"
+    },
+    {
+     "x": 3,
+     "y": 4,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 5,
+     "t": "N3"
+    }
+   ]
+  }
+ },
+ {
+  "id": "R06",
+  "suite": "robot",
+  "group": "ก. ผ่านด่าน",
+  "name": "ด่าน 1 ด้วย while และตัวแปร",
+  "code": "done = 0\nwhile done < 3:\n    robot.straight(1)\n    robot.turn(-90)\n    robot.straight(1)\n    robot.turn(90)\n    done += 1\nprint(\"ถึงธงแล้ว\", done)",
+  "levelKey": "1",
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 3,
+    "y": 2
+   },
+   "obs": [
+    {
+     "x": 3,
+     "y": 0,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 2,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 2,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 3,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 3,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 4,
+     "t": "N2"
+    },
+    {
+     "x": 3,
+     "y": 4,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 5,
+     "t": "N3"
+    }
+   ]
+  }
+ },
+ {
+  "id": "R07",
+  "suite": "robot",
+  "group": "ข. ไม่ถึงธง",
+  "name": "เดินก้าวเดียวแล้วจบ",
+  "code": "robot.straight(1)",
+  "levelKey": "1",
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 3,
+    "y": 2
+   },
+   "obs": [
+    {
+     "x": 3,
+     "y": 0,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 2,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 2,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 3,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 3,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 4,
+     "t": "N2"
+    },
+    {
+     "x": 3,
+     "y": 4,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 5,
+     "t": "N3"
+    }
+   ]
+  }
+ },
+ {
+  "id": "R08",
+  "suite": "robot",
+  "group": "ข. ไม่ถึงธง",
+  "name": "เดินหน้า ถอยหลัง และหมุนครบรอบ",
+  "code": "robot.straight(1)\nrobot.straight(-1)\nrobot.turn(360)\nrobot.turn(-450)",
+  "levelKey": "1",
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 3,
+    "y": 2
+   },
+   "obs": [
+    {
+     "x": 3,
+     "y": 0,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 2,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 2,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 3,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 3,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 4,
+     "t": "N2"
+    },
+    {
+     "x": 3,
+     "y": 4,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 5,
+     "t": "N3"
+    }
+   ]
+  }
+ },
+ {
+  "id": "R09",
+  "suite": "robot",
+  "group": "ข. ไม่ถึงธง",
+  "name": "เดินทีละเศษส่วนของช่อง",
+  "code": "robot.straight(0.5)\nrobot.straight(0.5)\nrobot.turn(-90)\nrobot.straight(0.25)\nrobot.straight(0.75)",
+  "levelKey": "1",
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 3,
+    "y": 2
+   },
+   "obs": [
+    {
+     "x": 3,
+     "y": 0,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 2,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 2,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 3,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 3,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 4,
+     "t": "N2"
+    },
+    {
+     "x": 3,
+     "y": 4,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 5,
+     "t": "N3"
+    }
+   ]
+  }
+ },
+ {
+  "id": "R10",
+  "suite": "robot",
+  "group": "ข. ไม่ถึงธง",
+  "name": "เรียกคำสั่งโดยไม่ใส่ค่า",
+  "code": "robot.straight()\nrobot.turn()\nrobot.straight(1)",
+  "levelKey": "1",
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 3,
+    "y": 2
+   },
+   "obs": [
+    {
+     "x": 3,
+     "y": 0,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 2,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 2,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 3,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 3,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 4,
+     "t": "N2"
+    },
+    {
+     "x": 3,
+     "y": 4,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 5,
+     "t": "N3"
+    }
+   ]
+  }
+ },
+ {
+  "id": "R11",
+  "suite": "robot",
+  "group": "ข. ไม่ถึงธง",
+  "name": "print สลับกับการเดิน",
+  "code": "print(\"เริ่ม\", end=\" \")\nprint(\"เดิน\")\nrobot.straight(1)\nprint(\"ค้าง\", end=\"\")\nrobot.turn(-90)\nprint(\"จบ\")",
+  "levelKey": "1",
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 3,
+    "y": 2
+   },
+   "obs": [
+    {
+     "x": 3,
+     "y": 0,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 2,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 2,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 3,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 3,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 4,
+     "t": "N2"
+    },
+    {
+     "x": 3,
+     "y": 4,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 5,
+     "t": "N3"
+    }
+   ]
+  }
+ },
+ {
+  "id": "R12",
+  "suite": "robot",
+  "group": "ค. ชน",
+  "name": "ชนสิ่งกีดขวาง",
+  "code": "robot.straight(2)",
+  "levelKey": "1",
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 3,
+    "y": 2
+   },
+   "obs": [
+    {
+     "x": 3,
+     "y": 0,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 2,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 2,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 3,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 3,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 4,
+     "t": "N2"
+    },
+    {
+     "x": 3,
+     "y": 4,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 5,
+     "t": "N3"
+    }
+   ]
+  }
+ },
+ {
+  "id": "R13",
+  "suite": "robot",
+  "group": "ค. ชน",
+  "name": "ชนขอบสนาม",
+  "code": "robot.turn(180)\nrobot.straight(1)",
+  "levelKey": "1",
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 3,
+    "y": 2
+   },
+   "obs": [
+    {
+     "x": 3,
+     "y": 0,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 2,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 2,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 3,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 3,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 4,
+     "t": "N2"
+    },
+    {
+     "x": 3,
+     "y": 4,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 5,
+     "t": "N3"
+    }
+   ]
+  }
+ },
+ {
+  "id": "R14",
+  "suite": "robot",
+  "group": "ค. ชน",
+  "name": "ชนกลางลูป while",
+  "code": "steps = 0\nwhile steps < 6:\n    robot.straight(1)\n    steps += 1\n    if steps == 3:\n        print(\"ครึ่งทางแล้ว!\")",
+  "levelKey": "1",
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 3,
+    "y": 2
+   },
+   "obs": [
+    {
+     "x": 3,
+     "y": 0,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 2,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 2,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 3,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 3,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 4,
+     "t": "N2"
+    },
+    {
+     "x": 3,
+     "y": 4,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 5,
+     "t": "N3"
+    }
+   ]
+  }
+ },
+ {
+  "id": "R15",
+  "suite": "robot",
+  "group": "ค. ชน",
+  "name": "เดินเฉียงออกนอกสนาม",
+  "code": "robot.straight(0.5)\nrobot.turn(45)\nrobot.straight(1.2)",
+  "levelKey": "1",
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 3,
+    "y": 2
+   },
+   "obs": [
+    {
+     "x": 3,
+     "y": 0,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 2,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 2,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 3,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 3,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 4,
+     "t": "N2"
+    },
+    {
+     "x": 3,
+     "y": 4,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 5,
+     "t": "N3"
+    }
+   ]
+  }
+ },
+ {
+  "id": "R16",
+  "suite": "robot",
+  "group": "ค. ชน",
+  "name": "ชนสิ่งกีดขวางด่าน 4",
+  "code": "robot.straight(1)\nrobot.turn(-90)\nrobot.straight(2)",
+  "levelKey": "4",
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 5,
+    "y": 0
+   },
+   "obs": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 1,
+     "y": 0
+    },
+    {
+     "x": 2,
+     "y": 0
+    },
+    {
+     "x": 3,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 1
+    },
+    {
+     "x": 5,
+     "y": 1
+    },
+    {
+     "x": 4,
+     "y": 2
+    },
+    {
+     "x": 1,
+     "y": 3
+    },
+    {
+     "x": 3,
+     "y": 3
+    },
+    {
+     "x": 1,
+     "y": 4
+    },
+    {
+     "x": 2,
+     "y": 4
+    }
+   ]
+  }
+ },
+ {
+  "id": "R17",
+  "suite": "robot",
+  "group": "ง. ผิดพลาดและขีดจำกัด",
+  "name": "โค้ดผิดหลังหุ่นเดินไปแล้ว",
+  "code": "robot.straight(1)\nx = 1 / 0\nrobot.turn(90)",
+  "levelKey": "1",
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 3,
+    "y": 2
+   },
+   "obs": [
+    {
+     "x": 3,
+     "y": 0,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 2,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 2,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 3,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 3,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 4,
+     "t": "N2"
+    },
+    {
+     "x": 3,
+     "y": 4,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 5,
+     "t": "N3"
+    }
+   ]
+  }
+ },
+ {
+  "id": "R18",
+  "suite": "robot",
+  "group": "ง. ผิดพลาดและขีดจำกัด",
+  "name": "ส่งค่า True ให้คำสั่งเดิน",
+  "code": "robot.straight(True)",
+  "levelKey": "1",
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 3,
+    "y": 2
+   },
+   "obs": [
+    {
+     "x": 3,
+     "y": 0,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 2,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 2,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 3,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 3,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 4,
+     "t": "N2"
+    },
+    {
+     "x": 3,
+     "y": 4,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 5,
+     "t": "N3"
+    }
+   ]
+  }
+ },
+ {
+  "id": "R19",
+  "suite": "robot",
+  "group": "ง. ผิดพลาดและขีดจำกัด",
+  "name": "ลูปไม่สิ้นสุดที่ไม่มีคำสั่งหุ่นยนต์",
+  "code": "x = 0\nwhile True:\n    x = x + 1",
+  "levelKey": "1",
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 3,
+    "y": 2
+   },
+   "obs": [
+    {
+     "x": 3,
+     "y": 0,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 2,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 2,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 3,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 3,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 4,
+     "t": "N2"
+    },
+    {
+     "x": 3,
+     "y": 4,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 5,
+     "t": "N3"
+    }
+   ]
+  }
+ },
+ {
+  "id": "R20",
+  "suite": "robot",
+  "group": "ง. ผิดพลาดและขีดจำกัด",
+  "name": "ลูปไม่สิ้นสุดที่สั่งหุ่นหมุน",
+  "code": "while True:\n    robot.turn(90)",
+  "levelKey": "1",
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 3,
+    "y": 2
+   },
+   "obs": [
+    {
+     "x": 3,
+     "y": 0,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 2,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 2,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 3,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 3,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 4,
+     "t": "N2"
+    },
+    {
+     "x": 3,
+     "y": 4,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 5,
+     "t": "N3"
+    }
+   ]
+  }
+ },
+ {
+  "id": "R21",
+  "suite": "robot",
+  "group": "ง. ผิดพลาดและขีดจำกัด",
+  "name": "ดักการชนด้วย try / except",
+  "code": "try:\n    robot.straight(5)\nexcept Exception:\n    print(\"จับได้\")\nrobot.turn(90)",
+  "levelKey": "1",
+  "level": {
+   "N": 6,
+   "start": {
+    "x": 0,
+    "y": 5,
+    "dir": 1
+   },
+   "goal": {
+    "x": 3,
+    "y": 2
+   },
+   "obs": [
+    {
+     "x": 3,
+     "y": 0,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 2,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 2,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 3,
+     "t": "N3"
+    },
+    {
+     "x": 1,
+     "y": 3,
+     "t": "N2"
+    },
+    {
+     "x": 0,
+     "y": 4,
+     "t": "N2"
+    },
+    {
+     "x": 3,
+     "y": 4,
+     "t": "N3"
+    },
+    {
+     "x": 2,
+     "y": 5,
+     "t": "N3"
+    }
+   ]
+  }
+ }
+]

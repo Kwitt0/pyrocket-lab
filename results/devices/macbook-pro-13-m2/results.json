@@ -1,0 +1,11961 @@
+{
+ "env": {
+  "time": "2026-10-14T13:57:24.175Z",
+  "url": "tests/index.html?i=1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+  "platform": "macOS",
+  "cores": 8,
+  "memoryGB": 16,
+  "screen": "1440×900 @2x",
+  "webAssembly": true,
+  "crossOriginIsolated": false,
+  "sharedArrayBuffer": false,
+  "pyodide": {
+   "impl": "CPython",
+   "version": "3.13.2"
+  },
+  "skulpt": "Skulpt · รายงานตัวเองว่า Python 3.7(ish) [Skulpt]"
+ },
+ "reference": {
+  "python": "3.13.2",
+  "implementation": "CPython",
+  "platform": "macOS-26.3.1-arm64-arm-64bit-Mach-O",
+  "cases": {
+   "language": 45,
+   "error": 27,
+   "robot": 21
+  }
+ },
+ "correctness": {
+  "language": {
+   "n": 45,
+   "metrics": {
+    "output": {
+     "py": 45,
+     "sk": 34
+    }
+   },
+   "groups": {
+    "ก. ข้อมูลพื้นฐาน": {
+     "n": 8,
+     "output": {
+      "py": 8,
+      "sk": 6
+     }
+    },
+    "ข. โครงสร้างควบคุม": {
+     "n": 6,
+     "output": {
+      "py": 6,
+      "sk": 6
+     }
+    },
+    "ค. โครงสร้างข้อมูล": {
+     "n": 7,
+     "output": {
+      "py": 7,
+      "sk": 7
+     }
+    },
+    "ง. ฟังก์ชันและคลาส": {
+     "n": 8,
+     "output": {
+      "py": 8,
+      "sk": 8
+     }
+    },
+    "จ. ไลบรารีมาตรฐาน": {
+     "n": 6,
+     "output": {
+      "py": 6,
+      "sk": 5
+     }
+    },
+    "ฉ. ไวยากรณ์รุ่นใหม่": {
+     "n": 10,
+     "output": {
+      "py": 10,
+      "sk": 2
+     }
+    }
+   }
+  },
+  "error": {
+   "n": 27,
+   "metrics": {
+    "type": {
+     "py": 27,
+     "sk": 24
+    },
+    "line": {
+     "py": 27,
+     "sk": 26
+    },
+    "message": {
+     "py": 27,
+     "sk": 9
+    }
+   },
+   "groups": {
+    "ก. ไวยากรณ์": {
+     "n": 7,
+     "type": {
+      "py": 7,
+      "sk": 7
+     },
+     "line": {
+      "py": 7,
+      "sk": 6
+     },
+     "message": {
+      "py": 7,
+      "sk": 1
+     }
+    },
+    "ข. การเยื้องบรรทัด": {
+     "n": 3,
+     "type": {
+      "py": 3,
+      "sk": 0
+     },
+     "line": {
+      "py": 3,
+      "sk": 3
+     },
+     "message": {
+      "py": 3,
+      "sk": 0
+     }
+    },
+    "ค. ชื่อผิด": {
+     "n": 7,
+     "type": {
+      "py": 7,
+      "sk": 7
+     },
+     "line": {
+      "py": 7,
+      "sk": 7
+     },
+     "message": {
+      "py": 7,
+      "sk": 1
+     }
+    },
+    "ง. ชนิดข้อมูลและค่า": {
+     "n": 10,
+     "type": {
+      "py": 10,
+      "sk": 10
+     },
+     "line": {
+      "py": 10,
+      "sk": 10
+     },
+     "message": {
+      "py": 10,
+      "sk": 7
+     }
+    }
+   }
+  },
+  "robot": {
+   "n": 21,
+   "metrics": {
+    "status": {
+     "py": 21,
+     "sk": 21
+    },
+    "final": {
+     "py": 21,
+     "sk": 21
+    },
+    "actions": {
+     "py": 21,
+     "sk": 21
+    },
+    "lines": {
+     "py": 21,
+     "sk": 11
+    },
+    "continuity": {
+     "py": 21,
+     "sk": 21
+    }
+   },
+   "groups": {
+    "ก. ผ่านด่าน": {
+     "n": 6,
+     "status": {
+      "py": 6,
+      "sk": 6
+     },
+     "final": {
+      "py": 6,
+      "sk": 6
+     },
+     "actions": {
+      "py": 6,
+      "sk": 6
+     },
+     "lines": {
+      "py": 6,
+      "sk": 0
+     },
+     "continuity": {
+      "py": 6,
+      "sk": 6
+     }
+    },
+    "ข. ไม่ถึงธง": {
+     "n": 5,
+     "status": {
+      "py": 5,
+      "sk": 5
+     },
+     "final": {
+      "py": 5,
+      "sk": 5
+     },
+     "actions": {
+      "py": 5,
+      "sk": 5
+     },
+     "lines": {
+      "py": 5,
+      "sk": 5
+     },
+     "continuity": {
+      "py": 5,
+      "sk": 5
+     }
+    },
+    "ค. ชน": {
+     "n": 5,
+     "status": {
+      "py": 5,
+      "sk": 5
+     },
+     "final": {
+      "py": 5,
+      "sk": 5
+     },
+     "actions": {
+      "py": 5,
+      "sk": 5
+     },
+     "lines": {
+      "py": 5,
+      "sk": 4
+     },
+     "continuity": {
+      "py": 5,
+      "sk": 5
+     }
+    },
+    "ง. ผิดพลาดและขีดจำกัด": {
+     "n": 5,
+     "status": {
+      "py": 5,
+      "sk": 5
+     },
+     "final": {
+      "py": 5,
+      "sk": 5
+     },
+     "actions": {
+      "py": 5,
+      "sk": 5
+     },
+     "lines": {
+      "py": 5,
+      "sk": 2
+     },
+     "continuity": {
+      "py": 5,
+      "sk": 5
+     }
+    }
+   }
+  },
+  "maxCoordDiff": {
+   "py": 0,
+   "sk": 0
+  },
+  "lineCoverage": {
+   "py": 1,
+   "sk": 0.8125
+  }
+ },
+ "performance": {
+  "reps": 30,
+  "boots": 10,
+  "pyDownload": {
+   "bytes": 12262929,
+   "ms": 3227
+  },
+  "skDownload": {
+   "bytes": 1109359,
+   "ms": 471.89999997615814
+  },
+  "httpCache": true,
+  "pageHidden": false,
+  "pyBoot": {
+   "n": 10,
+   "mean": 744.8900000035762,
+   "sd": 50.8855240311296,
+   "median": 733.9000000059605,
+   "min": 702.9000000059605,
+   "max": 847
+  },
+  "pyBootRaw": [
+   822.6000000238419,
+   749.0999999940395,
+   703.3000000119209,
+   702.9000000059605,
+   703.6999999880791,
+   708.5999999940395,
+   727.9000000059605,
+   743.9000000059605,
+   847,
+   739.9000000059605
+  ],
+  "skBoot": {
+   "n": 10,
+   "mean": 6.069999995827675,
+   "sd": 2.104518945957445,
+   "median": 4.950000002980232,
+   "min": 4.799999982118607,
+   "max": 11
+  },
+  "skBootRaw": [
+   11,
+   7.699999988079071,
+   4.9000000059604645,
+   5.100000023841858,
+   7.799999982118607,
+   4.800000011920929,
+   4.799999982118607,
+   4.799999982118607,
+   4.799999982118607,
+   5
+  ],
+  "programs": [
+   {
+    "name": "เฉลยด่าน 1",
+    "id": "R01",
+    "py": {
+     "inner": {
+      "n": 30,
+      "mean": 0.8233333333333335,
+      "sd": 0.18323403789601475,
+      "median": 0.8,
+      "min": 0.6,
+      "max": 1.3
+     },
+     "wall": {
+      "n": 30,
+      "mean": 1.0333333333333334,
+      "sd": 0.2368373977103609,
+      "median": 0.9000000059604645,
+      "min": 0.7999999821186066,
+      "max": 1.5999999940395355
+     },
+     "events": 28
+    },
+    "sk": {
+     "inner": {
+      "n": 30,
+      "mean": 0.25333333333333324,
+      "sd": 0.06288102248298562,
+      "median": 0.3,
+      "min": 0.1,
+      "max": 0.4
+     },
+     "wall": {
+      "n": 30,
+      "mean": 0.2566666672627131,
+      "sd": 0.06789105578599959,
+      "median": 0.29999998211860657,
+      "min": 0.09999999403953552,
+      "max": 0.4000000059604645
+     },
+     "events": 24
+    }
+   },
+   {
+    "name": "เฉลยด่าน 2",
+    "id": "R02",
+    "py": {
+     "inner": {
+      "n": 30,
+      "mean": 0.7500000000000001,
+      "sd": 0.08610338613230192,
+      "median": 0.75,
+      "min": 0.5,
+      "max": 0.9
+     },
+     "wall": {
+      "n": 30,
+      "mean": 0.9066666662693024,
+      "sd": 0.13879613778012567,
+      "median": 0.9000000059604645,
+      "min": 0.699999988079071,
+      "max": 1.300000011920929
+     },
+     "events": 23
+    },
+    "sk": {
+     "inner": {
+      "n": 30,
+      "mean": 0.3700000000000001,
+      "sd": 0.07497125886079556,
+      "median": 0.4,
+      "min": 0.2,
+      "max": 0.5
+     },
+     "wall": {
+      "n": 30,
+      "mean": 0.37333333293596904,
+      "sd": 0.07396799374900478,
+      "median": 0.3999999910593033,
+      "min": 0.20000001788139343,
+      "max": 0.5
+     },
+     "events": 20
+    }
+   },
+   {
+    "name": "เฉลยด่าน 3",
+    "id": "R03",
+    "py": {
+     "inner": {
+      "n": 30,
+      "mean": 1.19,
+      "sd": 0.27586853440699255,
+      "median": 1.15,
+      "min": 1,
+      "max": 2.4
+     },
+     "wall": {
+      "n": 30,
+      "mean": 1.376666667064031,
+      "sd": 0.30249916754363754,
+      "median": 1.300000011920929,
+      "min": 1.0999999940395355,
+      "max": 2.5999999940395355
+     },
+     "events": 29
+    },
+    "sk": {
+     "inner": {
+      "n": 30,
+      "mean": 0.4333333333333334,
+      "sd": 0.07111590022187594,
+      "median": 0.4,
+      "min": 0.3,
+      "max": 0.6
+     },
+     "wall": {
+      "n": 30,
+      "mean": 0.43333333333333335,
+      "sd": 0.07111590369001689,
+      "median": 0.4000000059604645,
+      "min": 0.29999998211860657,
+      "max": 0.6000000238418579
+     },
+     "events": 26
+    }
+   },
+   {
+    "name": "เฉลยด่าน 4",
+    "id": "R04",
+    "py": {
+     "inner": {
+      "n": 30,
+      "mean": 1.0433333333333337,
+      "sd": 0.08583598366625751,
+      "median": 1,
+      "min": 0.9,
+      "max": 1.2
+     },
+     "wall": {
+      "n": 30,
+      "mean": 1.176666667064031,
+      "sd": 0.13047217576269024,
+      "median": 1.199999988079071,
+      "min": 1,
+      "max": 1.5999999940395355
+     },
+     "events": 27
+    },
+    "sk": {
+     "inner": {
+      "n": 30,
+      "mean": 0.38333333333333347,
+      "sd": 0.07466399831028449,
+      "median": 0.4,
+      "min": 0.3,
+      "max": 0.6
+     },
+     "wall": {
+      "n": 30,
+      "mean": 0.38666666646798453,
+      "sd": 0.07302967570368803,
+      "median": 0.4000000059604645,
+      "min": 0.29999998211860657,
+      "max": 0.5999999940395355
+     },
+     "events": 24
+    }
+   },
+   {
+    "name": "ลูปคำนวณ 3,000 รอบ",
+    "id": "P05",
+    "py": {
+     "inner": {
+      "n": 30,
+      "mean": 7.236666666666667,
+      "sd": 7.537697596578895,
+      "median": 5,
+      "min": 4.5,
+      "max": 38.2
+     },
+     "wall": {
+      "n": 30,
+      "mean": 14.513333333532016,
+      "sd": 13.867966892315618,
+      "median": 10.099999994039536,
+      "min": 9,
+      "max": 64.40000000596046
+     },
+     "events": 6004
+    },
+    "sk": {
+     "inner": {
+      "n": 30,
+      "mean": 8.47,
+      "sd": 7.673382116345326,
+      "median": 6.1,
+      "min": 2.5,
+      "max": 38.4
+     },
+     "wall": {
+      "n": 30,
+      "mean": 8.480000000198682,
+      "sd": 7.673528162728449,
+      "median": 6.0999999940395355,
+      "min": 2.5999999940395355,
+      "max": 38.400000005960464
+     },
+     "events": 3003
+    }
+   }
+  ]
+ },
+ "cases": {
+  "L01": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "3 1 -4 1 1024 3.5"
+    ],
+    "nEvents": 2,
+    "nLines": 1,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "print",
+      "text": "3 1 -4 1 1024 3.5",
+      "line": 1
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "3 1 -4 1 1024 3.5"
+    ],
+    "nEvents": 2,
+    "nLines": 1,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "print",
+      "text": "3 1 -4 1 1024 3.5",
+      "line": 1
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L02": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "0.30000000000000004 0.3333333333333333 1e+16 2.5e-05 5.0"
+    ],
+    "nEvents": 2,
+    "nLines": 1,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "print",
+      "text": "0.30000000000000004 0.3333333333333333 1e+16 2.5e-05 5.0",
+      "line": 1
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "0.3 0.3333333333333333 1e+16 2.5e-05 5.0"
+    ],
+    "nEvents": 2,
+    "nLines": 1,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "print",
+      "text": "0.3 0.3333333333333333 1e+16 2.5e-05 5.0",
+      "line": 1
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": false
+    }
+   }
+  },
+  "L03": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "1267650600228229401496703205376",
+     "1219326311370217952237463801111263526900"
+    ],
+    "nEvents": 4,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "print",
+      "text": "1267650600228229401496703205376",
+      "line": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "1219326311370217952237463801111263526900",
+      "line": 2
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "1267650600228229401496703205376",
+     "1219326311370217952237463801111263526900"
+    ],
+    "nEvents": 4,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "print",
+      "text": "1267650600228229401496703205376",
+      "line": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "1219326311370217952237463801111263526900",
+      "line": 2
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L04": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "2 4 2.67 0 7"
+    ],
+    "nEvents": 2,
+    "nLines": 1,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "print",
+      "text": "2 4 2.67 0 7",
+      "line": 1
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "2 4 2.68 0 7"
+    ],
+    "nEvents": 2,
+    "nLines": 1,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "print",
+      "text": "2 4 2.68 0 7",
+      "line": 1
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": false
+    }
+   }
+  },
+  "L05": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "PYROCKET LAB pyrocket lab 12 P b Rocket baL tekcoRyP",
+     "PyRocket Robot ['PyRocket', 'Lab'] a-b-c",
+     "2 1 True x"
+    ],
+    "nEvents": 7,
+    "nLines": 4,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "PYROCKET LAB pyrocket lab 12 P b Rocket baL tekcoRyP",
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "print",
+      "text": "PyRocket Robot ['PyRocket', 'Lab'] a-b-c",
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "print",
+      "text": "2 1 True x",
+      "line": 4
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "PYROCKET LAB pyrocket lab 12 P b Rocket baL tekcoRyP",
+     "PyRocket Robot ['PyRocket', 'Lab'] a-b-c",
+     "2 1 True x"
+    ],
+    "nEvents": 7,
+    "nLines": 4,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "PYROCKET LAB pyrocket lab 12 P b Rocket baL tekcoRyP",
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "print",
+      "text": "PyRocket Robot ['PyRocket', 'Lab'] a-b-c",
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "print",
+      "text": "2 1 True x",
+      "line": 4
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L06": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "3-x-3.14",
+     "     a|b     |  c   ",
+     "3.14 00042 ff 1,234,567"
+    ],
+    "nEvents": 6,
+    "nLines": 3,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "print",
+      "text": "3-x-3.14",
+      "line": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "     a|b     |  c   ",
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "print",
+      "text": "3.14 00042 ff 1,234,567",
+      "line": 3
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "3-x-3.14",
+     "     a|b     |  c   ",
+     "3.14 00042 ff 1,234,567"
+    ],
+    "nEvents": 6,
+    "nLines": 3,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "print",
+      "text": "3-x-3.14",
+      "line": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "     a|b     |  c   ",
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "print",
+      "text": "3.14 00042 ff 1,234,567",
+      "line": 3
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L07": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "43 7.0 100 3 False True",
+     "int float str list"
+    ],
+    "nEvents": 4,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "print",
+      "text": "43 7.0 100 3 False True",
+      "line": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "int float str list",
+      "line": 2
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "43 7.0 100 3 False True",
+     "int float str list"
+    ],
+    "nEvents": 4,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "print",
+      "text": "43 7.0 100 3 False True",
+      "line": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "int float str list",
+      "line": 2
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L08": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "6 สวั สวัสดีสวัสดี"
+    ],
+    "nEvents": 3,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "6 สวั สวัสดีสวัสดี",
+      "line": 2
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "6 สวั สวัสดีสวัสดี"
+    ],
+    "nEvents": 3,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "6 สวั สวัสดีสวัสดี",
+      "line": 2
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L09": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "45 F",
+     "60 B",
+     "79 B",
+     "80 A",
+     "100 A"
+    ],
+    "nEvents": 29,
+    "nLines": 24,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "print",
+      "text": "45 F",
+      "line": 8
+     },
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "print",
+      "text": "60 B",
+      "line": 8
+     },
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "print",
+      "text": "79 B",
+      "line": 8
+     },
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "print",
+      "text": "80 A",
+      "line": 8
+     },
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "print",
+      "text": "100 A",
+      "line": 8
+     },
+     {
+      "t": "line",
+      "n": 1
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "45 F",
+     "60 B",
+     "79 B",
+     "80 A",
+     "100 A"
+    ],
+    "nEvents": 15,
+    "nLines": 10,
+    "events": [
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "print",
+      "text": "45 F",
+      "line": 8
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "print",
+      "text": "60 B",
+      "line": 8
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "print",
+      "text": "79 B",
+      "line": 8
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "print",
+      "text": "80 A",
+      "line": 8
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "print",
+      "text": "100 A",
+      "line": 8
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L10": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "[0, 1, 2, 3, 4] [2, 3, 4, 5, 6, 7] [10, 7, 4, 1]",
+     "55"
+    ],
+    "nEvents": 26,
+    "nLines": 24,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "print",
+      "text": "[0, 1, 2, 3, 4] [2, 3, 4, 5, 6, 7] [10, 7, 4, 1]",
+      "line": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "print",
+      "text": "55",
+      "line": 5
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "[0, 1, 2, 3, 4] [2, 3, 4, 5, 6, 7] [10, 7, 4, 1]",
+     "55"
+    ],
+    "nEvents": 15,
+    "nLines": 13,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "print",
+      "text": "[0, 1, 2, 3, 4] [2, 3, 4, 5, 6, 7] [10, 7, 4, 1]",
+      "line": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "print",
+      "text": "55",
+      "line": 5
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L11": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "1",
+     "3",
+     "5",
+     "7",
+     "9"
+    ],
+    "nEvents": 56,
+    "nLines": 51,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "print",
+      "text": "1",
+      "line": 8
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "print",
+      "text": "3",
+      "line": 8
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "print",
+      "text": "5",
+      "line": 8
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "print",
+      "text": "7",
+      "line": 8
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "print",
+      "text": "9",
+      "line": 8
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "line",
+      "n": 7
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "1",
+     "3",
+     "5",
+     "7",
+     "9"
+    ],
+    "nEvents": 28,
+    "nLines": 23,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "print",
+      "text": "1",
+      "line": 8
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "print",
+      "text": "3",
+      "line": 8
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "print",
+      "text": "5",
+      "line": 8
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "print",
+      "text": "7",
+      "line": 8
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "print",
+      "text": "9",
+      "line": 8
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 7
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L12": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "1 2 3 ",
+     "2 4 6 ",
+     "3 6 9 "
+    ],
+    "nEvents": 34,
+    "nLines": 31,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "print",
+      "text": "1 2 3 ",
+      "line": 5
+     },
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "print",
+      "text": "2 4 6 ",
+      "line": 5
+     },
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "print",
+      "text": "3 6 9 ",
+      "line": 5
+     },
+     {
+      "t": "line",
+      "n": 1
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "1 2 3 ",
+     "2 4 6 ",
+     "3 6 9 "
+    ],
+    "nEvents": 18,
+    "nLines": 15,
+    "events": [
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "print",
+      "text": "1 2 3 ",
+      "line": 5
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "print",
+      "text": "2 4 6 ",
+      "line": 5
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "print",
+      "text": "3 6 9 ",
+      "line": 5
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L13": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "True False True fallback",
+     "คี่ False True"
+    ],
+    "nEvents": 5,
+    "nLines": 3,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "True False True fallback",
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "print",
+      "text": "คี่ False True",
+      "line": 3
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "True False True fallback",
+     "คี่ False True"
+    ],
+    "nEvents": 5,
+    "nLines": 3,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "True False True fallback",
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "print",
+      "text": "คี่ False True",
+      "line": 3
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L14": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "ไม่มีเลขคู่",
+     "จบ 0"
+    ],
+    "nEvents": 19,
+    "nLines": 17,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "print",
+      "text": "ไม่มีเลขคู่",
+      "line": 5
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "line",
+      "n": 10
+     },
+     {
+      "t": "print",
+      "text": "จบ 0",
+      "line": 10
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "ไม่มีเลขคู่",
+     "จบ 0"
+    ],
+    "nEvents": 8,
+    "nLines": 6,
+    "events": [
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "print",
+      "text": "ไม่มีเลขคู่",
+      "line": 5
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "line",
+      "n": 10
+     },
+     {
+      "t": "print",
+      "text": "จบ 0",
+      "line": 10
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L15": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "[9, 3, 2, 5] 4 19 9 2",
+     "[2, 3, 5] 9 1 [5, 3, 2]"
+    ],
+    "nEvents": 9,
+    "nLines": 7,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "print",
+      "text": "[9, 3, 2, 5] 4 19 9 2",
+      "line": 5
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "print",
+      "text": "[2, 3, 5] 9 1 [5, 3, 2]",
+      "line": 7
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "[9, 3, 2, 5] 4 19 9 2",
+     "[2, 3, 5] 9 1 [5, 3, 2]"
+    ],
+    "nEvents": 9,
+    "nLines": 7,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "print",
+      "text": "[9, 3, 2, 5] 4 19 9 2",
+      "line": 5
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "print",
+      "text": "[2, 3, 5] 9 1 [5, 3, 2]",
+      "line": 7
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L16": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "[2, 3, 4] [0, 1, 2] [7, 8, 9] [0, 2, 4, 6, 8]",
+     "[0, 4, 16, 36, 64]",
+     "[[0, 0, 0], [0, 1, 2]]"
+    ],
+    "nEvents": 25,
+    "nLines": 22,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "[2, 3, 4] [0, 1, 2] [7, 8, 9] [0, 2, 4, 6, 8]",
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "print",
+      "text": "[0, 4, 16, 36, 64]",
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "print",
+      "text": "[[0, 0, 0], [0, 1, 2]]",
+      "line": 4
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "[2, 3, 4] [0, 1, 2] [7, 8, 9] [0, 2, 4, 6, 8]",
+     "[0, 4, 16, 36, 64]",
+     "[[0, 0, 0], [0, 1, 2]]"
+    ],
+    "nEvents": 7,
+    "nLines": 4,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "[2, 3, 4] [0, 1, 2] [7, 8, 9] [0, 2, 4, 6, 8]",
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "print",
+      "text": "[0, 4, 16, 36, 64]",
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "print",
+      "text": "[[0, 0, 0], [0, 1, 2]]",
+      "line": 4
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L17": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "2 1 10 [20, 30] (1, 2, 3) 3"
+    ],
+    "nEvents": 5,
+    "nLines": 4,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "print",
+      "text": "2 1 10 [20, 30] (1, 2, 3) 3",
+      "line": 4
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "2 1 10 [20, 30] (1, 2, 3) 3"
+    ],
+    "nEvents": 5,
+    "nLines": 4,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "print",
+      "text": "2 1 10 [20, 30] (1, 2, 3) 3",
+      "line": 4
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L18": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "{'b': 2, 'a': 1, 'c': 3} 0 ['b', 'a', 'c'] [('b', 2), ('a', 1), ('c', 3)]",
+     "{'b': 4, 'a': 2, 'c': 6} True 3"
+    ],
+    "nEvents": 9,
+    "nLines": 7,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "print",
+      "text": "{'b': 2, 'a': 1, 'c': 3} 0 ['b', 'a', 'c'] [('b', 2), ('a', 1), ('c', 3)]",
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "print",
+      "text": "{'b': 4, 'a': 2, 'c': 6} True 3",
+      "line": 4
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "{'b': 2, 'a': 1, 'c': 3} 0 ['b', 'a', 'c'] [('b', 2), ('a', 1), ('c', 3)]",
+     "{'b': 4, 'a': 2, 'c': 6} True 3"
+    ],
+    "nEvents": 6,
+    "nLines": 4,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "print",
+      "text": "{'b': 2, 'a': 1, 'c': 3} 0 ['b', 'a', 'c'] [('b', 2), ('a', 1), ('c', 3)]",
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "print",
+      "text": "{'b': 4, 'a': 2, 'c': 6} True 3",
+      "line": 4
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L19": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "[1, 2, 3, 4] [3] [1, 2] 3 True"
+    ],
+    "nEvents": 4,
+    "nLines": 3,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "print",
+      "text": "[1, 2, 3, 4] [3] [1, 2] 3 True",
+      "line": 3
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "[1, 2, 3, 4] [3] [1, 2] 3 True"
+    ],
+    "nEvents": 4,
+    "nLines": 3,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "print",
+      "text": "[1, 2, 3, 4] [3] [1, 2] 3 True",
+      "line": 3
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L20": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "1 cat",
+     "2 ant",
+     "3 bee",
+     "[('cat', 3), ('ant', 1), ('bee', 2)] ['ant', 'bee', 'cat'] ['cat', 'ant', 'bee']",
+     "['bee', 'ant', 'cat'] True True"
+    ],
+    "nEvents": 22,
+    "nLines": 17,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "print",
+      "text": "1 cat",
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "print",
+      "text": "2 ant",
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "print",
+      "text": "3 bee",
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "print",
+      "text": "[('cat', 3), ('ant', 1), ('bee', 2)] ['ant', 'bee', 'cat'] ['cat', 'ant', 'bee']",
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "print",
+      "text": "['bee', 'ant', 'cat'] True True",
+      "line": 5
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "1 cat",
+     "2 ant",
+     "3 bee",
+     "[('cat', 3), ('ant', 1), ('bee', 2)] ['ant', 'bee', 'cat'] ['cat', 'ant', 'bee']",
+     "['bee', 'ant', 'cat'] True True"
+    ],
+    "nEvents": 11,
+    "nLines": 6,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "print",
+      "text": "1 cat",
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "print",
+      "text": "2 ant",
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "print",
+      "text": "3 bee",
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "print",
+      "text": "[('cat', 3), ('ant', 1), ('bee', 2)] ['ant', 'bee', 'cat'] ['cat', 'ant', 'bee']",
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "print",
+      "text": "['bee', 'ant', 'cat'] True True",
+      "line": 5
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L21": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "[0, 0, 0]",
+     "[0, 0, 7]",
+     "[0, 0, 0]",
+     "7"
+    ],
+    "nEvents": 21,
+    "nLines": 17,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "print",
+      "text": "[0, 0, 0]",
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "print",
+      "text": "[0, 0, 7]",
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "print",
+      "text": "[0, 0, 0]",
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "print",
+      "text": "7",
+      "line": 5
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "[0, 0, 0]",
+     "[0, 0, 7]",
+     "[0, 0, 0]",
+     "7"
+    ],
+    "nEvents": 10,
+    "nLines": 6,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "print",
+      "text": "[0, 0, 0]",
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "print",
+      "text": "[0, 0, 7]",
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "print",
+      "text": "[0, 0, 0]",
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "print",
+      "text": "7",
+      "line": 5
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L22": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "6 cm 12 cm 10 cm 2 m"
+    ],
+    "nEvents": 7,
+    "nLines": 6,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "6 cm 12 cm 10 cm 2 m",
+      "line": 2
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "6 cm 12 cm 10 cm 2 m"
+    ],
+    "nEvents": 6,
+    "nLines": 5,
+    "events": [
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "6 cm 12 cm 10 cm 2 m",
+      "line": 2
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L23": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "3628800 [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]"
+    ],
+    "nEvents": 300,
+    "nLines": 299
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "3628800 [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]"
+    ],
+    "nEvents": 288,
+    "nLines": 287
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L24": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "(3, [('a', 1), ('b', 2)])",
+     "(2, [('z', 0)])"
+    ],
+    "nEvents": 7,
+    "nLines": 5,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "(3, [('a', 1), ('b', 2)])",
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "(2, [('z', 0)])",
+      "line": 2
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "(3, [('a', 1), ('b', 2)])",
+     "(2, [('z', 0)])"
+    ],
+    "nEvents": 6,
+    "nLines": 4,
+    "events": [
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "(3, [('a', 1), ('b', 2)])",
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "(2, [('z', 0)])",
+      "line": 2
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L25": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "[1, 4, 9] [2, 3]"
+    ],
+    "nEvents": 9,
+    "nLines": 8,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "[1, 4, 9] [2, 3]",
+      "line": 2
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "[1, 4, 9] [2, 3]"
+    ],
+    "nEvents": 3,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "[1, 4, 9] [2, 3]",
+      "line": 2
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L26": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "Rocket เดิน 5 ก้าว 1 True"
+    ],
+    "nEvents": 17,
+    "nLines": 16,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "line",
+      "n": 10
+     },
+     {
+      "t": "line",
+      "n": 12
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "line",
+      "n": 9
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "line",
+      "n": 9
+     },
+     {
+      "t": "line",
+      "n": 13
+     },
+     {
+      "t": "line",
+      "n": 11
+     },
+     {
+      "t": "print",
+      "text": "Rocket เดิน 5 ก้าว 1 True",
+      "line": 11
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "Rocket เดิน 5 ก้าว 1 True"
+    ],
+    "nEvents": 12,
+    "nLines": 11,
+    "events": [
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 12
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "line",
+      "n": 9
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "line",
+      "n": 9
+     },
+     {
+      "t": "line",
+      "n": 13
+     },
+     {
+      "t": "line",
+      "n": 11
+     },
+     {
+      "t": "print",
+      "text": "Rocket เดิน 5 ก้าว 1 True",
+      "line": 11
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L27": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "บ๊อบ ... โฮ่ง True"
+    ],
+    "nEvents": 13,
+    "nLines": 12,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "line",
+      "n": 9
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 10
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "print",
+      "text": "บ๊อบ ... โฮ่ง True",
+      "line": 5
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "บ๊อบ ... โฮ่ง True"
+    ],
+    "nEvents": 6,
+    "nLines": 5,
+    "events": [
+     {
+      "t": "line",
+      "n": 9
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 10
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "print",
+      "text": "บ๊อบ ... โฮ่ง True",
+      "line": 5
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L28": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "3",
+     "จบรอบ",
+     "ผิดพลาด: ไกลเกินไป: 9",
+     "จบรอบ",
+     "ValueError"
+    ],
+    "nEvents": 28,
+    "nLines": 23,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "line",
+      "n": 9
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "print",
+      "text": "3",
+      "line": 6
+     },
+     {
+      "t": "line",
+      "n": 13
+     },
+     {
+      "t": "print",
+      "text": "จบรอบ",
+      "line": 13
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "line",
+      "n": 9
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 10
+     },
+     {
+      "t": "line",
+      "n": 11
+     },
+     {
+      "t": "print",
+      "text": "ผิดพลาด: ไกลเกินไป: 9",
+      "line": 11
+     },
+     {
+      "t": "line",
+      "n": 13
+     },
+     {
+      "t": "print",
+      "text": "จบรอบ",
+      "line": 13
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "line",
+      "n": 14
+     },
+     {
+      "t": "line",
+      "n": 15
+     },
+     {
+      "t": "line",
+      "n": 16
+     },
+     {
+      "t": "line",
+      "n": 17
+     },
+     {
+      "t": "print",
+      "text": "ValueError",
+      "line": 17
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "3",
+     "จบรอบ",
+     "ผิดพลาด: ไกลเกินไป: 9",
+     "จบรอบ",
+     "ValueError"
+    ],
+    "nEvents": 15,
+    "nLines": 10,
+    "events": [
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 9
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "print",
+      "text": "3",
+      "line": 6
+     },
+     {
+      "t": "line",
+      "n": 13
+     },
+     {
+      "t": "print",
+      "text": "จบรอบ",
+      "line": 13
+     },
+     {
+      "t": "line",
+      "n": 9
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 11
+     },
+     {
+      "t": "print",
+      "text": "ผิดพลาด: ไกลเกินไป: 9",
+      "line": 11
+     },
+     {
+      "t": "line",
+      "n": 13
+     },
+     {
+      "t": "print",
+      "text": "จบรอบ",
+      "line": 13
+     },
+     {
+      "t": "line",
+      "n": 15
+     },
+     {
+      "t": "line",
+      "n": 17
+     },
+     {
+      "t": "print",
+      "text": "ValueError",
+      "line": 17
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L29": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "[4, 3, 2, 1] 10"
+    ],
+    "nEvents": 34,
+    "nLines": 33,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "[4, 3, 2, 1] 10",
+      "line": 2
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "[4, 3, 2, 1] 10"
+    ],
+    "nEvents": 18,
+    "nLines": 17,
+    "events": [
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "print",
+      "text": "[4, 3, 2, 1] 10",
+      "line": 4
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L30": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "4.0 2 3 6 3.14159",
+     "0.0 8.0 3.0"
+    ],
+    "nEvents": 5,
+    "nLines": 3,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "4.0 2 3 6 3.14159",
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "print",
+      "text": "0.0 8.0 3.0",
+      "line": 3
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "4.0 2 3 6 3.14159",
+     "0.0 8.0 3.0"
+    ],
+    "nEvents": 4,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "4.0 2 3 6 3.14159",
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "print",
+      "text": "0.0 8.0 3.0",
+      "line": 3
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L31": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "3 ซ้าย 0.394823"
+    ],
+    "nEvents": 4,
+    "nLines": 3,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "print",
+      "text": "3 ซ้าย 0.394823",
+      "line": 3
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "1 ขวา 0.438409"
+    ],
+    "nEvents": 3,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "print",
+      "text": "1 ขวา 0.438409",
+      "line": 3
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": false
+    }
+   }
+  },
+  "L32": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "abcde 0123456789"
+    ],
+    "nEvents": 3,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "abcde 0123456789",
+      "line": 2
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "abcde 0123456789"
+    ],
+    "nEvents": 2,
+    "nLines": 1,
+    "events": [
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "abcde 0123456789",
+      "line": 2
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L33": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "[('a', 3), ('n', 2)]",
+     "{'a': [1]}"
+    ],
+    "nEvents": 7,
+    "nLines": 5,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "[('a', 3), ('n', 2)]",
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "print",
+      "text": "{'a': [1]}",
+      "line": 5
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "[('a', 3), ('n', 2)]",
+     "{'a': [1]}"
+    ],
+    "nEvents": 6,
+    "nLines": 4,
+    "events": [
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "[('a', 3), ('n', 2)]",
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "print",
+      "text": "{'a': [1]}",
+      "line": 5
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L34": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "[('a', 'b'), ('a', 'c'), ('b', 'a')] [1, 3, 6]"
+    ],
+    "nEvents": 3,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "[('a', 'b'), ('a', 'c'), ('b', 'a')] [1, 3, 6]",
+      "line": 2
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "[('a', 'b'), ('a', 'c'), ('b', 'a')] [1, 3, 6]"
+    ],
+    "nEvents": 2,
+    "nLines": 1,
+    "events": [
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "[('a', 'b'), ('a', 'c'), ('b', 'a')] [1, 3, 6]",
+      "line": 2
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L35": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "{\"a\": null, \"b\": [1, 2]} 2"
+    ],
+    "nEvents": 4,
+    "nLines": 3,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "print",
+      "text": "{\"a\": null, \"b\": [1, 2]} 2",
+      "line": 3
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "{\"a\": null, \"b\": [1, 2]} 2"
+    ],
+    "nEvents": 3,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "print",
+      "text": "{\"a\": null, \"b\": [1, 2]} 2",
+      "line": 3
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L36": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "steps=3 steps * 2=6"
+    ],
+    "nEvents": 3,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "steps=3 steps * 2=6",
+      "line": 2
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "SyntaxError",
+     "msg": "bad input",
+     "line": 2,
+     "full": "SyntaxError: bad input"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 0,
+    "nLines": 0,
+    "events": []
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": false
+    }
+   }
+  },
+  "L37": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "ยาว 3"
+    ],
+    "nEvents": 4,
+    "nLines": 3,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "print",
+      "text": "ยาว 3",
+      "line": 3
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "SyntaxError",
+     "msg": "bad input",
+     "line": 2,
+     "full": "SyntaxError: bad input"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 0,
+    "nLines": 0,
+    "events": []
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": false
+    }
+   }
+  },
+  "L38": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "2 ช่อง 3 ก้าว"
+    ],
+    "nEvents": 5,
+    "nLines": 4,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "2 ช่อง 3 ก้าว",
+      "line": 2
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "SyntaxError",
+     "msg": "bad input",
+     "line": 1,
+     "full": "SyntaxError: bad input"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 0,
+    "nLines": 0,
+    "events": []
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": false
+    }
+   }
+  },
+  "L39": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "{'a': 1, 'b': 2} {'a': 9}"
+    ],
+    "nEvents": 2,
+    "nLines": 1,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "print",
+      "text": "{'a': 1, 'b': 2} {'a': 9}",
+      "line": 1
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "{'a': 1, 'b': 2} {'a': 9}"
+    ],
+    "nEvents": 2,
+    "nLines": 1,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "print",
+      "text": "{'a': 1, 'b': 2} {'a': 9}",
+      "line": 1
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L40": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "straight level1"
+    ],
+    "nEvents": 2,
+    "nLines": 1,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "print",
+      "text": "straight level1",
+      "line": 1
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "straight level1"
+    ],
+    "nEvents": 2,
+    "nLines": 1,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "print",
+      "text": "straight level1",
+      "line": 1
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": true
+    }
+   }
+  },
+  "L41": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "เลี้ยวซ้าย เดิน 2 ไม่รู้จัก"
+    ],
+    "nEvents": 15,
+    "nLines": 14,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 9
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "print",
+      "text": "เลี้ยวซ้าย เดิน 2 ไม่รู้จัก",
+      "line": 8
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "SyntaxError",
+     "msg": "bad input",
+     "line": 2,
+     "full": "SyntaxError: bad input"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 0,
+    "nLines": 0,
+    "events": []
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": false
+    }
+   }
+  },
+  "L42": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "2 [(1, 'a'), (2, 'b')]"
+    ],
+    "nEvents": 2,
+    "nLines": 1,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "print",
+      "text": "2 [(1, 'a'), (2, 'b')]",
+      "line": 1
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "AttributeError",
+     "msg": "'int' object has no attribute 'bit_count'",
+     "line": 1,
+     "full": "AttributeError: 'int' object has no attribute 'bit_count'"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 1,
+    "nLines": 1,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": false
+    }
+   }
+  },
+  "L43": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "ค่าผิด ['ตรวจบรรทัดก่อนหน้า']"
+    ],
+    "nEvents": 6,
+    "nLines": 5,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "print",
+      "text": "ค่าผิด ['ตรวจบรรทัดก่อนหน้า']",
+      "line": 5
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "AttributeError",
+     "msg": "'ValueError' object has no attribute 'add_note'",
+     "line": 4,
+     "full": "AttributeError: 'ValueError' object has no attribute 'add_note'"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 2,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 4
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": false
+    }
+   }
+  },
+  "L44": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "Point ab"
+    ],
+    "nEvents": 3,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "Point ab",
+      "line": 2
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "SyntaxError",
+     "msg": "bad input",
+     "line": 1,
+     "full": "SyntaxError: bad input"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 0,
+    "nLines": 0,
+    "events": []
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": false
+    }
+   }
+  },
+  "L45": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [
+     "P(x=5, y=2)"
+    ],
+    "nEvents": 11,
+    "nLines": 10,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "print",
+      "text": "P(x=5, y=2)",
+      "line": 7
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "SyntaxError",
+     "msg": "bad input",
+     "line": 3,
+     "full": "SyntaxError: bad input"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 0,
+    "nLines": 0,
+    "events": []
+   },
+   "judge": {
+    "py": {
+     "output": true
+    },
+    "sk": {
+     "output": false
+    }
+   }
+  },
+  "E01": {
+   "py": {
+    "outcome": {
+     "status": "error",
+     "name": "SyntaxError",
+     "msg": "expected ':'",
+     "line": 1,
+     "full": "SyntaxError: expected ':'"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 0,
+    "nLines": 0,
+    "events": []
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "SyntaxError",
+     "msg": "bad input",
+     "line": 1,
+     "full": "SyntaxError: bad input"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 0,
+    "nLines": 0,
+    "events": []
+   },
+   "judge": {
+    "py": {
+     "type": true,
+     "line": true,
+     "message": true
+    },
+    "sk": {
+     "type": true,
+     "line": true,
+     "message": false
+    }
+   }
+  },
+  "E02": {
+   "py": {
+    "outcome": {
+     "status": "error",
+     "name": "SyntaxError",
+     "msg": "'(' was never closed",
+     "line": 1,
+     "full": "SyntaxError: '(' was never closed"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 0,
+    "nLines": 0,
+    "events": []
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "SyntaxError",
+     "msg": "bad input",
+     "line": 2,
+     "full": "SyntaxError: bad input"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 0,
+    "nLines": 0,
+    "events": []
+   },
+   "judge": {
+    "py": {
+     "type": true,
+     "line": true,
+     "message": true
+    },
+    "sk": {
+     "type": true,
+     "line": false,
+     "message": false
+    }
+   }
+  },
+  "E03": {
+   "py": {
+    "outcome": {
+     "status": "error",
+     "name": "SyntaxError",
+     "msg": "unterminated string literal (detected at line 1)",
+     "line": 1,
+     "full": "SyntaxError: unterminated string literal (detected at line 1)"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 0,
+    "nLines": 0,
+    "events": []
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "SyntaxError",
+     "msg": "bad token T_OP",
+     "line": 1,
+     "full": "SyntaxError: bad token T_OP"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 0,
+    "nLines": 0,
+    "events": []
+   },
+   "judge": {
+    "py": {
+     "type": true,
+     "line": true,
+     "message": true
+    },
+    "sk": {
+     "type": true,
+     "line": true,
+     "message": false
+    }
+   }
+  },
+  "E04": {
+   "py": {
+    "outcome": {
+     "status": "error",
+     "name": "SyntaxError",
+     "msg": "invalid syntax. Maybe you meant '==' or ':=' instead of '='?",
+     "line": 2,
+     "full": "SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 0,
+    "nLines": 0,
+    "events": []
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "SyntaxError",
+     "msg": "bad input",
+     "line": 2,
+     "full": "SyntaxError: bad input"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 0,
+    "nLines": 0,
+    "events": []
+   },
+   "judge": {
+    "py": {
+     "type": true,
+     "line": true,
+     "message": true
+    },
+    "sk": {
+     "type": true,
+     "line": true,
+     "message": false
+    }
+   }
+  },
+  "E05": {
+   "py": {
+    "outcome": {
+     "status": "error",
+     "name": "SyntaxError",
+     "msg": "invalid syntax. Perhaps you forgot a comma?",
+     "line": 1,
+     "full": "SyntaxError: invalid syntax. Perhaps you forgot a comma?"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 0,
+    "nLines": 0,
+    "events": []
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "SyntaxError",
+     "msg": "bad input",
+     "line": 1,
+     "full": "SyntaxError: bad input"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 0,
+    "nLines": 0,
+    "events": []
+   },
+   "judge": {
+    "py": {
+     "type": true,
+     "line": true,
+     "message": true
+    },
+    "sk": {
+     "type": true,
+     "line": true,
+     "message": false
+    }
+   }
+  },
+  "E06": {
+   "py": {
+    "outcome": {
+     "status": "error",
+     "name": "SyntaxError",
+     "msg": "invalid syntax",
+     "line": 1,
+     "full": "SyntaxError: invalid syntax"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 0,
+    "nLines": 0,
+    "events": []
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "SyntaxError",
+     "msg": "bad input",
+     "line": 1,
+     "full": "SyntaxError: bad input"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 0,
+    "nLines": 0,
+    "events": []
+   },
+   "judge": {
+    "py": {
+     "type": true,
+     "line": true,
+     "message": true
+    },
+    "sk": {
+     "type": true,
+     "line": true,
+     "message": false
+    }
+   }
+  },
+  "E07": {
+   "py": {
+    "outcome": {
+     "status": "error",
+     "name": "SyntaxError",
+     "msg": "'return' outside function",
+     "line": 2,
+     "full": "SyntaxError: 'return' outside function"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 0,
+    "nLines": 0,
+    "events": []
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "SyntaxError",
+     "msg": "'return' outside function",
+     "line": 2,
+     "full": "SyntaxError: 'return' outside function"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 0,
+    "nLines": 0,
+    "events": []
+   },
+   "judge": {
+    "py": {
+     "type": true,
+     "line": true,
+     "message": true
+    },
+    "sk": {
+     "type": true,
+     "line": true,
+     "message": true
+    }
+   }
+  },
+  "E08": {
+   "py": {
+    "outcome": {
+     "status": "error",
+     "name": "IndentationError",
+     "msg": "expected an indented block after 'for' statement on line 1",
+     "line": 2,
+     "full": "IndentationError: expected an indented block after 'for' statement on line 1"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 0,
+    "nLines": 0,
+    "events": []
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "SyntaxError",
+     "msg": "bad input",
+     "line": 2,
+     "full": "SyntaxError: bad input"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 0,
+    "nLines": 0,
+    "events": []
+   },
+   "judge": {
+    "py": {
+     "type": true,
+     "line": true,
+     "message": true
+    },
+    "sk": {
+     "type": false,
+     "line": true,
+     "message": false
+    }
+   }
+  },
+  "E09": {
+   "py": {
+    "outcome": {
+     "status": "error",
+     "name": "IndentationError",
+     "msg": "unexpected indent",
+     "line": 2,
+     "full": "IndentationError: unexpected indent"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 0,
+    "nLines": 0,
+    "events": []
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "SyntaxError",
+     "msg": "bad input",
+     "line": 2,
+     "full": "SyntaxError: bad input"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 0,
+    "nLines": 0,
+    "events": []
+   },
+   "judge": {
+    "py": {
+     "type": true,
+     "line": true,
+     "message": true
+    },
+    "sk": {
+     "type": false,
+     "line": true,
+     "message": false
+    }
+   }
+  },
+  "E10": {
+   "py": {
+    "outcome": {
+     "status": "error",
+     "name": "IndentationError",
+     "msg": "unindent does not match any outer indentation level",
+     "line": 3,
+     "full": "IndentationError: unindent does not match any outer indentation level"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 0,
+    "nLines": 0,
+    "events": []
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "SyntaxError",
+     "msg": "unindent does not match any outer indentation level",
+     "line": 3,
+     "full": "SyntaxError: unindent does not match any outer indentation level"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 0,
+    "nLines": 0,
+    "events": []
+   },
+   "judge": {
+    "py": {
+     "type": true,
+     "line": true,
+     "message": true
+    },
+    "sk": {
+     "type": false,
+     "line": true,
+     "message": false
+    }
+   }
+  },
+  "E11": {
+   "py": {
+    "outcome": {
+     "status": "error",
+     "name": "NameError",
+     "msg": "name 'totl' is not defined",
+     "line": 2,
+     "full": "NameError: name 'totl' is not defined. Did you mean: 'total'?"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 2,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "NameError",
+     "msg": "name 'totl' is not defined",
+     "line": 2,
+     "full": "NameError: name 'totl' is not defined"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 2,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "type": true,
+     "line": true,
+     "message": true
+    },
+    "sk": {
+     "type": true,
+     "line": true,
+     "message": false
+    }
+   }
+  },
+  "E12": {
+   "py": {
+    "outcome": {
+     "status": "error",
+     "name": "NameError",
+     "msg": "name 'pritn' is not defined",
+     "line": 1,
+     "full": "NameError: name 'pritn' is not defined. Did you mean: 'print'?"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 1,
+    "nLines": 1,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "NameError",
+     "msg": "name 'pritn' is not defined",
+     "line": 1,
+     "full": "NameError: name 'pritn' is not defined"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 1,
+    "nLines": 1,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "type": true,
+     "line": true,
+     "message": true
+    },
+    "sk": {
+     "type": true,
+     "line": true,
+     "message": false
+    }
+   }
+  },
+  "E13": {
+   "py": {
+    "outcome": {
+     "status": "error",
+     "name": "AttributeError",
+     "msg": "module 'robot' has no attribute 'straigt'",
+     "line": 1,
+     "full": "AttributeError: module 'robot' has no attribute 'straigt'. Did you mean: 'straight'?"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 1,
+    "nLines": 1,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "AttributeError",
+     "msg": "module 'robot' has no attribute 'straigt'",
+     "line": 1,
+     "full": "AttributeError: module 'robot' has no attribute 'straigt'"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 1,
+    "nLines": 1,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "type": true,
+     "line": true,
+     "message": true
+    },
+    "sk": {
+     "type": true,
+     "line": true,
+     "message": false
+    }
+   }
+  },
+  "E14": {
+   "py": {
+    "outcome": {
+     "status": "error",
+     "name": "AttributeError",
+     "msg": "module 'math' has no attribute 'sqroot'",
+     "line": 2,
+     "full": "AttributeError: module 'math' has no attribute 'sqroot'. Did you mean: 'sqrt'?"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 2,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "AttributeError",
+     "msg": "module 'math' has no attribute 'sqroot'",
+     "line": 2,
+     "full": "AttributeError: module 'math' has no attribute 'sqroot'"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 1,
+    "nLines": 1,
+    "events": [
+     {
+      "t": "line",
+      "n": 2
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "type": true,
+     "line": true,
+     "message": true
+    },
+    "sk": {
+     "type": true,
+     "line": true,
+     "message": false
+    }
+   }
+  },
+  "E15": {
+   "py": {
+    "outcome": {
+     "status": "error",
+     "name": "AttributeError",
+     "msg": "'list' object has no attribute 'apend'",
+     "line": 2,
+     "full": "AttributeError: 'list' object has no attribute 'apend'. Did you mean: 'append'?"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 2,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "AttributeError",
+     "msg": "'list' object has no attribute 'apend'",
+     "line": 2,
+     "full": "AttributeError: 'list' object has no attribute 'apend'"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 2,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "type": true,
+     "line": true,
+     "message": true
+    },
+    "sk": {
+     "type": true,
+     "line": true,
+     "message": false
+    }
+   }
+  },
+  "E16": {
+   "py": {
+    "outcome": {
+     "status": "error",
+     "name": "UnboundLocalError",
+     "msg": "cannot access local variable 'count' where it is not associated with a value",
+     "line": 3,
+     "full": "UnboundLocalError: cannot access local variable 'count' where it is not associated with a value"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 4,
+    "nLines": 4,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "UnboundLocalError",
+     "msg": "local variable 'count' referenced before assignment",
+     "line": 3,
+     "full": "UnboundLocalError: local variable 'count' referenced before assignment"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 3,
+    "nLines": 3,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "type": true,
+     "line": true,
+     "message": true
+    },
+    "sk": {
+     "type": true,
+     "line": true,
+     "message": false
+    }
+   }
+  },
+  "E17": {
+   "py": {
+    "outcome": {
+     "status": "error",
+     "name": "ModuleNotFoundError",
+     "msg": "No module named 'robots'",
+     "line": 1,
+     "full": "ModuleNotFoundError: No module named 'robots'"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 1,
+    "nLines": 1,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "ModuleNotFoundError",
+     "msg": "No module named 'robots'",
+     "line": 1,
+     "full": "ModuleNotFoundError: No module named 'robots'"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 0,
+    "nLines": 0,
+    "events": []
+   },
+   "judge": {
+    "py": {
+     "type": true,
+     "line": true,
+     "message": true
+    },
+    "sk": {
+     "type": true,
+     "line": true,
+     "message": true
+    }
+   }
+  },
+  "E18": {
+   "py": {
+    "outcome": {
+     "status": "error",
+     "name": "TypeError",
+     "msg": "can only concatenate str (not \"int\") to str",
+     "line": 2,
+     "full": "TypeError: can only concatenate str (not \"int\") to str"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 2,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "TypeError",
+     "msg": "cannot concatenate 'str' and 'int' objects",
+     "line": 2,
+     "full": "TypeError: cannot concatenate 'str' and 'int' objects"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 2,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "type": true,
+     "line": true,
+     "message": true
+    },
+    "sk": {
+     "type": true,
+     "line": true,
+     "message": false
+    }
+   }
+  },
+  "E19": {
+   "py": {
+    "outcome": {
+     "status": "error",
+     "name": "ValueError",
+     "msg": "invalid literal for int() with base 10: 'สาม'",
+     "line": 1,
+     "full": "ValueError: invalid literal for int() with base 10: 'สาม'"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 1,
+    "nLines": 1,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "ValueError",
+     "msg": "invalid literal for int() with base 10: 'สาม'",
+     "line": 1,
+     "full": "ValueError: invalid literal for int() with base 10: 'สาม'"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 1,
+    "nLines": 1,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "type": true,
+     "line": true,
+     "message": true
+    },
+    "sk": {
+     "type": true,
+     "line": true,
+     "message": true
+    }
+   }
+  },
+  "E20": {
+   "py": {
+    "outcome": {
+     "status": "error",
+     "name": "ZeroDivisionError",
+     "msg": "division by zero",
+     "line": 2,
+     "full": "ZeroDivisionError: division by zero"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 2,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "ZeroDivisionError",
+     "msg": "division by zero",
+     "line": 2,
+     "full": "ZeroDivisionError: division by zero"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 2,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "type": true,
+     "line": true,
+     "message": true
+    },
+    "sk": {
+     "type": true,
+     "line": true,
+     "message": true
+    }
+   }
+  },
+  "E21": {
+   "py": {
+    "outcome": {
+     "status": "error",
+     "name": "IndexError",
+     "msg": "list index out of range",
+     "line": 2,
+     "full": "IndexError: list index out of range"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 2,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "IndexError",
+     "msg": "list index out of range",
+     "line": 2,
+     "full": "IndexError: list index out of range"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 2,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "type": true,
+     "line": true,
+     "message": true
+    },
+    "sk": {
+     "type": true,
+     "line": true,
+     "message": true
+    }
+   }
+  },
+  "E22": {
+   "py": {
+    "outcome": {
+     "status": "error",
+     "name": "KeyError",
+     "msg": "'y'",
+     "line": 2,
+     "full": "KeyError: 'y'"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 2,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "KeyError",
+     "msg": "y",
+     "line": 2,
+     "full": "KeyError: y"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 2,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "type": true,
+     "line": true,
+     "message": true
+    },
+    "sk": {
+     "type": true,
+     "line": true,
+     "message": false
+    }
+   }
+  },
+  "E23": {
+   "py": {
+    "outcome": {
+     "status": "error",
+     "name": "TypeError",
+     "msg": "'int' object is not callable",
+     "line": 2,
+     "full": "TypeError: 'int' object is not callable"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 2,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "TypeError",
+     "msg": "'int' object is not callable",
+     "line": 2,
+     "full": "TypeError: 'int' object is not callable"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 2,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "type": true,
+     "line": true,
+     "message": true
+    },
+    "sk": {
+     "type": true,
+     "line": true,
+     "message": true
+    }
+   }
+  },
+  "E24": {
+   "py": {
+    "outcome": {
+     "status": "error",
+     "name": "TypeError",
+     "msg": "walk() takes 1 positional argument but 2 were given",
+     "line": 3,
+     "full": "TypeError: walk() takes 1 positional argument but 2 were given"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 2,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 3
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "TypeError",
+     "msg": "walk() takes 1 positional argument but 2 were given",
+     "line": 3,
+     "full": "TypeError: walk() takes 1 positional argument but 2 were given"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 1,
+    "nLines": 1,
+    "events": [
+     {
+      "t": "line",
+      "n": 3
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "type": true,
+     "line": true,
+     "message": true
+    },
+    "sk": {
+     "type": true,
+     "line": true,
+     "message": true
+    }
+   }
+  },
+  "E25": {
+   "py": {
+    "outcome": {
+     "status": "error",
+     "name": "AttributeError",
+     "msg": "'NoneType' object has no attribute 'append'",
+     "line": 2,
+     "full": "AttributeError: 'NoneType' object has no attribute 'append'"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 2,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "AttributeError",
+     "msg": "'NoneType' object has no attribute 'append'",
+     "line": 2,
+     "full": "AttributeError: 'NoneType' object has no attribute 'append'"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 2,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "type": true,
+     "line": true,
+     "message": true
+    },
+    "sk": {
+     "type": true,
+     "line": true,
+     "message": true
+    }
+   }
+  },
+  "E26": {
+   "py": {
+    "outcome": {
+     "status": "error",
+     "name": "TypeError",
+     "msg": "robot.straight() ต้องการตัวเลข แต่ได้รับ str: '2'",
+     "line": 1,
+     "full": "TypeError: robot.straight() ต้องการตัวเลข แต่ได้รับ str: '2'"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 1,
+    "nLines": 1,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "TypeError",
+     "msg": "robot.straight() ต้องการตัวเลข แต่ได้รับ str: '2'",
+     "line": 1,
+     "full": "TypeError: robot.straight() ต้องการตัวเลข แต่ได้รับ str: '2'"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 1,
+    "nLines": 1,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "type": true,
+     "line": true,
+     "message": true
+    },
+    "sk": {
+     "type": true,
+     "line": true,
+     "message": true
+    }
+   }
+  },
+  "E27": {
+   "py": {
+    "outcome": {
+     "status": "error",
+     "name": "RecursionError",
+     "msg": "maximum recursion depth exceeded",
+     "line": 2,
+     "full": "RecursionError: maximum recursion depth exceeded"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 999,
+    "nLines": 999
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "RecursionError",
+     "msg": "Maximum call stack size exceeded",
+     "line": 2,
+     "full": "RecursionError: Maximum call stack size exceeded"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 3645,
+    "nLines": 3645
+   },
+   "judge": {
+    "py": {
+     "type": true,
+     "line": true,
+     "message": true
+    },
+    "sk": {
+     "type": true,
+     "line": true,
+     "message": false
+    }
+   }
+  },
+  "R01": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 3.000000000000001,
+     "y": 2,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 28,
+    "nLines": 16,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       1,
+       5
+      ],
+      "cells": 1,
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "move",
+      "from": [
+       1,
+       5
+      ],
+      "to": [
+       1,
+       4.0000000000000036
+      ],
+      "cells": 1,
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 5
+     },
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "move",
+      "from": [
+       1,
+       4.0000000000000036
+      ],
+      "to": [
+       1.9999999999999991,
+       4.0000000000000036
+      ],
+      "cells": 1,
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "move",
+      "from": [
+       1.9999999999999991,
+       4.0000000000000036
+      ],
+      "to": [
+       1.9999999999999991,
+       3.0000000000000018
+      ],
+      "cells": 1,
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 5
+     },
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "move",
+      "from": [
+       1.9999999999999991,
+       3.0000000000000018
+      ],
+      "to": [
+       3.000000000000001,
+       3.0000000000000018
+      ],
+      "cells": 1,
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "move",
+      "from": [
+       3.000000000000001,
+       3.0000000000000018
+      ],
+      "to": [
+       3.000000000000001,
+       2
+      ],
+      "cells": 1,
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 5
+     },
+     {
+      "t": "line",
+      "n": 1
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 3.000000000000001,
+     "y": 2,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 24,
+    "nLines": 12,
+    "events": [
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       1,
+       5
+      ],
+      "cells": 1,
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "move",
+      "from": [
+       1,
+       5
+      ],
+      "to": [
+       1,
+       4.0000000000000036
+      ],
+      "cells": 1,
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 5
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "move",
+      "from": [
+       1,
+       4.0000000000000036
+      ],
+      "to": [
+       1.9999999999999991,
+       4.0000000000000036
+      ],
+      "cells": 1,
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "move",
+      "from": [
+       1.9999999999999991,
+       4.0000000000000036
+      ],
+      "to": [
+       1.9999999999999991,
+       3.0000000000000018
+      ],
+      "cells": 1,
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 5
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "move",
+      "from": [
+       1.9999999999999991,
+       3.0000000000000018
+      ],
+      "to": [
+       3.000000000000001,
+       3.0000000000000018
+      ],
+      "cells": 1,
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "move",
+      "from": [
+       3.000000000000001,
+       3.0000000000000018
+      ],
+      "to": [
+       3.000000000000001,
+       2
+      ],
+      "cells": 1,
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 5
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": true,
+     "continuity": true
+    },
+    "sk": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": false,
+     "continuity": true
+    }
+   },
+   "coordDiff": {
+    "py": 0,
+    "sk": 0
+   }
+  },
+  "R02": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 4.999999999999999,
+     "y": 3.0000000000000018,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 23,
+    "nLines": 13,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "move",
+      "from": [
+       1,
+       5
+      ],
+      "to": [
+       1.9999999999999991,
+       5
+      ],
+      "cells": 1,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "move",
+      "from": [
+       1.9999999999999991,
+       5
+      ],
+      "to": [
+       1.9999999999999991,
+       4.0000000000000036
+      ],
+      "cells": 1,
+      "line": 5
+     },
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "move",
+      "from": [
+       1.9999999999999991,
+       4.0000000000000036
+      ],
+      "to": [
+       3.000000000000001,
+       4.0000000000000036
+      ],
+      "cells": 1,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "move",
+      "from": [
+       3.000000000000001,
+       4.0000000000000036
+      ],
+      "to": [
+       3.000000000000001,
+       3.0000000000000018
+      ],
+      "cells": 1,
+      "line": 5
+     },
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 6
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "move",
+      "from": [
+       3.000000000000001,
+       3.0000000000000018
+      ],
+      "to": [
+       4.999999999999999,
+       3.0000000000000018
+      ],
+      "cells": 2,
+      "line": 7
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 4.999999999999999,
+     "y": 3.0000000000000018,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 20,
+    "nLines": 10,
+    "events": [
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "move",
+      "from": [
+       1,
+       5
+      ],
+      "to": [
+       1.9999999999999991,
+       5
+      ],
+      "cells": 1,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "move",
+      "from": [
+       1.9999999999999991,
+       5
+      ],
+      "to": [
+       1.9999999999999991,
+       4.0000000000000036
+      ],
+      "cells": 1,
+      "line": 5
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "move",
+      "from": [
+       1.9999999999999991,
+       4.0000000000000036
+      ],
+      "to": [
+       3.000000000000001,
+       4.0000000000000036
+      ],
+      "cells": 1,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "move",
+      "from": [
+       3.000000000000001,
+       4.0000000000000036
+      ],
+      "to": [
+       3.000000000000001,
+       3.0000000000000018
+      ],
+      "cells": 1,
+      "line": 5
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 6
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "move",
+      "from": [
+       3.000000000000001,
+       3.0000000000000018
+      ],
+      "to": [
+       4.999999999999999,
+       3.0000000000000018
+      ],
+      "cells": 2,
+      "line": 7
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": true,
+     "continuity": true
+    },
+    "sk": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": false,
+     "continuity": true
+    }
+   },
+   "coordDiff": {
+    "py": 0,
+    "sk": 0
+   }
+  },
+  "R03": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 4.999999999999999,
+     "y": 6.269358617072455e-16,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 29,
+    "nLines": 16,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       1,
+       5
+      ],
+      "cells": 1,
+      "line": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "move",
+      "from": [
+       1,
+       5
+      ],
+      "to": [
+       1,
+       2
+      ],
+      "cells": 3,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "move",
+      "from": [
+       1,
+       2
+      ],
+      "to": [
+       1.9999999999999991,
+       2
+      ],
+      "cells": 1,
+      "line": 6
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 7
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "move",
+      "from": [
+       1.9999999999999991,
+       2
+      ],
+      "to": [
+       1.9999999999999991,
+       1.0000000000000009
+      ],
+      "cells": 1,
+      "line": 8
+     },
+     {
+      "t": "line",
+      "n": 9
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 9
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "move",
+      "from": [
+       1.9999999999999991,
+       1.0000000000000009
+      ],
+      "to": [
+       3.000000000000001,
+       1.0000000000000009
+      ],
+      "cells": 1,
+      "line": 6
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 7
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "move",
+      "from": [
+       3.000000000000001,
+       1.0000000000000009
+      ],
+      "to": [
+       3.000000000000001,
+       7.494005416219807e-16
+      ],
+      "cells": 1,
+      "line": 8
+     },
+     {
+      "t": "line",
+      "n": 9
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 9
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 10
+     },
+     {
+      "t": "move",
+      "from": [
+       3.000000000000001,
+       7.494005416219807e-16
+      ],
+      "to": [
+       4.999999999999999,
+       6.269358617072455e-16
+      ],
+      "cells": 2,
+      "line": 10
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 4.999999999999999,
+     "y": 6.269358617072455e-16,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 26,
+    "nLines": 13,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       1,
+       5
+      ],
+      "cells": 1,
+      "line": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "move",
+      "from": [
+       1,
+       5
+      ],
+      "to": [
+       1,
+       2
+      ],
+      "cells": 3,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "move",
+      "from": [
+       1,
+       2
+      ],
+      "to": [
+       1.9999999999999991,
+       2
+      ],
+      "cells": 1,
+      "line": 6
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 7
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "move",
+      "from": [
+       1.9999999999999991,
+       2
+      ],
+      "to": [
+       1.9999999999999991,
+       1.0000000000000009
+      ],
+      "cells": 1,
+      "line": 8
+     },
+     {
+      "t": "line",
+      "n": 9
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 9
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "move",
+      "from": [
+       1.9999999999999991,
+       1.0000000000000009
+      ],
+      "to": [
+       3.000000000000001,
+       1.0000000000000009
+      ],
+      "cells": 1,
+      "line": 6
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 7
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "move",
+      "from": [
+       3.000000000000001,
+       1.0000000000000009
+      ],
+      "to": [
+       3.000000000000001,
+       7.494005416219807e-16
+      ],
+      "cells": 1,
+      "line": 8
+     },
+     {
+      "t": "line",
+      "n": 9
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 9
+     },
+     {
+      "t": "line",
+      "n": 10
+     },
+     {
+      "t": "move",
+      "from": [
+       3.000000000000001,
+       7.494005416219807e-16
+      ],
+      "to": [
+       4.999999999999999,
+       6.269358617072455e-16
+      ],
+      "cells": 2,
+      "line": 10
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": true,
+     "continuity": true
+    },
+    "sk": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": false,
+     "continuity": true
+    }
+   },
+   "coordDiff": {
+    "py": 0,
+    "sk": 0
+   }
+  },
+  "R04": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 4.999999999999999,
+     "y": 6.881682016646131e-16,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 27,
+    "nLines": 15,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       0,
+       2
+      ],
+      "cells": 3,
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       2
+      ],
+      "to": [
+       3.000000000000001,
+       2
+      ],
+      "cells": 3,
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 6
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "move",
+      "from": [
+       3.000000000000001,
+       2
+      ],
+      "to": [
+       3.000000000000001,
+       1.0000000000000009
+      ],
+      "cells": 1,
+      "line": 7
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 8
+     },
+     {
+      "t": "line",
+      "n": 9
+     },
+     {
+      "t": "move",
+      "from": [
+       3.000000000000001,
+       1.0000000000000009
+      ],
+      "to": [
+       4.000000000000003,
+       1.0000000000000009
+      ],
+      "cells": 1,
+      "line": 9
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 6
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "move",
+      "from": [
+       4.000000000000003,
+       1.0000000000000009
+      ],
+      "to": [
+       4.000000000000003,
+       7.494005416219807e-16
+      ],
+      "cells": 1,
+      "line": 7
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 8
+     },
+     {
+      "t": "line",
+      "n": 9
+     },
+     {
+      "t": "move",
+      "from": [
+       4.000000000000003,
+       7.494005416219807e-16
+      ],
+      "to": [
+       4.999999999999999,
+       6.881682016646131e-16
+      ],
+      "cells": 1,
+      "line": 9
+     },
+     {
+      "t": "line",
+      "n": 5
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 4.999999999999999,
+     "y": 6.881682016646131e-16,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 24,
+    "nLines": 12,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       0,
+       2
+      ],
+      "cells": 3,
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       2
+      ],
+      "to": [
+       3.000000000000001,
+       2
+      ],
+      "cells": 3,
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 6
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "move",
+      "from": [
+       3.000000000000001,
+       2
+      ],
+      "to": [
+       3.000000000000001,
+       1.0000000000000009
+      ],
+      "cells": 1,
+      "line": 7
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 8
+     },
+     {
+      "t": "line",
+      "n": 9
+     },
+     {
+      "t": "move",
+      "from": [
+       3.000000000000001,
+       1.0000000000000009
+      ],
+      "to": [
+       4.000000000000003,
+       1.0000000000000009
+      ],
+      "cells": 1,
+      "line": 9
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 6
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "move",
+      "from": [
+       4.000000000000003,
+       1.0000000000000009
+      ],
+      "to": [
+       4.000000000000003,
+       7.494005416219807e-16
+      ],
+      "cells": 1,
+      "line": 7
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 8
+     },
+     {
+      "t": "line",
+      "n": 9
+     },
+     {
+      "t": "move",
+      "from": [
+       4.000000000000003,
+       7.494005416219807e-16
+      ],
+      "to": [
+       4.999999999999999,
+       6.881682016646131e-16
+      ],
+      "cells": 1,
+      "line": 9
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": true,
+     "continuity": true
+    },
+    "sk": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": false,
+     "continuity": true
+    }
+   },
+   "coordDiff": {
+    "py": 0,
+    "sk": 0
+   }
+  },
+  "R05": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 3.000000000000001,
+     "y": 2,
+     "h": 90
+    },
+    "prints": [
+     "ขั้นที่ 1",
+     "ขั้นที่ 2",
+     "ขั้นที่ 3"
+    ],
+    "nEvents": 38,
+    "nLines": 23,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       1,
+       5
+      ],
+      "cells": 1,
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "move",
+      "from": [
+       1,
+       5
+      ],
+      "to": [
+       1,
+       4.0000000000000036
+      ],
+      "cells": 1,
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 5
+     },
+     {
+      "t": "line",
+      "n": 9
+     },
+     {
+      "t": "print",
+      "text": "ขั้นที่ 1",
+      "line": 9
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "move",
+      "from": [
+       1,
+       4.0000000000000036
+      ],
+      "to": [
+       1.9999999999999991,
+       4.0000000000000036
+      ],
+      "cells": 1,
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "move",
+      "from": [
+       1.9999999999999991,
+       4.0000000000000036
+      ],
+      "to": [
+       1.9999999999999991,
+       3.0000000000000018
+      ],
+      "cells": 1,
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 5
+     },
+     {
+      "t": "line",
+      "n": 9
+     },
+     {
+      "t": "print",
+      "text": "ขั้นที่ 2",
+      "line": 9
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "move",
+      "from": [
+       1.9999999999999991,
+       3.0000000000000018
+      ],
+      "to": [
+       3.000000000000001,
+       3.0000000000000018
+      ],
+      "cells": 1,
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "move",
+      "from": [
+       3.000000000000001,
+       3.0000000000000018
+      ],
+      "to": [
+       3.000000000000001,
+       2
+      ],
+      "cells": 1,
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 5
+     },
+     {
+      "t": "line",
+      "n": 9
+     },
+     {
+      "t": "print",
+      "text": "ขั้นที่ 3",
+      "line": 9
+     },
+     {
+      "t": "line",
+      "n": 7
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 3.000000000000001,
+     "y": 2,
+     "h": 90
+    },
+    "prints": [
+     "ขั้นที่ 1",
+     "ขั้นที่ 2",
+     "ขั้นที่ 3"
+    ],
+    "nEvents": 33,
+    "nLines": 18,
+    "events": [
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       1,
+       5
+      ],
+      "cells": 1,
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "move",
+      "from": [
+       1,
+       5
+      ],
+      "to": [
+       1,
+       4.0000000000000036
+      ],
+      "cells": 1,
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 5
+     },
+     {
+      "t": "line",
+      "n": 9
+     },
+     {
+      "t": "print",
+      "text": "ขั้นที่ 1",
+      "line": 9
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "move",
+      "from": [
+       1,
+       4.0000000000000036
+      ],
+      "to": [
+       1.9999999999999991,
+       4.0000000000000036
+      ],
+      "cells": 1,
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "move",
+      "from": [
+       1.9999999999999991,
+       4.0000000000000036
+      ],
+      "to": [
+       1.9999999999999991,
+       3.0000000000000018
+      ],
+      "cells": 1,
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 5
+     },
+     {
+      "t": "line",
+      "n": 9
+     },
+     {
+      "t": "print",
+      "text": "ขั้นที่ 2",
+      "line": 9
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "move",
+      "from": [
+       1.9999999999999991,
+       3.0000000000000018
+      ],
+      "to": [
+       3.000000000000001,
+       3.0000000000000018
+      ],
+      "cells": 1,
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "move",
+      "from": [
+       3.000000000000001,
+       3.0000000000000018
+      ],
+      "to": [
+       3.000000000000001,
+       2
+      ],
+      "cells": 1,
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 5
+     },
+     {
+      "t": "line",
+      "n": 9
+     },
+     {
+      "t": "print",
+      "text": "ขั้นที่ 3",
+      "line": 9
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": true,
+     "continuity": true
+    },
+    "sk": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": false,
+     "continuity": true
+    }
+   },
+   "coordDiff": {
+    "py": 0,
+    "sk": 0
+   }
+  },
+  "R06": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 3.000000000000001,
+     "y": 2,
+     "h": 90
+    },
+    "prints": [
+     "ถึงธงแล้ว 3"
+    ],
+    "nEvents": 34,
+    "nLines": 21,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       1,
+       5
+      ],
+      "cells": 1,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "move",
+      "from": [
+       1,
+       5
+      ],
+      "to": [
+       1,
+       4.0000000000000036
+      ],
+      "cells": 1,
+      "line": 5
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 6
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "move",
+      "from": [
+       1,
+       4.0000000000000036
+      ],
+      "to": [
+       1.9999999999999991,
+       4.0000000000000036
+      ],
+      "cells": 1,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "move",
+      "from": [
+       1.9999999999999991,
+       4.0000000000000036
+      ],
+      "to": [
+       1.9999999999999991,
+       3.0000000000000018
+      ],
+      "cells": 1,
+      "line": 5
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 6
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "move",
+      "from": [
+       1.9999999999999991,
+       3.0000000000000018
+      ],
+      "to": [
+       3.000000000000001,
+       3.0000000000000018
+      ],
+      "cells": 1,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "move",
+      "from": [
+       3.000000000000001,
+       3.0000000000000018
+      ],
+      "to": [
+       3.000000000000001,
+       2
+      ],
+      "cells": 1,
+      "line": 5
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 6
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "print",
+      "text": "ถึงธงแล้ว 3",
+      "line": 8
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 3.000000000000001,
+     "y": 2,
+     "h": 90
+    },
+    "prints": [
+     "ถึงธงแล้ว 3"
+    ],
+    "nEvents": 30,
+    "nLines": 17,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       1,
+       5
+      ],
+      "cells": 1,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "move",
+      "from": [
+       1,
+       5
+      ],
+      "to": [
+       1,
+       4.0000000000000036
+      ],
+      "cells": 1,
+      "line": 5
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 6
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "move",
+      "from": [
+       1,
+       4.0000000000000036
+      ],
+      "to": [
+       1.9999999999999991,
+       4.0000000000000036
+      ],
+      "cells": 1,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "move",
+      "from": [
+       1.9999999999999991,
+       4.0000000000000036
+      ],
+      "to": [
+       1.9999999999999991,
+       3.0000000000000018
+      ],
+      "cells": 1,
+      "line": 5
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 6
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "move",
+      "from": [
+       1.9999999999999991,
+       3.0000000000000018
+      ],
+      "to": [
+       3.000000000000001,
+       3.0000000000000018
+      ],
+      "cells": 1,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "move",
+      "from": [
+       3.000000000000001,
+       3.0000000000000018
+      ],
+      "to": [
+       3.000000000000001,
+       2
+      ],
+      "cells": 1,
+      "line": 5
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 90,
+      "line": 6
+     },
+     {
+      "t": "line",
+      "n": 7
+     },
+     {
+      "t": "line",
+      "n": 8
+     },
+     {
+      "t": "print",
+      "text": "ถึงธงแล้ว 3",
+      "line": 8
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": true,
+     "continuity": true
+    },
+    "sk": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": false,
+     "continuity": true
+    }
+   },
+   "coordDiff": {
+    "py": 0,
+    "sk": 0
+   }
+  },
+  "R07": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 1,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 2,
+    "nLines": 1,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       1,
+       5
+      ],
+      "cells": 1,
+      "line": 1
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 1,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 2,
+    "nLines": 1,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       1,
+       5
+      ],
+      "cells": 1,
+      "line": 1
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": true,
+     "continuity": true
+    },
+    "sk": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": true,
+     "continuity": true
+    }
+   },
+   "coordDiff": {
+    "py": 0,
+    "sk": 0
+   }
+  },
+  "R08": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 0
+    },
+    "prints": [],
+    "nEvents": 8,
+    "nLines": 4,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       1,
+       5
+      ],
+      "cells": 1,
+      "line": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "move",
+      "from": [
+       1,
+       5
+      ],
+      "to": [
+       0,
+       5
+      ],
+      "cells": -1,
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "turn",
+      "deg": 360,
+      "heading": 90,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "turn",
+      "deg": -450,
+      "heading": 0,
+      "line": 4
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 0
+    },
+    "prints": [],
+    "nEvents": 8,
+    "nLines": 4,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       1,
+       5
+      ],
+      "cells": 1,
+      "line": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "move",
+      "from": [
+       1,
+       5
+      ],
+      "to": [
+       0,
+       5
+      ],
+      "cells": -1,
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "turn",
+      "deg": 360,
+      "heading": 90,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "turn",
+      "deg": -450,
+      "heading": 0,
+      "line": 4
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": true,
+     "continuity": true
+    },
+    "sk": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": true,
+     "continuity": true
+    }
+   },
+   "coordDiff": {
+    "py": 0,
+    "sk": 0
+   }
+  },
+  "R09": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 1,
+     "y": 4.0000000000000036,
+     "h": 0
+    },
+    "prints": [],
+    "nEvents": 10,
+    "nLines": 5,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       0.49999999999999994,
+       5
+      ],
+      "cells": 0.5,
+      "line": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "move",
+      "from": [
+       0.49999999999999994,
+       5
+      ],
+      "to": [
+       1,
+       5
+      ],
+      "cells": 0.5,
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "move",
+      "from": [
+       1,
+       5
+      ],
+      "to": [
+       1,
+       4.750000000000001
+      ],
+      "cells": 0.25,
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "move",
+      "from": [
+       1,
+       4.750000000000001
+      ],
+      "to": [
+       1,
+       4.0000000000000036
+      ],
+      "cells": 0.75,
+      "line": 5
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 1,
+     "y": 4.0000000000000036,
+     "h": 0
+    },
+    "prints": [],
+    "nEvents": 10,
+    "nLines": 5,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       0.49999999999999994,
+       5
+      ],
+      "cells": 0.5,
+      "line": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "move",
+      "from": [
+       0.49999999999999994,
+       5
+      ],
+      "to": [
+       1,
+       5
+      ],
+      "cells": 0.5,
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "move",
+      "from": [
+       1,
+       5
+      ],
+      "to": [
+       1,
+       4.750000000000001
+      ],
+      "cells": 0.25,
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "move",
+      "from": [
+       1,
+       4.750000000000001
+      ],
+      "to": [
+       1,
+       4.0000000000000036
+      ],
+      "cells": 0.75,
+      "line": 5
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": true,
+     "continuity": true
+    },
+    "sk": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": true,
+     "continuity": true
+    }
+   },
+   "coordDiff": {
+    "py": 0,
+    "sk": 0
+   }
+  },
+  "R10": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 1,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 6,
+    "nLines": 3,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       0,
+       5
+      ],
+      "cells": 0,
+      "line": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "turn",
+      "deg": 0,
+      "heading": 90,
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       1,
+       5
+      ],
+      "cells": 1,
+      "line": 3
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 1,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 6,
+    "nLines": 3,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       0,
+       5
+      ],
+      "cells": 0,
+      "line": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "turn",
+      "deg": 0,
+      "heading": 90,
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       1,
+       5
+      ],
+      "cells": 1,
+      "line": 3
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": true,
+     "continuity": true
+    },
+    "sk": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": true,
+     "continuity": true
+    }
+   },
+   "coordDiff": {
+    "py": 0,
+    "sk": 0
+   }
+  },
+  "R11": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 1,
+     "y": 5,
+     "h": 0
+    },
+    "prints": [
+     "เริ่ม เดิน",
+     "ค้าง",
+     "จบ"
+    ],
+    "nEvents": 11,
+    "nLines": 6,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "เริ่ม เดิน",
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       1,
+       5
+      ],
+      "cells": 1,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "print",
+      "text": "ค้าง",
+      "line": 5
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 5
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "print",
+      "text": "จบ",
+      "line": 6
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 1,
+     "y": 5,
+     "h": 0
+    },
+    "prints": [
+     "เริ่ม เดิน",
+     "ค้าง",
+     "จบ"
+    ],
+    "nEvents": 11,
+    "nLines": 6,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "print",
+      "text": "เริ่ม เดิน",
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       1,
+       5
+      ],
+      "cells": 1,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "print",
+      "text": "ค้าง",
+      "line": 5
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 5
+     },
+     {
+      "t": "line",
+      "n": 6
+     },
+     {
+      "t": "print",
+      "text": "จบ",
+      "line": 6
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": true,
+     "continuity": true
+    },
+    "sk": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": true,
+     "continuity": true
+    }
+   },
+   "coordDiff": {
+    "py": 0,
+    "sk": 0
+   }
+  },
+  "R12": {
+   "py": {
+    "outcome": {
+     "status": "crash",
+     "crash": {
+      "type": "obstacle",
+      "at": [
+       2,
+       5
+      ],
+      "from": [
+       0,
+       5
+      ],
+      "heading": 90,
+      "cells": 2,
+      "line": 1
+     },
+     "line": 1
+    },
+    "final": {
+     "x": 1.4999999999999996,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 2,
+    "nLines": 1,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       1.4999999999999996,
+       5
+      ],
+      "cells": 2,
+      "line": 1,
+      "crash": {
+       "type": "obstacle",
+       "at": [
+        2,
+        5
+       ],
+       "from": [
+        0,
+        5
+       ],
+       "heading": 90,
+       "cells": 2,
+       "line": 1
+      }
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "crash",
+     "crash": {
+      "type": "obstacle",
+      "at": [
+       2,
+       5
+      ],
+      "from": [
+       0,
+       5
+      ],
+      "heading": 90,
+      "cells": 2,
+      "line": 1
+     },
+     "line": 1
+    },
+    "final": {
+     "x": 1.4999999999999996,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 2,
+    "nLines": 1,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       1.4999999999999996,
+       5
+      ],
+      "cells": 2,
+      "line": 1,
+      "crash": {
+       "type": "obstacle",
+       "at": [
+        2,
+        5
+       ],
+       "from": [
+        0,
+        5
+       ],
+       "heading": 90,
+       "cells": 2,
+       "line": 1
+      }
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": true,
+     "continuity": true
+    },
+    "sk": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": true,
+     "continuity": true
+    }
+   },
+   "coordDiff": {
+    "py": 0,
+    "sk": 0
+   }
+  },
+  "R13": {
+   "py": {
+    "outcome": {
+     "status": "crash",
+     "crash": {
+      "type": "edge",
+      "at": [
+       0,
+       5
+      ],
+      "from": [
+       0,
+       5
+      ],
+      "heading": 270,
+      "cells": 1,
+      "line": 2
+     },
+     "line": 2
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 270
+    },
+    "prints": [],
+    "nEvents": 4,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "turn",
+      "deg": 180,
+      "heading": 270,
+      "line": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       0,
+       5
+      ],
+      "cells": 1,
+      "line": 2,
+      "crash": {
+       "type": "edge",
+       "at": [
+        0,
+        5
+       ],
+       "from": [
+        0,
+        5
+       ],
+       "heading": 270,
+       "cells": 1,
+       "line": 2
+      }
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "crash",
+     "crash": {
+      "type": "edge",
+      "at": [
+       0,
+       5
+      ],
+      "from": [
+       0,
+       5
+      ],
+      "heading": 270,
+      "cells": 1,
+      "line": 2
+     },
+     "line": 2
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 270
+    },
+    "prints": [],
+    "nEvents": 4,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "turn",
+      "deg": 180,
+      "heading": 270,
+      "line": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       0,
+       5
+      ],
+      "cells": 1,
+      "line": 2,
+      "crash": {
+       "type": "edge",
+       "at": [
+        0,
+        5
+       ],
+       "from": [
+        0,
+        5
+       ],
+       "heading": 270,
+       "cells": 1,
+       "line": 2
+      }
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": true,
+     "continuity": true
+    },
+    "sk": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": true,
+     "continuity": true
+    }
+   },
+   "coordDiff": {
+    "py": 0,
+    "sk": 0
+   }
+  },
+  "R14": {
+   "py": {
+    "outcome": {
+     "status": "crash",
+     "crash": {
+      "type": "obstacle",
+      "at": [
+       2,
+       5
+      ],
+      "from": [
+       1,
+       5
+      ],
+      "heading": 90,
+      "cells": 1,
+      "line": 3
+     },
+     "line": 3
+    },
+    "final": {
+     "x": 1.4999999999999996,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 9,
+    "nLines": 7,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       1,
+       5
+      ],
+      "cells": 1,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "move",
+      "from": [
+       1,
+       5
+      ],
+      "to": [
+       1.4999999999999996,
+       5
+      ],
+      "cells": 1,
+      "line": 3,
+      "crash": {
+       "type": "obstacle",
+       "at": [
+        2,
+        5
+       ],
+       "from": [
+        1,
+        5
+       ],
+       "heading": 90,
+       "cells": 1,
+       "line": 3
+      }
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "crash",
+     "crash": {
+      "type": "obstacle",
+      "at": [
+       2,
+       5
+      ],
+      "from": [
+       1,
+       5
+      ],
+      "heading": 90,
+      "cells": 1,
+      "line": 3
+     },
+     "line": 3
+    },
+    "final": {
+     "x": 1.4999999999999996,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 6,
+    "nLines": 4,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       1,
+       5
+      ],
+      "cells": 1,
+      "line": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "move",
+      "from": [
+       1,
+       5
+      ],
+      "to": [
+       1.4999999999999996,
+       5
+      ],
+      "cells": 1,
+      "line": 3,
+      "crash": {
+       "type": "obstacle",
+       "at": [
+        2,
+        5
+       ],
+       "from": [
+        1,
+        5
+       ],
+       "heading": 90,
+       "cells": 1,
+       "line": 3
+      }
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": true,
+     "continuity": true
+    },
+    "sk": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": false,
+     "continuity": true
+    }
+   },
+   "coordDiff": {
+    "py": 0,
+    "sk": 0
+   }
+  },
+  "R15": {
+   "py": {
+    "outcome": {
+     "status": "crash",
+     "crash": {
+      "type": "edge",
+      "at": [
+       1,
+       5
+      ],
+      "from": [
+       0.49999999999999994,
+       5
+      ],
+      "heading": 135,
+      "cells": 1.2,
+      "line": 3
+     },
+     "line": 3
+    },
+    "final": {
+     "x": 0.49999999999999994,
+     "y": 5,
+     "h": 135
+    },
+    "prints": [],
+    "nEvents": 6,
+    "nLines": 3,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       0.49999999999999994,
+       5
+      ],
+      "cells": 0.5,
+      "line": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "turn",
+      "deg": 45,
+      "heading": 135,
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "move",
+      "from": [
+       0.49999999999999994,
+       5
+      ],
+      "to": [
+       0.49999999999999994,
+       5
+      ],
+      "cells": 1.2,
+      "line": 3,
+      "crash": {
+       "type": "edge",
+       "at": [
+        1,
+        5
+       ],
+       "from": [
+        0.49999999999999994,
+        5
+       ],
+       "heading": 135,
+       "cells": 1.2,
+       "line": 3
+      }
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "crash",
+     "crash": {
+      "type": "edge",
+      "at": [
+       1,
+       5
+      ],
+      "from": [
+       0.49999999999999994,
+       5
+      ],
+      "heading": 135,
+      "cells": 1.2,
+      "line": 3
+     },
+     "line": 3
+    },
+    "final": {
+     "x": 0.49999999999999994,
+     "y": 5,
+     "h": 135
+    },
+    "prints": [],
+    "nEvents": 6,
+    "nLines": 3,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       0.49999999999999994,
+       5
+      ],
+      "cells": 0.5,
+      "line": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "turn",
+      "deg": 45,
+      "heading": 135,
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "move",
+      "from": [
+       0.49999999999999994,
+       5
+      ],
+      "to": [
+       0.49999999999999994,
+       5
+      ],
+      "cells": 1.2,
+      "line": 3,
+      "crash": {
+       "type": "edge",
+       "at": [
+        1,
+        5
+       ],
+       "from": [
+        0.49999999999999994,
+        5
+       ],
+       "heading": 135,
+       "cells": 1.2,
+       "line": 3
+      }
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": true,
+     "continuity": true
+    },
+    "sk": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": true,
+     "continuity": true
+    }
+   },
+   "coordDiff": {
+    "py": 0,
+    "sk": 0
+   }
+  },
+  "R16": {
+   "py": {
+    "outcome": {
+     "status": "crash",
+     "crash": {
+      "type": "obstacle",
+      "at": [
+       1,
+       4
+      ],
+      "from": [
+       1,
+       5
+      ],
+      "heading": 0,
+      "cells": 2,
+      "line": 3
+     },
+     "line": 3
+    },
+    "final": {
+     "x": 1,
+     "y": 4.500000000000002,
+     "h": 0
+    },
+    "prints": [],
+    "nEvents": 6,
+    "nLines": 3,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       1,
+       5
+      ],
+      "cells": 1,
+      "line": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "move",
+      "from": [
+       1,
+       5
+      ],
+      "to": [
+       1,
+       4.500000000000002
+      ],
+      "cells": 2,
+      "line": 3,
+      "crash": {
+       "type": "obstacle",
+       "at": [
+        1,
+        4
+       ],
+       "from": [
+        1,
+        5
+       ],
+       "heading": 0,
+       "cells": 2,
+       "line": 3
+      }
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "crash",
+     "crash": {
+      "type": "obstacle",
+      "at": [
+       1,
+       4
+      ],
+      "from": [
+       1,
+       5
+      ],
+      "heading": 0,
+      "cells": 2,
+      "line": 3
+     },
+     "line": 3
+    },
+    "final": {
+     "x": 1,
+     "y": 4.500000000000002,
+     "h": 0
+    },
+    "prints": [],
+    "nEvents": 6,
+    "nLines": 3,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       1,
+       5
+      ],
+      "cells": 1,
+      "line": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "turn",
+      "deg": -90,
+      "heading": 0,
+      "line": 2
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "move",
+      "from": [
+       1,
+       5
+      ],
+      "to": [
+       1,
+       4.500000000000002
+      ],
+      "cells": 2,
+      "line": 3,
+      "crash": {
+       "type": "obstacle",
+       "at": [
+        1,
+        4
+       ],
+       "from": [
+        1,
+        5
+       ],
+       "heading": 0,
+       "cells": 2,
+       "line": 3
+      }
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": true,
+     "continuity": true
+    },
+    "sk": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": true,
+     "continuity": true
+    }
+   },
+   "coordDiff": {
+    "py": 0,
+    "sk": 0
+   }
+  },
+  "R17": {
+   "py": {
+    "outcome": {
+     "status": "error",
+     "name": "ZeroDivisionError",
+     "msg": "division by zero",
+     "line": 2,
+     "full": "ZeroDivisionError: division by zero"
+    },
+    "final": {
+     "x": 1,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 3,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       1,
+       5
+      ],
+      "cells": 1,
+      "line": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "ZeroDivisionError",
+     "msg": "division by zero",
+     "line": 2,
+     "full": "ZeroDivisionError: division by zero"
+    },
+    "final": {
+     "x": 1,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 3,
+    "nLines": 2,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       1,
+       5
+      ],
+      "cells": 1,
+      "line": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": true,
+     "continuity": true
+    },
+    "sk": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": true,
+     "continuity": true
+    }
+   },
+   "coordDiff": {
+    "py": 0,
+    "sk": 0
+   }
+  },
+  "R18": {
+   "py": {
+    "outcome": {
+     "status": "error",
+     "name": "TypeError",
+     "msg": "robot.straight() ต้องการตัวเลข แต่ได้รับ bool: True",
+     "line": 1,
+     "full": "TypeError: robot.straight() ต้องการตัวเลข แต่ได้รับ bool: True"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 1,
+    "nLines": 1,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "error",
+     "name": "TypeError",
+     "msg": "robot.straight() ต้องการตัวเลข แต่ได้รับ bool: True",
+     "line": 1,
+     "full": "TypeError: robot.straight() ต้องการตัวเลข แต่ได้รับ bool: True"
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 1,
+    "nLines": 1,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": true,
+     "continuity": true
+    },
+    "sk": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": true,
+     "continuity": true
+    }
+   },
+   "coordDiff": {
+    "py": 0,
+    "sk": 0
+   }
+  },
+  "R19": {
+   "py": {
+    "outcome": {
+     "status": "limit",
+     "name": "RuntimeError",
+     "msg": "โค้ดรันคำสั่งมากเกินไป (อาจมีลูปไม่สิ้นสุด) — โปรแกรมถูกหยุดเพื่อความปลอดภัย",
+     "line": 2
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 20000,
+    "nLines": 20000
+   },
+   "sk": {
+    "outcome": {
+     "status": "limit",
+     "name": "RuntimeError",
+     "msg": "โค้ดรันคำสั่งมากเกินไป (อาจมีลูปไม่สิ้นสุด) — โปรแกรมถูกหยุดเพื่อความปลอดภัย",
+     "line": 3
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 20000,
+    "nLines": 20000
+   },
+   "judge": {
+    "py": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": true,
+     "continuity": true
+    },
+    "sk": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": false,
+     "continuity": true
+    }
+   },
+   "coordDiff": {
+    "py": 0,
+    "sk": 0
+   }
+  },
+  "R20": {
+   "py": {
+    "outcome": {
+     "status": "limit",
+     "name": "RuntimeError",
+     "msg": "โค้ดรันคำสั่งมากเกินไป (อาจมีลูปไม่สิ้นสุด) — โปรแกรมถูกหยุดเพื่อความปลอดภัย",
+     "line": 2
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 9002,
+    "nLines": 6002
+   },
+   "sk": {
+    "outcome": {
+     "status": "limit",
+     "name": "RuntimeError",
+     "msg": "โค้ดรันคำสั่งมากเกินไป (อาจมีลูปไม่สิ้นสุด) — โปรแกรมถูกหยุดเพื่อความปลอดภัย",
+     "line": 2
+    },
+    "final": {
+     "x": 0,
+     "y": 5,
+     "h": 90
+    },
+    "prints": [],
+    "nEvents": 6001,
+    "nLines": 3001
+   },
+   "judge": {
+    "py": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": true,
+     "continuity": true
+    },
+    "sk": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": false,
+     "continuity": true
+    }
+   },
+   "coordDiff": {
+    "py": 0,
+    "sk": 0
+   }
+  },
+  "R21": {
+   "py": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 1.4999999999999996,
+     "y": 5,
+     "h": 180
+    },
+    "prints": [
+     "จับได้"
+    ],
+    "nEvents": 8,
+    "nLines": 5,
+    "events": [
+     {
+      "t": "line",
+      "n": 1
+     },
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       1.4999999999999996,
+       5
+      ],
+      "cells": 5,
+      "line": 2,
+      "crash": {
+       "type": "obstacle",
+       "at": [
+        2,
+        5
+       ],
+       "from": [
+        0,
+        5
+       ],
+       "heading": 90,
+       "cells": 5,
+       "line": 2
+      }
+     },
+     {
+      "t": "line",
+      "n": 3
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "print",
+      "text": "จับได้",
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 180,
+      "line": 5
+     }
+    ]
+   },
+   "sk": {
+    "outcome": {
+     "status": "ok"
+    },
+    "final": {
+     "x": 1.4999999999999996,
+     "y": 5,
+     "h": 180
+    },
+    "prints": [
+     "จับได้"
+    ],
+    "nEvents": 6,
+    "nLines": 3,
+    "events": [
+     {
+      "t": "line",
+      "n": 2
+     },
+     {
+      "t": "move",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       1.4999999999999996,
+       5
+      ],
+      "cells": 5,
+      "line": 2,
+      "crash": {
+       "type": "obstacle",
+       "at": [
+        2,
+        5
+       ],
+       "from": [
+        0,
+        5
+       ],
+       "heading": 90,
+       "cells": 5,
+       "line": 2
+      }
+     },
+     {
+      "t": "line",
+      "n": 4
+     },
+     {
+      "t": "print",
+      "text": "จับได้",
+      "line": 4
+     },
+     {
+      "t": "line",
+      "n": 5
+     },
+     {
+      "t": "turn",
+      "deg": 90,
+      "heading": 180,
+      "line": 5
+     }
+    ]
+   },
+   "judge": {
+    "py": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": true,
+     "continuity": true
+    },
+    "sk": {
+     "status": true,
+     "final": true,
+     "actions": true,
+     "lines": false,
+     "continuity": true
+    }
+   },
+   "coordDiff": {
+    "py": 0,
+    "sk": 0
+   }
+  }
+ }
+}

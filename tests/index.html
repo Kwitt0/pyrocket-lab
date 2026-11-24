@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>ชุดทดสอบ • PyRocket Lab</title>
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;font-family:"Sarabun",system-ui,sans-serif;color:#1f2937;background:#f6f7fb;line-height:1.55}
+    .wrap{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:20px 0 48px}
+    h1{font-size:24px;margin:0 0 4px} h2{font-size:19px;margin:28px 0 8px} h3{font-size:16px;margin:16px 0 6px}
+    p{margin:4px 0 10px} .sub{color:#6b7280;font-size:14.5px}
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:14px 16px;margin-top:12px}
+    .bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    button{font:inherit;font-weight:500;border:1px solid #d1d5db;background:#fff;border-radius:8px;padding:8px 14px;cursor:pointer}
+    button.primary{background:#4f46e5;border-color:#4f46e5;color:#fff}
+    button:disabled{opacity:.5;cursor:not-allowed}
+    label{font-size:14.5px;color:#374151} input[type=number]{font:inherit;width:64px;padding:4px 6px;border:1px solid #d1d5db;border-radius:6px}
+    progress{width:220px;height:14px}
+    table{border-collapse:collapse;width:100%;font-size:14.5px;font-variant-numeric:tabular-nums}
+    th,td{border-bottom:1px solid #e5e7eb;padding:6px 8px;text-align:left;vertical-align:top}
+    th{background:#f9fafb;font-weight:600;white-space:nowrap}
+    td.n,th.n{text-align:right;white-space:nowrap}
+    tr.grp td{background:#f3f4f6;font-weight:600}
+    .ok{color:#15803d} .bad{color:#b91c1c;font-weight:600} .na{color:#9ca3af}
+    tr.case{cursor:pointer} tr.case:hover td{background:#f9fafb}
+    tr.detail td{background:#fafafa}
+    pre{margin:4px 0;font:12.5px/1.5 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;word-break:break-word;
+      background:#111827;color:#e5e7eb;border-radius:8px;padding:8px 10px;max-height:260px;overflow:auto}
+    .cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+    @media(max-width:800px){.cols{grid-template-columns:1fr}}
+    .cols b{font-size:13.5px}
+    .scroll{overflow-x:auto}
+    .note{font-size:13.5px;color:#6b7280;margin-top:6px}
+    @media print{button,.noprint{display:none!important} body{background:#fff} .card{border:0;padding:0} tr.detail{display:none}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <h1>ชุดทดสอบเชิงเทคนิคของ PyRocket Lab</h1>
+  <p class="sub">เทียบผลของตัวแปลภาษาในเบราว์เซอร์กับ CPython ที่ติดตั้งบนเครื่อง และวัดเวลาการทำงานบนอุปกรณ์นี้ · <a href="../index.html">กลับหน้าหลัก</a></p>
+
+  <div class="card noprint">
+    <div class="bar">
+      <button class="primary" id="runAll" disabled>เริ่มทดสอบทั้งหมด</button>
+      <button id="runCorrect" disabled>เฉพาะความถูกต้อง</button>
+      <button id="runPerf" disabled>เฉพาะประสิทธิภาพ</button>
+      <label>รอบวัดเวลารัน <input type="number" id="reps" value="30" min="3" max="200"></label>
+      <label>รอบวัดเวลาเริ่มตัวแปล <input type="number" id="boots" value="10" min="1" max="50"></label>
+      <button id="dlJson" disabled>ดาวน์โหลดผล (JSON)</button>
+      <button id="dlCsv" disabled>ดาวน์โหลดตาราง (CSV)</button>
+    </div>
+    <div class="bar" style="margin-top:10px"><progress id="prog" value="0" max="1"></progress><span id="progText" class="sub">กำลังโหลดชุดทดสอบ…</span></div>
+  </div>
+
+  <h2>1. สภาพแวดล้อมที่ทดสอบ</h2>
+  <div class="card scroll"><table id="envTable"></table></div>
+
+  <h2>2. สรุปความถูกต้องเทียบกับ CPython บนเครื่อง</h2>
+  <div class="card scroll"><table id="sumTable"><tr><td class="na">ยังไม่ได้ทดสอบ</td></tr></table>
+    <p class="note">ตัวเลขคือจำนวนโปรแกรมที่ให้ผลตรงกับผลอ้างอิง / จำนวนโปรแกรมทั้งหมดในชุด · พิกัดเทียบด้วยค่าคลาดเคลื่อนไม่เกิน 1e-9 ช่อง</p></div>
+
+  <h2>3. ประสิทธิภาพบนอุปกรณ์นี้</h2>
+  <div class="card scroll"><table id="perfTable"><tr><td class="na">ยังไม่ได้ทดสอบ</td></tr></table>
+    <p class="note" id="perfNote"></p></div>
+
+  <h2>4. ผลรายโปรแกรม</h2>
+  <p class="sub noprint">คลิกแถวเพื่อดูโค้ดและผลของตัวแปลแต่ละตัว</p>
+  <div id="details"></div>
+</div>
+
+<script src="../skulpt_engine.js?v=3"></script>
+<script>
+(function(){
+  "use strict";
+  const $ = (id) => document.getElementById(id);
+  const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+  const WORKER_URL = "../pyodide_worker.js?v=3";
+  const TOL = 1e-9;
+  const RUN_TIMEOUT_MS = 10000;
+
+  const SUITES = {
+    language: { title:"ความถูกต้องของภาษา", metrics:[["output","ผลลัพธ์ตรงกัน"]] },
+    error:    { title:"ข้อความแจ้งข้อผิดพลาด", metrics:[["type","ชนิดข้อผิดพลาดตรงกัน"],["line","เลขบรรทัดตรงกัน"],["message","ข้อความตรงกันทุกตัวอักษร"]] },
+    robot:    { title:"การควบคุมหุ่นยนต์", metrics:[["status","ผลการรันตรงกัน"],["final","ตำแหน่งและทิศสุดท้ายตรงกัน"],["actions","ลำดับการเดิน เลี้ยว และ print ตรงกัน"],["lines","ลำดับบรรทัดที่จดได้ตรงกัน"],["continuity","บันทึกต่อเนื่อง เล่นซ้ำแล้วได้ตำแหน่งสุดท้ายตรงกับที่รายงาน"]] },
+  };
+  const ENGINES = [["py","CPython ผ่าน Pyodide"],["sk","Skulpt (ตัวสำรอง)"]];
+
+  let cases = [], reference = null;
+  const report = { env:null, reference:null, correctness:null, performance:null, cases:{} };
+
+  let worker = null, workerInfo = null, seq = 0;
+  function bootWorker(){
+    return new Promise((resolve, reject) => {
+      const t0 = performance.now();
+      const w = new Worker(WORKER_URL);
+      w.onmessage = (ev) => {
+        const m = ev.data;
+        if(m.type === "ready") resolve({ worker:w, wall:performance.now() - t0, inner:m.ms, version:m.version, impl:m.impl });
+        else if(m.type === "fatal") reject(new Error(m.msg));
+      };
+      w.onerror = (e) => reject(new Error(e.message || "worker error"));
+    });
+  }
+  async function ensureWorker(){
+    if(worker) return;
+    const b = await bootWorker();
+    worker = b.worker; workerInfo = b;
+  }
+  async function runPy(code, level){
+    await ensureWorker();
+    const id = ++seq, w = worker, t0 = performance.now();
+    return new Promise((resolve) => {
+      const timer = setTimeout(() => {
+        w.terminate(); worker = null;
+        resolve({ outcome:{ status:"timeout", msg:"ไม่ตอบกลับภายใน " + RUN_TIMEOUT_MS/1000 + " วินาที" }, events:[], final:null, stats:{} });
+      }, RUN_TIMEOUT_MS);
+      w.onmessage = (ev) => {
+        const m = ev.data;
+        if(m.type !== "result" || m.id !== id) return;
+        clearTimeout(timer);
+        m.data.wall = performance.now() - t0;
+        resolve(m.data);
+      };
+      w.postMessage({ type:"run", id, code, level: JSON.stringify(level) });
+    });
+  }
+  async function runSk(code, level){
+    try{ return await SkulptEngine.run(code, level); }
+    catch(e){ return { outcome:{ status:"crashed", msg:String((e && e.message) || e) }, events:[], final:null, stats:{} }; }
+  }
+
+  const near = (a, b) => typeof a === "number" && typeof b === "number" && Math.abs(a - b) <= TOL;
+  const nearPt = (a, b) => !!a && !!b && near(a[0], b[0]) && near(a[1], b[1]);
+  const prints = (d) => d.events.filter(e => e.t === "print").map(e => e.text);
+  const lineSeq = (d) => d.events.filter(e => e.t === "line").map(e => e.n);
+  const actions = (d) => d.events.filter(e => e.t !== "line");
+  const sameArr = (a, b) => a.length === b.length && a.every((v, i) => v === b[i]);
+
+  function sameActions(a, b){
+    const x = actions(a), y = actions(b);
+    if(x.length !== y.length) return false;
+    return x.every((e, i) => {
+      const f = y[i];
+      if(e.t !== f.t || e.line !== f.line) return false;
+      if(e.t === "print") return e.text === f.text;
+      if(e.t === "turn") return near(e.deg, f.deg) && near(e.heading, f.heading);
+      return near(e.cells, f.cells) && nearPt(e.from, f.from) && nearPt(e.to, f.to) && !!e.crash === !!f.crash
+        && (!e.crash || (e.crash.type === f.crash.type && sameArr(e.crash.at, f.crash.at)));
+    });
+  }
+  function sameStatus(a, b){
+    const x = a.outcome, y = b.outcome;
+    if(x.status !== y.status) return false;
+    if(x.status === "crash") return x.crash.type === y.crash.type && sameArr(x.crash.at, y.crash.at) && x.line === y.line;
+    if(x.status === "error") return x.name === y.name;
+    return true;
+  }
+  const sameFinal = (a, b) => !!a.final && !!b.final && near(a.final.x, b.final.x) && near(a.final.y, b.final.y) && near(a.final.h, b.final.h);
+
+  function continuous(d, level){
+    if(!d.final) return false;
+    const st = level.start;
+    let x = st.x, y = st.y, h = (("heading" in st ? st.heading : (st.dir || 0) * 90) % 360 + 360) % 360;
+    for(const e of d.events){
+      if(e.t === "move"){ if(!near(e.from[0], x) || !near(e.from[1], y)) return false; x = e.to[0]; y = e.to[1]; }
+      else if(e.t === "turn"){ if(!near(e.heading, ((h + e.deg) % 360 + 360) % 360)) return false; h = e.heading; }
+    }
+    return near(x, d.final.x) && near(y, d.final.y) && near(h, d.final.h);
+  }
+
+  function judge(c, ref, got){
+    if(c.suite === "language") return { output: got.outcome.status === ref.outcome.status && sameArr(prints(got), prints(ref)) };
+    if(c.suite === "error"){
+      const isErr = got.outcome.status === "error";
+      return { type: isErr && got.outcome.name === ref.outcome.name,
+               line: isErr && got.outcome.line === ref.outcome.line,
+               message: isErr && got.outcome.full === ref.outcome.full };
+    }
+    return { status: sameStatus(got, ref), final: sameFinal(got, ref), actions: sameActions(got, ref),
+             lines: sameArr(lineSeq(got), lineSeq(ref)), continuity: continuous(got, c.level) };
+  }
+
+  function maxCoordDiff(ref, got){
+    const x = actions(ref), y = actions(got);
+    if(x.length !== y.length) return null;
+    let m = 0;
+    x.forEach((e, i) => { if(e.t === "move" && y[i].t === "move") [0,1].forEach(k => {
+      m = Math.max(m, Math.abs(e.from[k] - y[i].from[k]), Math.abs(e.to[k] - y[i].to[k])); }); });
+    if(ref.final && got.final) m = Math.max(m, Math.abs(ref.final.x - got.final.x), Math.abs(ref.final.y - got.final.y));
+    return m;
+  }
+
+  function collectEnv(){
+    const n = navigator;
+    report.env = {
+      time: new Date().toISOString(), url: location.href, userAgent: n.userAgent,
+      platform: (n.userAgentData && n.userAgentData.platform) || n.platform || "",
+      cores: n.hardwareConcurrency || null, memoryGB: n.deviceMemory || null,
+      screen: `${screen.width}×${screen.height} @${devicePixelRatio}x`,
+      webAssembly: typeof WebAssembly === "object", crossOriginIsolated: !!self.crossOriginIsolated,
+      sharedArrayBuffer: typeof SharedArrayBuffer !== "undefined",
+    };
+    renderEnv();
+  }
+  function renderEnv(){
+    const e = report.env, r = report.reference || {};
+    const rows = [
+      ["วันที่ทดสอบ", new Date(e.time).toLocaleString("th-TH")],
+      ["เบราว์เซอร์ (user agent)", e.userAgent],
+      ["ระบบ", e.platform + " · " + (e.cores || "?") + " แกนประมวลผล" + (e.memoryGB ? " · หน่วยความจำที่เบราว์เซอร์รายงาน ≥ " + e.memoryGB + " GB" : "") + " · จอ " + e.screen],
+      ["WebAssembly", e.webAssembly ? "รองรับ" : "ไม่รองรับ"],
+      ["cross-origin isolated / SharedArrayBuffer", (e.crossOriginIsolated ? "ใช่" : "ไม่ใช่") + " / " + (e.sharedArrayBuffer ? "ใช้ได้" : "ใช้ไม่ได้")],
+      ["ตัวแปลภาษาในเบราว์เซอร์", e.pyodide ? `${e.pyodide.impl} ${e.pyodide.version} ผ่าน Pyodide` : "ยังไม่ได้โหลด"],
+      ["ตัวแปลสำรอง", e.skulpt || "ยังไม่ได้โหลด"],
+      ["ผลอ้างอิง", r.python ? `${r.implementation} ${r.python} บน ${r.platform}` : "-"],
+      ["จำนวนโปรแกรมทดสอบ", r.cases ? `ภาษา ${r.cases.language} · ข้อผิดพลาด ${r.cases.error} · หุ่นยนต์ ${r.cases.robot}` : "-"],
+    ];
+    $("envTable").innerHTML = rows.map(([k, v]) => `<tr><th>${k}</th><td>${esc(String(v))}</td></tr>`).join("");
+  }
+  const esc = (s) => s.replace(/[&<>]/g, ch => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;" }[ch]));
+
+  async function runCorrectness(){
+    const total = cases.length;
+    let done = 0;
+    for(const c of cases){
+      setProg(done / total, `ความถูกต้อง: ${c.id} ${c.name}`);
+      const ref = reference.results[c.id];
+      const py = await runPy(c.code, c.level);
+      const sk = await runSk(c.code, c.level);
+      report.cases[c.id] = { py:slim(py), sk:slim(sk), judge:{ py:judge(c, ref, py), sk:judge(c, ref, sk) },
+                             coordDiff: c.suite === "robot" ? { py:maxCoordDiff(ref, py), sk:maxCoordDiff(ref, sk) } : undefined };
+      done++;
+      await sleep(0);
+    }
+    report.env.pyodide = { impl:workerInfo.impl, version:workerInfo.version };
+    report.env.skulpt = "Skulpt · รายงานตัวเองว่า Python " + (await skulptVersion());
+    summarize();
+    renderEnv(); renderSummary(); renderDetails();
+  }
+  async function skulptVersion(){
+    const d = await runSk("import sys\nprint(sys.version)", cases[0].level);
+    return prints(d)[0] || "?";
+  }
+  function slim(d){
+    const o = { outcome:d.outcome, final:d.final, prints:prints(d).slice(0, 50), nEvents:d.events.length, nLines:lineSeq(d).length };
+    if(d.events.length <= 200) o.events = d.events;
+    return o;
+  }
+
+  function summarize(){
+    const sum = {};
+    for(const [suite, def] of Object.entries(SUITES)){
+      const list = cases.filter(c => c.suite === suite);
+      const groups = [...new Set(list.map(c => c.group))];
+      sum[suite] = { n:list.length, metrics:{}, groups:{} };
+      for(const [m] of def.metrics){
+        sum[suite].metrics[m] = {};
+        for(const [eng] of ENGINES) sum[suite].metrics[m][eng] = list.filter(c => report.cases[c.id].judge[eng][m]).length;
+      }
+      for(const g of groups){
+        const gl = list.filter(c => c.group === g);
+        sum[suite].groups[g] = { n:gl.length };
+        for(const [m] of def.metrics){
+          sum[suite].groups[g][m] = {};
+          for(const [eng] of ENGINES) sum[suite].groups[g][m][eng] = gl.filter(c => report.cases[c.id].judge[eng][m]).length;
+        }
+      }
+    }
+    const robots = cases.filter(c => c.suite === "robot");
+    const diffs = (eng) => robots.map(c => report.cases[c.id].coordDiff[eng]).filter(v => v !== null);
+    sum.maxCoordDiff = { py: Math.max(0, ...diffs("py")), sk: Math.max(0, ...diffs("sk")) };
+    const lineCov = (eng) => {
+      let a = 0, b = 0;
+      robots.forEach(c => { const ref = reference.results[c.id]; if(ref.outcome.status !== "ok") return;
+        a += report.cases[c.id][eng].nLines; b += lineSeq(ref).length; });
+      return b ? a / b : null;
+    };
+    sum.lineCoverage = { py: lineCov("py"), sk: lineCov("sk") };
+    report.correctness = sum;
+  }
+
+  const pct = (a, n) => `${a}/${n} (${(100 * a / n).toFixed(1)}%)`;
+  function renderSummary(){
+    const s = report.correctness;
+    let h = `<tr><th>ชุดทดสอบ</th><th>เกณฑ์</th>${ENGINES.map(e => `<th class="n">${e[1]}</th>`).join("")}</tr>`;
+    for(const [suite, def] of Object.entries(SUITES)){
+      def.metrics.forEach(([m, label], i) => {
+        h += `<tr>${i === 0 ? `<td rowspan="${def.metrics.length}"><b>${def.title}</b><br><span class="sub">${s[suite].n} โปรแกรม</span></td>` : ""}
+          <td>${label}</td>${ENGINES.map(([eng]) => { const a = s[suite].metrics[m][eng];
+            return `<td class="n ${a === s[suite].n ? "ok" : ""}">${pct(a, s[suite].n)}</td>`; }).join("")}</tr>`;
+      });
+    }
+    h += `<tr><td rowspan="2"><b>ค่าเสริมของชุดหุ่นยนต์</b></td><td>ค่าต่างของพิกัดสูงสุดเทียบกับผลอ้างอิง (ช่อง)</td>
+          ${ENGINES.map(([e]) => `<td class="n">${s.maxCoordDiff[e].toExponential(2)}</td>`).join("")}</tr>
+          <tr><td>จำนวนบรรทัดที่จดได้ เทียบกับผลอ้างอิง (โปรแกรมที่รันจบปกติ)</td>
+          ${ENGINES.map(([e]) => `<td class="n">${s.lineCoverage[e] === null ? "-" : (100 * s.lineCoverage[e]).toFixed(1) + "%"}</td>`).join("")}</tr>`;
+    $("sumTable").innerHTML = h;
+  }
+
+  function renderDetails(){
+    const box = $("details");
+    box.innerHTML = "";
+    const mark = (v) => v ? '<span class="ok">✓</span>' : '<span class="bad">✗</span>';
+    for(const [suite, def] of Object.entries(SUITES)){
+      const list = cases.filter(c => c.suite === suite);
+      const card = document.createElement("div");
+      card.className = "card scroll";
+      let h = `<h3>${def.title}</h3><table><tr><th>รหัส</th><th>โปรแกรม</th>` +
+        ENGINES.map(e => def.metrics.map(m => `<th class="n" title="${e[1]}: ${m[1]}">${e[0] === "py" ? "CPy" : "Sk"}·${m[1].split(/[ ]/)[0]}</th>`).join("")).join("") + "</tr>";
+      let group = null;
+      const span = 2 + ENGINES.length * def.metrics.length;
+      for(const c of list){
+        if(c.group !== group){
+          group = c.group;
+          const g = report.correctness[suite].groups[group], m0 = def.metrics[0][0];
+          h += `<tr class="grp"><td colspan="${span}">${group} — ${g.n} โปรแกรม · ${def.metrics[0][1]}: ` +
+               ENGINES.map(([e, n]) => `${n} ${g[m0][e]}/${g.n}`).join(" · ") + "</td></tr>";
+        }
+        const j = report.cases[c.id].judge;
+        h += `<tr class="case" data-id="${c.id}"><td>${c.id}</td><td>${esc(c.name)}</td>` +
+          ENGINES.map(([e]) => def.metrics.map(([m]) => `<td class="n">${mark(j[e][m])}</td>`).join("")).join("") + "</tr>";
+      }
+      card.innerHTML = h + "</table>";
+      box.appendChild(card);
+    }
+    box.onclick = (ev) => {
+      const tr = ev.target.closest("tr.case");
+      if(!tr) return;
+      if(tr.nextElementSibling && tr.nextElementSibling.classList.contains("detail")){ tr.nextElementSibling.remove(); return; }
+      const c = cases.find(x => x.id === tr.dataset.id), ref = reference.results[c.id], r = report.cases[c.id];
+      const show = (o, pr, fin, nLines) => {
+        let t = `ผล: ${o.status}` + (o.name ? ` ${o.name}` : "") + (o.line ? ` (บรรทัด ${o.line})` : "") + "\n";
+        if(o.full || o.msg) t += (o.full || o.msg) + "\n";
+        if(o.crash) t += `ชน ${o.crash.type} ที่ช่อง ${o.crash.at}\n`;
+        if(pr.length) t += "print:\n" + pr.join("\n") + "\n";
+        if(c.suite === "robot" && fin) t += `ตำแหน่งสุดท้าย: (${fin.x}, ${fin.y}) ทิศ ${fin.h}\nจดบรรทัดได้ ${nLines} ครั้ง`;
+        return esc(t.trim());
+      };
+      const d = document.createElement("tr");
+      d.className = "detail";
+      d.innerHTML = `<td colspan="${tr.children.length}"><pre>${esc(c.code)}</pre><div class="cols">
+        <div><b>ผลอ้างอิง (CPython บนเครื่อง)</b><pre>${show(ref.outcome, prints(ref), ref.final, lineSeq(ref).length)}</pre></div>
+        <div><b>CPython ผ่าน Pyodide</b><pre>${show(r.py.outcome, r.py.prints, r.py.final, r.py.nLines)}</pre></div>
+        <div><b>Skulpt</b><pre>${show(r.sk.outcome, r.sk.prints, r.sk.final, r.sk.nLines)}</pre></div></div></td>`;
+      tr.after(d);
+    };
+  }
+
+  const PY_FILES = ["pyodide.js", "pyodide.asm.js", "pyodide.asm.wasm", "python_stdlib.zip", "pyodide-lock.json"].map(f => "../vendor/pyodide/" + f);
+  const SK_FILES = ["skulpt.min.js", "skulpt-stdlib.js"].map(f => "../vendor/skulpt/" + f);
+  const PERF_PROGRAMS = [
+    ["เฉลยด่าน 1", "R01"], ["เฉลยด่าน 2", "R02"], ["เฉลยด่าน 3", "R03"], ["เฉลยด่าน 4", "R04"],
+    ["ลูปคำนวณ 3,000 รอบ", null, "total = 0\nfor i in range(3000):\n    total += i\nprint(total)"],
+  ];
+
+  function stats(a){
+    const s = [...a].sort((x, y) => x - y), n = s.length;
+    const mean = s.reduce((p, v) => p + v, 0) / n;
+    const sd = n > 1 ? Math.sqrt(s.reduce((p, v) => p + (v - mean) ** 2, 0) / (n - 1)) : 0;
+    const median = n % 2 ? s[(n - 1) / 2] : (s[n / 2 - 1] + s[n / 2]) / 2;
+    return { n, mean, sd, median, min:s[0], max:s[n - 1] };
+  }
+
+  async function download(files){
+    let bytes = 0;
+    const t0 = performance.now();
+    for(const f of files){
+      const buf = await (await fetch(f, { cache:"no-store" })).arrayBuffer();
+      bytes += buf.byteLength;
+    }
+    return { bytes, ms: performance.now() - t0 };
+  }
+
+  async function cacheProbe(){
+    const u = new URL(PY_FILES[2], location.href).href;
+    for(let i = 0; i < 2; i++) await (await fetch(u)).arrayBuffer();
+    const e = performance.getEntriesByName(u).pop();
+    return e ? e.transferSize === 0 : null;
+  }
+
+  function bootSkulptOnce(){
+    return new Promise((resolve, reject) => {
+      const base = new URL("../vendor/skulpt/", location.href).href, key = "skboot" + Math.random();
+      const f = document.createElement("iframe");
+      f.style.display = "none";
+      const onMsg = (ev) => { if(ev.data && ev.data.key === key){ window.removeEventListener("message", onMsg); f.remove(); ev.data.ok ? resolve(ev.data.ms) : reject(new Error("โหลด Skulpt ไม่สำเร็จ")); } };
+      window.addEventListener("message", onMsg);
+      f.srcdoc = `<script>var t0=performance.now();function done(ok){parent.postMessage({key:${JSON.stringify(key)},ok:ok,ms:performance.now()-t0},"*")}<\/script>` +
+        `<script src="${base}skulpt.min.js" onerror="done(false)"><\/script><script src="${base}skulpt-stdlib.js" onerror="done(false)"><\/script>` +
+        `<script>done(typeof Sk==="object")<\/script>`;
+      document.body.appendChild(f);
+    });
+  }
+
+  async function runPerformance(){
+    const reps = Math.max(3, +$("reps").value || 30), boots = Math.max(1, +$("boots").value || 10);
+    const perf = { reps, boots };
+    const steps = 2 + boots * 2 + PERF_PROGRAMS.length * 2;
+    let step = 0;
+    const tick = (t) => setProg(step++ / steps, "ประสิทธิภาพ: " + t);
+
+    tick("ดาวน์โหลดไฟล์ของ Pyodide โดยไม่ใช้แคช");
+    perf.pyDownload = await download(PY_FILES);
+    tick("ดาวน์โหลดไฟล์ของ Skulpt โดยไม่ใช้แคช");
+    perf.skDownload = await download(SK_FILES);
+    perf.httpCache = await cacheProbe();
+    perf.pageHidden = document.hidden;
+
+    if(worker){ worker.terminate(); worker = null; }
+    const pyBoot = [], skBoot = [];
+    for(let i = 0; i < boots; i++){
+      tick(`เริ่ม CPython รอบที่ ${i + 1}/${boots}`);
+      const b = await bootWorker();
+      pyBoot.push(b.wall);
+      if(i === boots - 1){ worker = b.worker; workerInfo = b; } else b.worker.terminate();
+    }
+    for(let i = 0; i < boots; i++){
+      tick(`เริ่ม Skulpt รอบที่ ${i + 1}/${boots}`);
+      skBoot.push(await bootSkulptOnce());
+    }
+    perf.pyBoot = stats(pyBoot); perf.pyBootRaw = pyBoot;
+    perf.skBoot = stats(skBoot); perf.skBootRaw = skBoot;
+
+    perf.programs = [];
+    for(const [name, id, src] of PERF_PROGRAMS){
+      const c = id ? cases.find(x => x.id === id) : { code:src, level:cases[0].level };
+      const row = { name, id: id || "P05" };
+      for(const [eng, run] of [["py", runPy], ["sk", runSk]]){
+        tick(`${name} บน ${eng === "py" ? "CPython" : "Skulpt"} × ${reps} รอบ`);
+        await run(c.code, c.level);
+        const inner = [], wall = [];
+        let events = 0;
+        for(let i = 0; i < reps; i++){
+          const t0 = performance.now();
+          const d = await run(c.code, c.level);
+          wall.push(performance.now() - t0);
+          inner.push(d.stats.py_ms);
+          events = d.events.length;
+        }
+        row[eng] = { inner:stats(inner), wall:stats(wall), events };
+        await sleep(0);
+      }
+      perf.programs.push(row);
+    }
+    report.performance = perf;
+    renderPerf();
+  }
+
+  const ms = (v) => v < 10 ? v.toFixed(2) : v < 100 ? v.toFixed(1) : v.toFixed(0);
+  const cell = (s) => `<td class="n">${ms(s.median)}</td><td class="n">${ms(s.mean)} ± ${ms(s.sd)}</td><td class="n">${ms(s.min)}–${ms(s.max)}</td>`;
+  const mb = (b) => (b / 1048576).toFixed(2) + " MB";
+  function renderPerf(){
+    const p = report.performance;
+    let h = `<tr><th>รายการ</th><th>ตัวแปลภาษา</th><th class="n">มัธยฐาน (ms)</th><th class="n">เฉลี่ย ± SD (ms)</th><th class="n">ต่ำสุด–สูงสุด (ms)</th><th class="n">หมายเหตุ</th></tr>`;
+    h += `<tr><td rowspan="2"><b>ขนาดไฟล์และเวลาดาวน์โหลด</b><br><span class="sub">ไม่ใช้แคช 1 ครั้ง</span></td>
+      <td>CPython ผ่าน Pyodide</td><td class="n">${ms(p.pyDownload.ms)}</td><td class="n na">-</td><td class="n na">-</td><td class="n">${mb(p.pyDownload.bytes)} (${PY_FILES.length} ไฟล์)</td></tr>
+      <tr><td>Skulpt</td><td class="n">${ms(p.skDownload.ms)}</td><td class="n na">-</td><td class="n na">-</td><td class="n">${mb(p.skDownload.bytes)} (${SK_FILES.length} ไฟล์)</td></tr>`;
+    const cacheText = p.httpCache === true ? "ไฟล์อยู่ในแคชแล้ว" : p.httpCache === false ? "เบราว์เซอร์นี้ไม่ได้ใช้แคช" : "ไม่ทราบสถานะแคช";
+    h += `<tr><td rowspan="2"><b>เวลาเริ่มตัวแปลภาษา</b><br><span class="sub">${cacheText}</span></td>
+      <td>CPython ผ่าน Pyodide</td>${cell(p.pyBoot)}<td class="n">n = ${p.boots}</td></tr>
+      <tr><td>Skulpt</td>${cell(p.skBoot)}<td class="n">n = ${p.boots}</td></tr>`;
+    for(const r of p.programs){
+      h += `<tr><td rowspan="4"><b>เวลารัน: ${esc(r.name)}</b><br><span class="sub">${r.py.events} เหตุการณ์</span></td>
+        <td>CPython — ในตัวแปลภาษา</td>${cell(r.py.inner)}<td class="n">n = ${p.reps}</td></tr>
+        <tr><td>CPython — รวมส่งไป-กลับเธรด (กดรันจนหุ่นเริ่มเคลื่อนที่)</td>${cell(r.py.wall)}<td class="n">n = ${p.reps}</td></tr>
+        <tr><td>Skulpt — ในตัวแปลภาษา</td>${cell(r.sk.inner)}<td class="n">${r.sk.events} เหตุการณ์</td></tr>
+        <tr><td>Skulpt — รวม (กดรันจนหุ่นเริ่มเคลื่อนที่)</td>${cell(r.sk.wall)}<td class="n">n = ${p.reps}</td></tr>`;
+    }
+    $("perfTable").innerHTML = h;
+    const warn = [];
+    if(p.httpCache === false) warn.push("เบราว์เซอร์นี้ไม่ได้เก็บไฟล์ไว้ในแคช เวลาเริ่มตัวแปลภาษาจึงเป็นกรณีเปิดครั้งแรกทุกรอบ");
+    if(p.pageHidden) warn.push("หน้านี้ถูกซ่อนอยู่ระหว่างทดสอบ เบราว์เซอร์อาจลดความเร็วการทำงาน ควรเปิดหน้าไว้ด้านหน้าแล้ววัดใหม่");
+    $("perfNote").innerHTML = (warn.length ? `<b class="bad">ข้อควรระวัง: ${warn.join(" · ")}</b><br>` : "") + "เวลาดาวน์โหลดขึ้นกับเครือข่ายระหว่างอุปกรณ์นี้กับเซิร์ฟเวอร์ ถ้าเปิดจาก localhost จะไม่สะท้อนการใช้งานจริง · เวลารันวัดหลังรอบอุ่นเครื่อง 1 รอบ";
+  }
+
+  function setProg(v, text){ $("prog").value = v; $("progText").textContent = text; }
+  const buttons = ["runAll", "runCorrect", "runPerf"];
+  async function guard(fn, label){
+    buttons.forEach(b => $(b).disabled = true);
+    try{
+      await fn();
+      setProg(1, label + " เสร็จแล้ว — " + new Date().toLocaleTimeString("th-TH"));
+      $("dlJson").disabled = $("dlCsv").disabled = false;
+    }catch(e){
+      console.error(e);
+      setProg(0, "หยุดเพราะข้อผิดพลาด: " + (e.message || e));
+    }
+    buttons.forEach(b => $(b).disabled = false);
+  }
+  $("runAll").onclick = () => guard(async () => { await runCorrectness(); await runPerformance(); renderEnv(); }, "ทดสอบทั้งหมด");
+  $("runCorrect").onclick = () => guard(runCorrectness, "ทดสอบความถูกต้อง");
+  $("runPerf").onclick = () => guard(async () => { await runPerformance(); report.env.pyodide = { impl:workerInfo.impl, version:workerInfo.version }; renderEnv(); }, "ทดสอบประสิทธิภาพ");
+
+  function save(name, text, type){
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([text], { type }));
+    a.download = name;
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  }
+  const stamp = () => new Date().toISOString().slice(0, 16).replace(/[-:T]/g, "");
+  $("dlJson").onclick = () => save(`pyrocket-test-${stamp()}.json`, JSON.stringify(report, null, 1), "application/json");
+  $("dlCsv").onclick = () => {
+    const q = (v) => `"${String(v).replace(/"/g, '""')}"`;
+    const rows = [["section", "item", "metric", "engine", "value", "n"]];
+    const s = report.correctness, p = report.performance;
+    if(s){
+      for(const [suite, def] of Object.entries(SUITES)) for(const [m, label] of def.metrics) for(const [e, en] of ENGINES)
+        rows.push(["correctness", def.title, label, en, s[suite].metrics[m][e], s[suite].n]);
+      for(const [suite, def] of Object.entries(SUITES)) for(const [g, gv] of Object.entries(s[suite].groups)) for(const [m, label] of def.metrics) for(const [e, en] of ENGINES)
+        rows.push(["correctness-group", def.title + " / " + g, label, en, gv[m][e], gv.n]);
+      for(const [e, en] of ENGINES){
+        rows.push(["correctness", "หุ่นยนต์", "ค่าต่างของพิกัดสูงสุด (ช่อง)", en, s.maxCoordDiff[e], ""]);
+        rows.push(["correctness", "หุ่นยนต์", "สัดส่วนบรรทัดที่จดได้", en, s.lineCoverage[e], ""]);
+      }
+      for(const c of cases) for(const [e, en] of ENGINES) for(const [m, v] of Object.entries(report.cases[c.id].judge[e]))
+        rows.push(["case", c.id + " " + c.name, m, en, v ? 1 : 0, ""]);
+    }
+    if(p){
+      rows.push(["performance", "สภาพการวัด", "เบราว์เซอร์ใช้แคช", "", p.httpCache, ""], ["performance", "สภาพการวัด", "หน้าถูกซ่อนระหว่างวัด", "", p.pageHidden, ""]);
+      rows.push(["performance", "ดาวน์โหลดไม่ใช้แคช", "bytes", "CPython ผ่าน Pyodide", p.pyDownload.bytes, 1], ["performance", "ดาวน์โหลดไม่ใช้แคช", "ms", "CPython ผ่าน Pyodide", p.pyDownload.ms, 1]);
+      rows.push(["performance", "ดาวน์โหลดไม่ใช้แคช", "bytes", "Skulpt", p.skDownload.bytes, 1], ["performance", "ดาวน์โหลดไม่ใช้แคช", "ms", "Skulpt", p.skDownload.ms, 1]);
+      const put = (item, eng, st) => ["median", "mean", "sd", "min", "max"].forEach(k => rows.push(["performance", item, k + " (ms)", eng, st[k], st.n]));
+      put("เวลาเริ่มตัวแปลภาษา", "CPython ผ่าน Pyodide", p.pyBoot); put("เวลาเริ่มตัวแปลภาษา", "Skulpt", p.skBoot);
+      for(const r of p.programs){
+        put("เวลารัน: " + r.name, "CPython — ในตัวแปลภาษา", r.py.inner);
+        put("เวลารัน: " + r.name, "CPython — รวมส่งไป-กลับเธรด", r.py.wall);
+        put("เวลารัน: " + r.name, "Skulpt — ในตัวแปลภาษา", r.sk.inner);
+        put("เวลารัน: " + r.name, "Skulpt — รวม", r.sk.wall);
+      }
+    }
+    save(`pyrocket-test-${stamp()}.csv`, "﻿" + rows.map(r => r.map(q).join(",")).join("\n"), "text/csv");
+  };
+
+  window.PyRocketTestReport = report;
+
+  (async function init(){
+    try{
+      [cases, reference] = await Promise.all([
+        fetch("cases.json", { cache:"no-store" }).then(r => r.json()),
+        fetch("reference.json", { cache:"no-store" }).then(r => r.json()),
+      ]);
+      report.reference = reference.meta;
+      collectEnv();
+      setProg(0, `พร้อมทดสอบ ${cases.length} โปรแกรม`);
+      buttons.forEach(b => $(b).disabled = false);
+    }catch(e){
+      setProg(0, "โหลดชุดทดสอบไม่สำเร็จ: " + (e.message || e));
+    }
+  })();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>PyRocket Lab • CPython บนเบราว์เซอร์สำหรับหุ่นยนต์จำลอง</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Mitr:wght@300;400;500&family=Sarabun:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <script>try{ if(localStorage.getItem("pr-theme")==="light") document.documentElement.dataset.theme="light"; }catch(e){}</script>
+  <link rel="stylesheet" href="style.css?v=7">
+</head>
+<body>
+  <div id="space" aria-hidden="true">
+    <div class="nebula n1"></div><div class="nebula n2"></div>
+    <div class="planet p1"><i></i></div><div class="planet p2"><i></i></div>
+  </div>
+
+  <div class="top">
+    <div class="container">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M32 4c10 8 14 20 12 34H20C18 24 22 12 32 4z" fill="#fff"/><path d="M32 4c5 4 8.500 9 10.500 15h-21C23.500 13 27 8 32 4z" fill="#ff8a3d"/>
+        <circle cx="32" cy="26" r="6" fill="#4cc9ff" stroke="#2f6bff" stroke-width="2.500"/>
+        <path d="M20 34l-8 10 9-2zM44 34l8 10-9-2z" fill="#7b4dff"/><path d="M26 40h12l-2 6h-8z" fill="#b9c2f0"/>
+        <path d="M28 47h8c0 6-2 10-4 13-2-3-4-7-4-13z" fill="#ffd23f"/>
+      </svg>
+      <div>
+        <h1>PyRocket Lab</h1>
+      </div>
+      <div class="right">
+        <span class="pill"><span class="dot loading" id="engineDot"></span><span id="engineText">กำลังโหลด Python…</span></span>
+        <button class="btn" id="themeBtn" type="button">☀ โหมดสว่าง</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="hero">
+      <img src="assets/robot-down.png" alt="" class="mascot" onerror="this.remove()">
+      <div>
+        <h2>เขียน Python ตัวจริงบนหน้าเว็บ<br>แล้วดูหุ่นยนต์ทำตามทีละบรรทัด</h2>
+        <ul class="points">
+          <li><b>ไม่ต้องติดตั้งอะไร</b>เปิดเว็บแล้วเขียนได้เลย</li>
+          <li><b>Python ตัวจริง</b>ตัวเดียวกับที่โปรแกรมเมอร์ใช้</li>
+          <li><b>เห็นทุกขั้น</b>บรรทัดไหนทำให้หุ่นขยับ</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="seg tabs" id="tabs">
+      <button data-view="demo" class="active">① ลองเล่น</button>
+      <button data-view="cmp">② ตัวจริงต่างอย่างไร</button>
+      <button data-view="about">③ จุดเด่นและข้อจำกัด</button>
+    </div>
+
+    <div class="view" id="view-demo">
+      <div class="demo">
+        <div class="card">
+          <h3>โค้ดของผู้เรียน
+            <select id="examples">
+              <option value="">ตัวอย่างโค้ด…</option>
+              <option value="loop3">ลูป for ไปถึงธง</option>
+              <option value="func">ฟังก์ชันที่เขียนเอง</option>
+              <option value="crash">while + if แล้วชน</option>
+              <option value="typo">สะกดชื่อผิด</option>
+              <option value="inf">ลูปไม่สิ้นสุด</option>
+            </select>
+          </h3>
+          <div class="editor">
+            <div class="gutter" id="gutter"></div>
+            <div class="code-wrap">
+              <div class="hl" id="hl"></div>
+              <textarea class="code" id="code" spellcheck="false" autocomplete="off" autocapitalize="off"></textarea>
+            </div>
+          </div>
+          <div class="row" style="margin-top:14px">
+            <button class="btn primary" id="runBtn" disabled>▶ รันโค้ด</button>
+            <button class="btn blue" id="stepBtn" disabled>⏭ ทีละบรรทัด</button>
+            <button class="btn" id="stopBtn" disabled>■ หยุด</button>
+            <button class="btn" id="resetBtn">↺ เริ่มใหม่</button>
+            <label class="speed">ความเร็ว <input type="range" id="speed" min="1" max="10" value="5"></label>
+          </div>
+          <div class="status" id="status">กำลังเตรียม Python…</div>
+          <div class="console" id="console"></div>
+        </div>
+
+        <div class="card">
+          <h3>สนามอวกาศ <span class="seg" id="levels"></span></h3>
+          <div class="board">
+            <div class="grid" id="grid"></div>
+            <div class="sprite" id="sprite"></div>
+            <div class="bubble" id="bubble"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card behind">
+        <h3>เบื้องหลัง: เกิดอะไรขึ้นเมื่อกดรันโค้ด</h3>
+        <div class="pipe">
+          <div class="stage" id="st1"><div class="name"><i>①</i>ส่งโค้ดให้ Python</div><div class="live" id="live1"></div></div>
+          <div class="arrow" id="ar1">→</div>
+          <div class="stage" id="st2"><div class="name"><i>②</i><span id="st2name">Python ตัวจริงรันจนจบ และจดทุกขั้นไว้</span></div><div class="live" id="live2"></div></div>
+          <div class="arrow" id="ar2">→</div>
+          <div class="stage" id="st3"><div class="name"><i>③</i>หุ่นเดินตามที่จดไว้</div><div class="live" id="live3"></div></div>
+        </div>
+        <div class="tl-head">สิ่งที่ Python จดไว้ <small id="evCount"></small></div>
+        <div class="tl" id="tl"><span class="empty">ยังว่างอยู่ — กดรันโค้ด แล้วรายการทั้งหมดจะมาถึงที่นี่ก่อนหุ่นเริ่มขยับ</span></div>
+      </div>
+    </div>
+
+    <div class="view" id="view-cmp" hidden>
+      <p class="lead">เว็บฝึกเขียนโปรแกรมจำนวนมากใช้ตัวแปลภาษาที่เขียนขึ้นใหม่ด้วย JavaScript ลองรันโค้ดเดียวกันบนทั้งสองตัว แล้วดูว่าตอบกลับต่างกันอย่างไร</p>
+      <div class="cmp">
+        <div class="card">
+          <h3>โค้ดที่มีจุดผิด
+            <select id="cmpExamples">
+              <option value="">ตัวอย่าง…</option>
+              <option value="name">สะกดชื่อตัวแปรผิด</option>
+              <option value="attr">สะกดชื่อคำสั่งผิด</option>
+              <option value="colon">ลืมเครื่องหมาย :</option>
+              <option value="paren">ลืมปิดวงเล็บ</option>
+              <option value="who">ถามเวอร์ชัน</option>
+              <option value="fstr">f-string แบบ =</option>
+              <option value="match">match-case</option>
+            </select>
+          </h3>
+          <div class="editor">
+            <div class="code-wrap">
+              <textarea class="code" id="cmpCode" spellcheck="false" autocomplete="off" autocapitalize="off"></textarea>
+            </div>
+          </div>
+          <div class="row" style="margin-top:14px">
+            <button class="btn primary" id="cmpBtn" disabled>▶ รันทั้งสองตัว</button>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Python ตัวจริง <small id="cmpPyVer">CPython</small></h3>
+          <div class="out" id="outPy"><span class="s">ยังไม่ได้รัน</span></div>
+        </div>
+        <div class="card">
+          <h3>ตัวแปลแบบ JavaScript <small>Skulpt</small></h3>
+          <div class="out" id="outSk"><span class="s">ยังไม่ได้รัน</span></div>
+        </div>
+      </div>
+      <div class="verdict" id="verdict"></div>
+    </div>
+
+    <div class="view" id="view-about" hidden>
+      <div class="facts">
+        <div class="card">
+          <h3>จุดเด่น</h3>
+          <ul>
+            <li>ใช้ Python ตัวจริง (CPython) ผู้เรียนจึงได้ภาษาและข้อความแจ้งข้อผิดพลาดแบบเดียวกับที่ใช้ทำงานจริง</li>
+            <li>โค้ดรันในเครื่องของผู้เรียนเอง ไม่ต้องติดตั้งโปรแกรม และไม่ต้องส่งโค้ดไปรันที่เซิร์ฟเวอร์</li>
+            <li>ดูการทำงานทีละบรรทัดได้ โดยไม่ต้องตั้งค่าพิเศษบนเว็บโฮสต์</li>
+            <li>หน้าเว็บไม่ค้าง แม้โค้ดจะวนไม่รู้จบ</li>
+            <li>ถ้าเครื่องใช้ Python ตัวจริงไม่ได้ ระบบสลับไปใช้ตัวแปลสำรองให้เอง</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>ข้อจำกัด</h3>
+          <ul>
+            <li>ใช้ได้กับสนามที่ผลลัพธ์แน่นอนทุกครั้ง ยังไม่รองรับเซนเซอร์หรือการรับค่าด้วย <code>input()</code></li>
+            <li>โค้ดหนึ่งครั้งทำงานได้ไม่เกิน 4 วินาที หรือ 20,000 บรรทัด</li>
+            <li>เปิดครั้งแรกต้องโหลดไฟล์ราว 12 MB ครั้งต่อไปจะเร็วขึ้น</li>
+          </ul>
+        </div>
+      </div>
+      <footer>
+        แนวคิดการบันทึกการทำงานของโปรแกรมแล้วแสดงผลทีละขั้นมีมาก่อนใน Online Python Tutor (Guo, 2013)
+        ระบบนี้นำมาใช้ขับหุ่นยนต์จำลอง และประมวลผลในเบราว์เซอร์ผ่าน Pyodide ซึ่งคอมไพล์ CPython เป็น WebAssembly
+      </footer>
+    </div>
+  </div>
+
+  <script src="assets/levels.js?v=1"></script>
+  <script src="skulpt_engine.js?v=3"></script>
+  <script>
+  (function(){
+    "use strict";
+    const N = 6;
+    const WORKER_URL = "pyodide_worker.js?v=3";
+    const OBST = ["N1","N2","N3","N4"];
+
+    const ART = {
+      N2: `<svg viewBox="0 0 100 100"><path d="M22 38 40 15l27 3 18 23-6 30-25 16-27-8-13-21z" fill="#9a93b8" stroke="#5d5680" stroke-width="4" stroke-linejoin="round"/><circle cx="42" cy="42" r="9" fill="#746d97"/><circle cx="63" cy="61" r="7" fill="#746d97"/><circle cx="61" cy="33" r="4" fill="#746d97"/></svg>`,
+      N3: `<svg viewBox="0 0 100 100"><path d="M30 18l30-4 24 20 2 28-22 24-32-2-18-24 2-26z" fill="#b99a8c" stroke="#7a5a52" stroke-width="4" stroke-linejoin="round"/><circle cx="38" cy="58" r="9" fill="#93746a"/><circle cx="60" cy="38" r="8" fill="#93746a"/><circle cx="64" cy="66" r="4" fill="#93746a"/></svg>`,
+      N1: `<svg viewBox="0 0 100 100"><defs><radialGradient id="gP1" cx=".35" cy=".3"><stop offset="0" stop-color="#c9f6ff"/><stop offset=".55" stop-color="#4cc9ff"/><stop offset="1" stop-color="#2f6bff"/></radialGradient></defs><circle cx="50" cy="50" r="32" fill="url(#gP1)"/><path d="M24 44c14-8 34-8 52 2M22 58c16 8 38 8 56-4" fill="none" stroke="#fff" stroke-opacity=".45" stroke-width="5" stroke-linecap="round"/></svg>`,
+      N4: `<svg viewBox="0 0 100 100"><defs><radialGradient id="gP4" cx=".35" cy=".3"><stop offset="0" stop-color="#ffe0f0"/><stop offset=".55" stop-color="#ff6fb5"/><stop offset="1" stop-color="#c93c8a"/></radialGradient></defs><circle cx="50" cy="50" r="27" fill="url(#gP4)"/><ellipse cx="50" cy="52" rx="45" ry="11" fill="none" stroke="#ffd98a" stroke-width="5" transform="rotate(-18 50 52)"/></svg>`,
+      C3: `<svg viewBox="0 0 100 100"><ellipse cx="50" cy="82" rx="30" ry="9" fill="#ffd23f" fill-opacity=".45"/><path d="M38 84V16" stroke="#fff" stroke-width="6" stroke-linecap="round"/><path d="M41 18l40 13-40 15z" fill="#ff8a3d" stroke="#ffd23f" stroke-width="3" stroke-linejoin="round"/></svg>`,
+    };
+
+    const ROBOT_IMG = { up:"assets/robot-up.png", right:"assets/robot-right.png", down:"assets/robot-down.png", left:"assets/robot-left.png" };
+    const ROBOT_SVG = `<svg viewBox="0 0 100 100"><rect x="30" y="56" width="40" height="30" rx="9" fill="#8e6bff" stroke="#3a22b0" stroke-width="3"/><rect x="12" y="44" width="16" height="30" rx="8" fill="#fff" stroke="#3a22b0" stroke-width="3"/><rect x="72" y="44" width="16" height="30" rx="8" fill="#fff" stroke="#3a22b0" stroke-width="3"/><circle cx="50" cy="46" r="30" fill="#fff" stroke="#3a22b0" stroke-width="3"/><path d="M28 38a22 17 0 0 1 44 0v4a22 12 0 0 1-44 0z" fill="#16205e" stroke="#4cf0ff" stroke-width="3"/><circle cx="41" cy="38" r="4" fill="#4cf0ff"/><circle cx="59" cy="38" r="4" fill="#4cf0ff"/><path d="M50 16V6" stroke="#3a22b0" stroke-width="3"/><circle cx="50" cy="5" r="4" fill="#ff8a3d"/></svg>`;
+    let robotImgs = false;
+
+    const EXAMPLES = {
+      loop3:
+`# ด่าน 1: เดินขึ้นบันได 3 ขั้นไปถึงธง
+for i in range(3):
+    robot.straight(1)
+    robot.turn(-90)
+    robot.straight(1)
+    robot.turn(90)
+print("ถึงธงแล้ว")`,
+      func:
+`def stair(step_len):
+    robot.straight(step_len)
+    robot.turn(-90)
+    robot.straight(step_len)
+    robot.turn(90)
+
+for i in range(3):
+    stair(1)
+    print("ขึ้นบันไดขั้นที่", i + 1)`,
+      crash:
+`# เดินไปเรื่อย ๆ จนครบ 6 ก้าว — ดูว่าหุ่นชนที่บรรทัดไหน
+steps = 0
+while steps < 6:
+    robot.straight(1)
+    steps += 1
+    if steps == 3:
+        print("ครึ่งทางแล้ว!")`,
+      typo:
+`# สะกดผิดที่บรรทัด 2 — แก้แล้วรันใหม่จะเจอบรรทัด 4
+robot.straigt(1)
+steps = 1
+robot.straight(step)`,
+      inf:
+`# หน้าเว็บไม่ค้าง และระบบหยุดให้เองเมื่อทำงานเกินกำหนด
+x = 0
+while True:
+    x = x + 1`,
+    };
+
+    const CMP_EXAMPLES = {
+      name:
+`total = 10
+print(totl + 5)`,
+      attr:
+`import math
+print(math.sqroot(16))`,
+      colon:
+`for i in range(3)
+    print(i)`,
+      paren:
+`print("สวัสดี"
+print("Python")`,
+      who:
+`import sys
+print(sys.version.split()[0])`,
+      fstr:
+`steps = 3
+print(f"{steps=}")`,
+      match:
+`cmd = "left"
+match cmd:
+    case "left":
+        print("เลี้ยวซ้าย")
+    case _:
+        print("ไม่รู้จักคำสั่ง")`,
+    };
+
+    const $ = (id) => document.getElementById(id);
+    const grid = $("grid"), sprite = $("sprite"), bubble = $("bubble");
+    const codeEl = $("code"), gutter = $("gutter"), hl = $("hl");
+    const runBtn = $("runBtn"), stepBtn = $("stepBtn"), stopBtn = $("stopBtn"), resetBtn = $("resetBtn");
+    const statusEl = $("status"), consoleEl = $("console"), tlEl = $("tl");
+
+    const ONLY_LEVEL = (() => { const v = new URLSearchParams(location.search).get("level"); return v && LEVELS[v] ? +v : null; })();
+    let level = ONLY_LEVEL || 1;
+    let bot = { x:0, y:0, h:0 };
+    let worker = null, ready = false;
+    let runId = 0;
+    let phase = "idle";
+    let stepMode = false;
+    let stepResolve = null;
+    let watchdog = null;
+    let evRows = [];
+    let codeLines = [];
+
+    function setPipe(active, done){
+      [1,2,3].forEach(i => {
+        const el = $("st" + i);
+        el.classList.toggle("active", i === active);
+        el.classList.toggle("done", done.includes(i));
+      });
+      $("ar1").classList.toggle("active", active === 2);
+      $("ar2").classList.toggle("active", active === 3);
+    }
+    function clearPipe(){
+      setPipe(0, []);
+      $("live1").textContent = "โค้ดไม่ถูกดัดแปลง";
+      $("live2").textContent = "เสร็จก่อนที่หุ่นจะเริ่มขยับ";
+      $("live3").textContent = "ต่อเนื่อง หรือทีละบรรทัด";
+    }
+
+    const LOAD_TIMEOUT_MS = 25000;
+    const FORCE_SKULPT = new URLSearchParams(location.search).get("engine") === "skulpt";
+    let engine = "pyodide";
+    let engineVersion = null, bootMs = null;
+    let loadTimer = null;
+
+    function startWorker(){
+      ready = false;
+      setEngine("loading", "กำลังโหลด Python…");
+      updateButtons();
+      let w;
+      try{
+        if(FORCE_SKULPT) throw new Error("เปิดหน้าด้วย ?engine=skulpt");
+        if(typeof WebAssembly !== "object" || typeof Worker !== "function") throw new Error("เบราว์เซอร์ไม่รองรับ WebAssembly หรือ Worker");
+        w = worker = new Worker(WORKER_URL);
+      }catch(e){ useFallback(e.message); return; }
+      w.onmessage = (ev) => { if(w === worker) onWorkerMessage(ev); };
+      w.onerror = (e) => { if(w === worker && !ready) useFallback(e.message || "เธรด Python เริ่มทำงานไม่ได้"); };
+      clearTimeout(loadTimer);
+      loadTimer = setTimeout(() => {
+        if(w === worker && !ready) useFallback(`โหลดนานเกิน ${LOAD_TIMEOUT_MS/1000} วินาที`, true);
+      }, LOAD_TIMEOUT_MS);
+    }
+
+    function useFallback(reason, slowNet){
+      console.warn("[PyRocket Lab] ใช้ตัวแปลสำรอง (Skulpt) แทน CPython:", reason);
+      clearTimeout(loadTimer);
+      engine = "skulpt";
+      const w = worker; worker = null;
+      if(w){
+        if(slowNet){
+          w.onmessage = (ev) => { if(ev.data && (ev.data.type === "ready" || ev.data.type === "fatal")) w.terminate(); };
+          w.onerror = () => w.terminate();
+        }else{ w.onmessage = w.onerror = null; w.terminate(); }
+      }
+      setEngine("loading", "กำลังโหลดตัวแปลสำรอง…");
+      const skT0 = performance.now();
+      SkulptEngine.load().then(() => {
+        engineVersion = "Skulpt";
+        bootMs = Math.round(performance.now() - skT0);
+        ready = true;
+        setEngine("fallback", "ตัวแปลสำรอง (Skulpt) พร้อมใช้งาน");
+        $("engineText").title = "ใช้ Python ตัวจริงไม่ได้: " + reason;
+        $("st2name").textContent = "ตัวแปลสำรองรันจนจบ และจดทุกขั้นไว้";
+        if(phase === "idle") setStatus("เครื่องนี้ใช้ Python ตัวจริงไม่ได้ จึงสลับไปใช้ตัวแปลสำรองให้ — กด “รันโค้ด” ได้เลย", "warn");
+        updateButtons();
+      }, (e) => setEngine("fail", "โหลดตัวแปลภาษาไม่สำเร็จ: " + (e.message || e)));
+    }
+
+    function onWorkerMessage(ev){
+      const m = ev.data;
+      if(m.type === "ready"){
+        clearTimeout(loadTimer);
+        ready = true;
+        setEngine("ready", `Python ${m.version} พร้อมใช้งาน`);
+        engineVersion = `${m.impl} ${m.version}`;
+        bootMs = m.ms;
+        $("engineText").title = `${m.impl} ${m.version} ผ่าน Pyodide · โหลด ${(m.ms/1000).toFixed(2)} วินาที`;
+        $("cmpPyVer").textContent = "CPython " + m.version;
+        if(phase === "idle") setStatus("พร้อมแล้ว — กด “รันโค้ด” เพื่อดูหุ่นทำตามโค้ดทางซ้าย");
+        updateButtons();
+      }else if(m.type === "fatal"){
+        useFallback(m.msg);
+      }else if(m.type === "result"){
+        if(m.id !== runId) return;
+        clearTimeout(watchdog);
+        onPythonDone(m.data, m.wall);
+      }
+    }
+
+    function setEngine(state, text){
+      $("engineDot").className = "dot " + state;
+      $("engineText").textContent = text;
+    }
+
+    function tileAt(x,y){
+      const L = LEVELS[level];
+      if(L.goal.x === x && L.goal.y === y) return "C3";
+      const o = (L.obs||[]).find(o => o.x === x && o.y === y);
+      if(o) return o.t || OBST[(x + 2*y) % OBST.length];
+      return (x + y) % 2 === 0 ? "C1" : "C2";
+    }
+
+    function buildGrid(){
+      grid.innerHTML = "";
+      for(let y=0; y<N; y++) for(let x=0; x<N; x++){
+        const c = document.createElement("div");
+        const t = tileAt(x,y);
+        c.className = "cell" + (OBST.includes(t) ? " obstacle" : t === "C2" ? " c2" : t === "C3" ? " goal" : "");
+        if(ART[t]) c.innerHTML = ART[t];
+        grid.appendChild(c);
+      }
+    }
+
+    function resetBot(){
+      const s = LEVELS[level].start;
+      bot = { x:s.x, y:s.y, h:(s.dir||0)*90 };
+      grid.querySelectorAll(".hit").forEach(c => c.classList.remove("hit"));
+      bubble.classList.remove("show");
+      paintBot();
+    }
+
+    function paintBot(){
+      sprite.style.left = ((bot.x + .5) / N * 100) + "%";
+      sprite.style.top  = ((bot.y + .5) / N * 100) + "%";
+      const d = ((bot.h % 360) + 360) % 360;
+      if(robotImgs){
+        const dir = d >= 315 || d < 45 ? "up" : d < 135 ? "right" : d < 225 ? "down" : "left";
+        const img = sprite.firstElementChild;
+        if(img.dataset.dir !== dir){ img.dataset.dir = dir; img.src = ROBOT_IMG[dir]; }
+      }else{
+        sprite.firstElementChild.style.transform = `rotate(${d}deg)`;
+      }
+    }
+
+    function loadRobotImages(){
+      sprite.innerHTML = ROBOT_SVG;
+      const load = (src) => new Promise((res, rej) => { const i = new Image(); i.onload = res; i.onerror = rej; i.src = src; });
+      Promise.all(Object.values(ROBOT_IMG).map(load)).then(() => {
+        sprite.innerHTML = '<img alt="หุ่นยนต์นักบินอวกาศ">';
+        robotImgs = true;
+        paintBot();
+      }).catch(() => {});
+    }
+
+    function buildLevelButtons(){
+      const box = $("levels");
+      Object.keys(LEVELS).filter(k => !ONLY_LEVEL || +k === ONLY_LEVEL).forEach(k => {
+        const b = document.createElement("button");
+        b.dataset.level = k;
+        b.textContent = "ด่าน " + k;
+        b.title = LEVELS[k].name;
+        b.addEventListener("click", () => { stopAll(); level = +k; markLevel(); buildGrid(); resetBot(); clearPipe(); });
+        box.appendChild(b);
+      });
+      markLevel();
+    }
+    function markLevel(){
+      [...$("levels").children].forEach(b => b.classList.toggle("active", +b.dataset.level === level));
+    }
+
+    function refreshGutter(){
+      const n = codeEl.value.split("\n").length;
+      if(gutter.childElementCount !== n){
+        gutter.innerHTML = Array.from({length:n}, (_,i) => `<div>${i+1}</div>`).join("");
+      }
+      gutter.scrollTop = codeEl.scrollTop;
+      positionHighlight();
+    }
+    let hlLine = null;
+    function highlight(n, isErr){
+      hlLine = n;
+      hl.classList.toggle("err", !!isErr);
+      positionHighlight();
+    }
+    function positionHighlight(){
+      if(!hlLine){ hl.style.display = "none"; return; }
+      const lh = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--line-h")) || 22;
+      hl.style.display = "block";
+      hl.style.top = (10 + (hlLine-1)*lh - codeEl.scrollTop) + "px";
+    }
+    function scrollLineIntoView(n){
+      const lh = 22, top = (n-1)*lh;
+      if(top < codeEl.scrollTop || top > codeEl.scrollTop + codeEl.clientHeight - 2*lh){
+        codeEl.scrollTop = Math.max(0, top - codeEl.clientHeight/2);
+      }
+    }
+    function tabKey(el, after){
+      el.addEventListener("keydown", (e) => {
+        if(e.key === "Tab"){
+          e.preventDefault();
+          el.setRangeText("    ", el.selectionStart, el.selectionEnd, "end");
+          if(after) after();
+        }
+      });
+    }
+    codeEl.addEventListener("input", () => { highlight(null); refreshGutter(); });
+    codeEl.addEventListener("scroll", refreshGutter);
+    tabKey(codeEl, refreshGutter);
+    $("examples").addEventListener("change", (e) => {
+      const k = e.target.value;
+      if(!k) return;
+      stopAll();
+      codeEl.value = EXAMPLES[k];
+      highlight(null); refreshGutter(); resetBot(); clearPipe();
+      e.target.value = "";
+    });
+
+    function setStatus(text, kind){
+      statusEl.textContent = text;
+      statusEl.className = "status" + (kind ? " " + kind : "");
+    }
+    function log(text, cls){
+      const d = document.createElement("div");
+      if(cls) d.className = cls;
+      d.textContent = text;
+      consoleEl.appendChild(d);
+      consoleEl.scrollTop = consoleEl.scrollHeight;
+    }
+    function updateButtons(){
+      runBtn.disabled  = !ready || phase === "python" || phase === "replay";
+      stepBtn.disabled = !ready || phase === "python" || (phase === "replay" && !stepMode);
+      stopBtn.disabled = phase === "idle";
+      runBtn.textContent = phase === "paused" ? "▶ ทำต่อจนจบ" : "▶ รันโค้ด";
+    }
+    function speedMs(){ return 60 + (10 - +$("speed").value) * 70; }
+    const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+
+    runBtn.addEventListener("click", () => {
+      if(phase === "paused"){ stepMode = false; releaseStep(); updateButtons(); return; }
+      startRun(false);
+    });
+    stepBtn.addEventListener("click", () => {
+      if(phase === "paused" || phase === "replay"){ releaseStep(); return; }
+      startRun(true);
+    });
+    stopBtn.addEventListener("click", () => {
+      const wasPython = phase === "python";
+      stopAll();
+      setPipe(0, []);
+      setStatus("หยุดแล้ว", "warn");
+    });
+    resetBtn.addEventListener("click", () => {
+      stopAll(); resetBot(); highlight(null); clearPipe(); markEvent(-1);
+      setStatus(ready ? "เริ่มใหม่แล้ว — กด “รันโค้ด” ได้เลย" : "กำลังเตรียม Python…");
+    });
+
+    function releaseStep(){ if(stepResolve){ const r = stepResolve; stepResolve = null; r(); } }
+
+    function stopAll(){
+      runId++;
+      clearTimeout(watchdog);
+      if(phase === "python" && engine === "pyodide"){ const old = worker; old.onmessage = old.onerror = null; old.terminate(); startWorker(); }
+      phase = "idle"; stepMode = false;
+      releaseStep();
+      updateButtons();
+    }
+
+    function startRun(step){
+      if(!ready) return;
+      stopAll();
+      resetBot();
+      highlight(null);
+      consoleEl.innerHTML = "";
+      clearPipe();
+      stepMode = step;
+      phase = "python";
+      updateButtons();
+      setStatus(engine === "pyodide" ? "Python กำลังรันโค้ด…" : "ตัวแปลสำรองกำลังรันโค้ด…");
+      codeLines = codeEl.value.split("\n");
+      const L = LEVELS[level];
+      const id = runId;
+      const code = codeEl.value.replace(/\t/g, "    ");
+      $("live1").textContent = `ส่งแล้ว ${code.split("\n").length} บรรทัด`;
+      setPipe(2, [1]);
+      $("live2").textContent = "กำลังรัน…";
+      const field = { N, start:L.start, goal:L.goal, obs:L.obs };
+      if(engine === "skulpt"){
+        const t0 = performance.now();
+        SkulptEngine.run(code, field).then((data) => { if(id === runId) onPythonDone(data, performance.now() - t0); });
+        return;
+      }
+      worker.postMessage({ type:"run", id, code, level: JSON.stringify(field) });
+      watchdog = setTimeout(() => {
+        if(id !== runId || phase !== "python") return;
+        stopAll();
+        setPipe(0, [1]);
+        $("live2").textContent = "ถูกปิดโดยระบบ";
+        setStatus("โปรแกรมรันนานเกินไป — ระบบปิดเธรด Python แล้วโหลดใหม่", "err");
+        log("หยุดโดยระบบ: เกิน 8 วินาที", "e");
+      }, 8000);
+    }
+
+    function onPythonDone(data, wall){
+      const st = data.stats || {}, events = data.events || [];
+      $("live2").textContent = `ใช้เวลา ${st.py_ms != null ? st.py_ms.toFixed(1) : "?"} มิลลิวินาที · จดไว้ ${events.length} รายการ`;
+      renderTrace(events);
+      replay(data, runId);
+    }
+
+    const fmt = (p) => `${(+p[0]).toFixed(1)}, ${(+p[1]).toFixed(1)}`;
+    const short = (t) => t.length > 16 ? t.slice(0, 15) + "…" : t;
+    function describe(e){
+      if(e.t === "line")  return [`บรรทัด ${e.n}`, `ทำบรรทัด ${e.n}`];
+      if(e.t === "move")  return [`เดิน ${e.cells}` + (e.crash ? " ✖" : ""),
+                                  `straight(${e.cells})  (${fmt(e.from)}) → (${fmt(e.to)})` + (e.crash ? "  ชน" + (e.crash.type === "edge" ? "ขอบสนาม" : "สิ่งกีดขวาง") : "")];
+      if(e.t === "turn")  return [`เลี้ยว ${e.deg}°`, `turn(${e.deg})  ทิศ = ${Math.round(e.heading)}°`];
+      if(e.t === "print") return [`print ${short(e.text)}`, `print → ${e.text}`];
+      return [e.t, JSON.stringify(e)];
+    }
+
+    function renderTrace(events){
+      tlEl.innerHTML = "";
+      evRows = [];
+      if(!events.length){
+        tlEl.innerHTML = '<span class="empty">ไม่มีรายการ เพราะโค้ดยังรันไม่ได้ (เช่น พิมพ์ผิดไวยากรณ์)</span>';
+      }
+      const frag = document.createDocumentFragment();
+      events.forEach((e) => {
+        const [label, full] = describe(e);
+        const chip = document.createElement("span");
+        chip.className = "chip" + (e.t === "line" ? " line" : "") + (e.crash ? " crash" : "");
+        chip.textContent = label;
+        chip.title = full;
+        frag.appendChild(chip);
+        evRows.push(chip);
+      });
+      tlEl.appendChild(frag);
+      tlEl.scrollTop = 0;
+      $("evCount").textContent = events.length ? `0 / ${events.length} รายการ` : "";
+    }
+
+    function markEvent(i){
+      evRows.forEach((r, k) => { r.classList.toggle("cur", k === i); r.classList.toggle("past", i >= 0 && k < i); });
+      if(i < 0 || !evRows[i]) return;
+      $("evCount").textContent = `${i + 1} / ${evRows.length} รายการ`;
+      $("live3").textContent = `รายการที่ ${i + 1} จาก ${evRows.length}`;
+      const r = evRows[i];
+      if(r.offsetTop < tlEl.scrollTop || r.offsetTop + r.offsetHeight > tlEl.scrollTop + tlEl.clientHeight){
+        tlEl.scrollTop = Math.max(0, r.offsetTop - tlEl.clientHeight / 2);
+      }
+    }
+
+    const lineText = (n) => `บรรทัด ${n}:  ${(codeLines[n - 1] || "").trim()}`;
+    function narrate(ev){
+      if(ev.t === "move") return ev.crash ? "หุ่นเดินไปชน!" : `หุ่นเดิน${ev.cells < 0 ? "ถอยหลัง" : "หน้า"} ${Math.abs(ev.cells)} ช่อง`;
+      if(ev.t === "turn") return `หุ่นหัน${ev.deg < 0 ? "ซ้าย" : "ขวา"} ${Math.abs(ev.deg)}°`;
+      if(ev.t === "print") return `หุ่นพูดว่า “${ev.text}”`;
+      return "";
+    }
+
+    async function replay(data, id){
+      phase = "replay";
+      updateButtons();
+      setPipe(3, [1,2]);
+      const alive = () => id === runId;
+      for(let i = 0; i < data.events.length; i++){
+        const ev = data.events[i];
+        if(!alive()) return;
+        markEvent(i);
+        if(ev.t === "line"){
+          highlight(ev.n);
+          scrollLineIntoView(ev.n);
+          if(stepMode){
+            phase = "paused"; updateButtons();
+            setStatus(`รออยู่ที่ ${lineText(ev.n)}  — กด “ทีละบรรทัด” เพื่อทำต่อ`);
+            await new Promise(r => { stepResolve = r; });
+            if(!alive()) return;
+            phase = "replay"; updateButtons();
+            setStatus(lineText(ev.n));
+          }else{
+            setStatus(lineText(ev.n));
+            await sleep(speedMs() * .35);
+          }
+        }else if(ev.t === "move"){
+          setStatus(narrate(ev));
+          await animateMove(ev, alive);
+        }else if(ev.t === "turn"){
+          setStatus(narrate(ev));
+          bot.h = ev.heading; paintBot();
+          await sleep(speedMs() * .9);
+        }else if(ev.t === "print"){
+          setStatus(narrate(ev));
+          log(ev.text);
+          bubble.textContent = ev.text;
+          bubble.classList.add("show");
+          await sleep(Math.max(400, speedMs() * 2));
+          bubble.classList.remove("show");
+        }
+      }
+      if(!alive()) return;
+      phase = "idle"; stepMode = false; updateButtons();
+      markEvent(-1);
+      setPipe(0, [1,2,3]);
+      $("live3").textContent = data.events.length ? `ครบ ${data.events.length} รายการ` : "ไม่มีรายการ";
+      showOutcome(data);
+    }
+
+    async function animateMove(ev, alive){
+      const [fx, fy] = ev.from, [tx, ty] = ev.to;
+      const dist = Math.hypot(tx - fx, ty - fy);
+      const dur = Math.max(1, dist) * speedMs();
+      const t0 = performance.now();
+      await new Promise(res => {
+        function frame(){
+          if(!alive()) return res();
+          const k = Math.min(1, (performance.now() - t0) / dur);
+          bot.x = fx + (tx - fx) * k; bot.y = fy + (ty - fy) * k;
+          paintBot();
+          k < 1 ? setTimeout(frame, 16) : res();
+        }
+        frame();
+      });
+      if(ev.crash && alive()){
+        const c = grid.children[ev.crash.at[1]*N + ev.crash.at[0]];
+        if(c) c.classList.add("hit");
+      }
+    }
+
+    function showOutcome(data){
+      const o = data.outcome;
+      if(o.status === "ok"){
+        highlight(null);
+        const g = LEVELS[level].goal, f = data.final || {};
+        if(Math.round(f.x) === g.x && Math.round(f.y) === g.y){ setStatus("🎉 หุ่นถึงธงแล้ว ผ่านด่าน!", "ok"); }
+        else setStatus("โค้ดทำงานจบแล้ว แต่หุ่นยังไม่ถึงธง", "warn");
+      }else if(o.status === "crash"){
+        const where = o.crash.type === "edge" ? "ขอบสนาม" : "สิ่งกีดขวาง";
+        highlight(o.line, true);
+        setStatus(`💥 หุ่นชน${where} — เกิดจาก${lineText(o.line)}`, "err");
+      }else if(o.status === "limit"){
+        if(o.line) highlight(o.line, true);
+        setStatus("⏹ " + o.msg, "err");
+        log(o.msg, "e");
+      }else{
+        if(o.line) { highlight(o.line, true); scrollLineIntoView(o.line); }
+        setStatus(`Python แจ้งว่าโค้ดผิด${o.line ? "ที่บรรทัด " + o.line : ""}`, "err");
+        log(o.full || `${o.name}: ${o.msg}`, "e");
+      }
+    }
+
+    const cmpCode = $("cmpCode"), cmpBtn = $("cmpBtn");
+    let cmpWorker = null, cmpReady = null, cmpSeq = 0;
+    const cmpWaiting = new Map();
+
+    function cmpPython(){
+      if(cmpReady) return cmpReady;
+      cmpReady = new Promise((resolve, reject) => {
+        const w = cmpWorker = new Worker(WORKER_URL);
+        w.onmessage = (ev) => {
+          const m = ev.data;
+          if(m.type === "ready") resolve();
+          else if(m.type === "fatal") reject(new Error(m.msg));
+          else if(m.type === "result"){ const f = cmpWaiting.get(m.id); cmpWaiting.delete(m.id); if(f) f(m.data); }
+        };
+        w.onerror = (e) => reject(new Error(e.message || "โหลด Python ไม่สำเร็จ"));
+      });
+      return cmpReady;
+    }
+
+    async function runOnCPython(code){
+      if(typeof WebAssembly !== "object") throw new Error("เบราว์เซอร์นี้ไม่รองรับ WebAssembly");
+      await cmpPython();
+      const id = ++cmpSeq;
+      const blank = JSON.stringify({ N, start:{x:0,y:0,dir:0}, goal:{x:5,y:5}, obs:[] });
+      const data = await new Promise((resolve, reject) => {
+        cmpWaiting.set(id, resolve);
+        cmpWorker.postMessage({ type:"run", id, code, level: blank });
+        setTimeout(() => { if(cmpWaiting.delete(id)) reject(new Error("รันนานเกิน 8 วินาที")); }, 8000);
+      });
+      const out = data.events.filter(e => e.t === "print").map(e => e.text).join("\n");
+      const o = data.outcome;
+      let err = "";
+      if(o.status === "error") err = (o.full || `${o.name}: ${o.msg}`) + (o.line ? `\n(บรรทัด ${o.line})` : "");
+      else if(o.status !== "ok") err = o.msg || o.status;
+      return { out, err };
+    }
+
+    const loadSkulpt = () => SkulptEngine.load();
+
+    async function runOnSkulpt(code){
+      await loadSkulpt();
+      let out = "";
+      Sk.configure({
+        output: (t) => { out += t; },
+        read: (f) => {
+          if(Sk.builtinFiles === undefined || Sk.builtinFiles.files[f] === undefined) throw "File not found: '" + f + "'";
+          return Sk.builtinFiles.files[f];
+        },
+        __future__: Sk.python3,
+        execLimit: 4000,
+      });
+      Sk.execStart = Date.now();
+      let err = "";
+      try{
+        await Sk.misceval.asyncToPromise(() => Sk.importMainWithBody("<stdin>", false, code, true));
+      }catch(e){
+        err = (e && e.toString) ? e.toString() : String(e);
+      }
+      return { out: out.replace(/\n$/, ""), err };
+    }
+
+    function showOut(el, r){
+      el.innerHTML = "";
+      const add = (text, cls) => { const d = document.createElement("div"); if(cls) d.className = cls; d.textContent = text; el.appendChild(d); };
+      if(r.out) add(r.out);
+      if(r.err){
+        add(r.err, "e");
+        const d = el.lastChild, m = r.err.match(/Did you mean[^\n]*/);
+        if(m){
+          const [a, b] = r.err.split(m[0]);
+          d.textContent = a;
+          const k = document.createElement("mark"); k.textContent = m[0];
+          d.append(k, b);
+        }
+      }
+      if(!r.out && !r.err) add("(ไม่มีข้อความแสดงผล)", "s");
+    }
+
+    cmpBtn.addEventListener("click", async () => {
+      const code = cmpCode.value.replace(/\t/g, "    ");
+      const v = $("verdict");
+      cmpBtn.disabled = true;
+      v.className = "verdict"; v.textContent = "กำลังรัน…";
+      $("outPy").innerHTML = $("outSk").innerHTML = '<span class="s">กำลังรัน…</span>';
+      const safe = (p) => p.catch(e => ({ out:"", err:"รันไม่ได้: " + (e.message || e), failed:true }));
+      const [py, sk] = await Promise.all([safe(runOnCPython(code)), safe(runOnSkulpt(code))]);
+      showOut($("outPy"), py);
+      showOut($("outSk"), sk);
+      if(py.failed || sk.failed){ v.textContent = "รันไม่ครบทั้งสองตัว จึงเทียบไม่ได้"; }
+      else if(!!py.err !== !!sk.err){ v.className = "verdict diff"; v.textContent = py.err ? "ต่างกัน — ตัวแปลแบบ JavaScript รันได้ แต่ Python ตัวจริงแจ้งว่าผิด" : "ต่างกัน — โค้ดนี้ถูกต้องตามภาษา Python แต่ตัวแปลแบบ JavaScript ยังไม่รู้จัก"; }
+      else if(py.out === sk.out && !py.err){ v.className = "verdict same"; v.textContent = "ได้ผลลัพธ์ตรงกัน"; }
+      else if(py.err){ v.className = "verdict diff"; v.textContent = /Did you mean/.test(py.err) ? "ทั้งคู่บอกว่าผิด แต่ Python ตัวจริงช่วยเดาคำที่ถูกให้ด้วย (แถบสีเหลือง)" : "ทั้งคู่บอกว่าผิด — ลองเทียบว่าข้อความไหนเข้าใจง่ายกว่า"; }
+      else{ v.className = "verdict diff"; v.textContent = "รันได้ทั้งคู่ แต่ผลลัพธ์ต่างกัน"; }
+      cmpBtn.disabled = false;
+    });
+    $("cmpExamples").addEventListener("change", (e) => {
+      const k = e.target.value;
+      if(!k) return;
+      cmpCode.value = CMP_EXAMPLES[k];
+      e.target.value = "";
+    });
+    tabKey(cmpCode);
+
+    $("tabs").addEventListener("click", (e) => {
+      const b = e.target.closest("button[data-view]");
+      if(!b) return;
+      [...$("tabs").children].forEach(x => x.classList.toggle("active", x === b));
+      ["demo","cmp","about"].forEach(v => { $("view-" + v).hidden = v !== b.dataset.view; });
+      positionHighlight();
+    });
+    const themeBtn = $("themeBtn");
+    function paintThemeBtn(){
+      themeBtn.textContent = document.documentElement.dataset.theme === "light" ? "🌙 โหมดอวกาศ" : "☀ โหมดสว่าง";
+    }
+    themeBtn.addEventListener("click", () => {
+      const light = document.documentElement.dataset.theme !== "light";
+      if(light) document.documentElement.dataset.theme = "light"; else delete document.documentElement.dataset.theme;
+      try{ localStorage.setItem("pr-theme", light ? "light" : "space"); }catch(e){}
+      paintThemeBtn();
+    });
+    paintThemeBtn();
+
+    codeEl.value = EXAMPLES.loop3;
+    cmpCode.value = CMP_EXAMPLES.name;
+    cmpBtn.disabled = false;
+    refreshGutter();
+    buildLevelButtons();
+    buildGrid();
+    loadRobotImages();
+    resetBot();
+    window.addEventListener("resize", positionHighlight);
+    startWorker();
+  })();
+  </script>
+</body>
+</html>
